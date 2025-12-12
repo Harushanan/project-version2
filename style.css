@@ -1005,4 +1005,33 @@
       color: #999;
     }
 
+    /* Default (Mobile) - Hide footer */
+.footer-content {
+    display: none;
+}
+
+/* Desktop Navigation - Show at 768px and above */
+@media (min-width: 768px) {
+    .main-nav {
+        display: block;
+    }
+
+    .mobile-menu-btn {
+        display: none;
+    }
+
+    /* Show footer on tablet and adjust grid */
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .footer-content {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
     
