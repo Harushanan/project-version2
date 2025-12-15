@@ -18,6 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./style.css">
+    
 
 
 </head>
@@ -111,7 +112,7 @@
                         </li>
 
                         <li>
-                            <a href="./coming-soon.html" 
+                            <a href="contact.html" 
                                class="{{ Route::is('client.contactus') ? 'active' : '' }}">
                                 Contact
                             </a>
@@ -200,7 +201,7 @@
                 </li>
 
                 <li><a href="./collections.html">Shop</a></li>
-                <li><a href="./collections.html">Contact</a></li>
+                <li><a href="./contact.html">Contact</a></li>
             </ul>
         </nav>
     </div>
@@ -266,7 +267,7 @@
         </div>
         <div class="featured-card-content">
             <h3>Explore the exhibition</h3>
-            <a href="./coming-soon.html" class="explore-btn">Explore</a>
+            <a href="./exhibition.html" class="explore-btn">Explore</a>
         </div>
     </article>
 
@@ -364,6 +365,7 @@
         </div>
     </main>
 
+<!-- footer  -->
    <footer>
     <div class="container">
       <div class="footer-content">
@@ -387,7 +389,6 @@
                 style="
                     background-color:#0070ba;
                     color:white;
-                    width: 62%;
                     padding:10px 18px;
                     border:none;
                     border-radius:6px;
@@ -442,7 +443,7 @@
 
     </div>
   </footer>
-
+<!-- footer  -->
               
                     <!-- <div style="margin-top: 1.2rem;">
                         <form action="https://www.paypal.com/donate" method="post" target="_blank">
@@ -508,84 +509,84 @@
         // ============================================
 // PROTECTION MEASURES (Consolidated)
 // ============================================
-(function() {
-    'use strict';
+// (function() {
+//     'use strict';
 
-    // ------------------------------------
-    // 1. BASIC COPY/SELECTION PROTECTION
-    // ------------------------------------
-    document.addEventListener('copy', e => e.preventDefault());
-    document.addEventListener('cut', e => e.preventDefault());
-    document.addEventListener('selectstart', e => e.preventDefault());
-    document.addEventListener('contextmenu', e => e.preventDefault());
+//     // ------------------------------------
+//     // 1. BASIC COPY/SELECTION PROTECTION
+//     // ------------------------------------
+//     document.addEventListener('copy', e => e.preventDefault());
+//     document.addEventListener('cut', e => e.preventDefault());
+//     document.addEventListener('selectstart', e => e.preventDefault());
+//     document.addEventListener('contextmenu', e => e.preventDefault());
 
-    // ------------------------------------
-    // 2. KEYBOARD SHORTCUTS BLOCKING
-    // ------------------------------------
-    document.addEventListener('keydown', function(e) {
-        // Block: F12, Ctrl+Shift+I/J/C, Ctrl+U, Ctrl+S
-        if (
-            e.key === 'F12' ||
-            (e.ctrlKey && e.shiftKey && ['I', 'J', 'C'].includes(e.key.toUpperCase())) ||
-            (e.ctrlKey && e.key.toLowerCase() === 'u') ||
-            (e.ctrlKey && e.key.toLowerCase() === 's')
-        ) {
-            e.preventDefault();
-            e.stopPropagation();
-            return false;
-        }
-    }, true); // Use capture phase
+//     // ------------------------------------
+//     // 2. KEYBOARD SHORTCUTS BLOCKING
+//     // ------------------------------------
+//     document.addEventListener('keydown', function(e) {
+//         // Block: F12, Ctrl+Shift+I/J/C, Ctrl+U, Ctrl+S
+//         if (
+//             e.key === 'F12' ||
+//             (e.ctrlKey && e.shiftKey && ['I', 'J', 'C'].includes(e.key.toUpperCase())) ||
+//             (e.ctrlKey && e.key.toLowerCase() === 'u') ||
+//             (e.ctrlKey && e.key.toLowerCase() === 's')
+//         ) {
+//             e.preventDefault();
+//             e.stopPropagation();
+//             return false;
+//         }
+//     }, true); // Use capture phase
 
-    // ------------------------------------
-    // 3. DEVTOOLS DETECTION
-    // ------------------------------------
-    let devtoolsOpen = false;
-    const threshold = 160;
+//     // ------------------------------------
+//     // 3. DEVTOOLS DETECTION
+//     // ------------------------------------
+//     let devtoolsOpen = false;
+//     const threshold = 160;
 
-    const detectDevTools = () => {
-        // Check window size difference
-        const widthDiff = window.outerWidth - window.innerWidth;
-        const heightDiff = window.outerHeight - window.innerHeight;
-        return widthDiff > threshold || heightDiff > threshold;
-    };
+//     const detectDevTools = () => {
+//         // Check window size difference
+//         const widthDiff = window.outerWidth - window.innerWidth;
+//         const heightDiff = window.outerHeight - window.innerHeight;
+//         return widthDiff > threshold || heightDiff > threshold;
+//     };
 
-    const handleDevToolsDetected = () => {
-        if (!devtoolsOpen) {
-            devtoolsOpen = true;
-            console.warn('⚠️ Developer tools detected - Redirecting...');
+//     const handleDevToolsDetected = () => {
+//         if (!devtoolsOpen) {
+//             devtoolsOpen = true;
+//             console.warn('⚠️ Developer tools detected - Redirecting...');
             
-            // Immediate redirect to Google
-            window.location.href = 'https://www.google.com';
-        }
-    };
+//             // Immediate redirect to Google
+//             window.location.href = 'https://www.google.com';
+//         }
+//     };
 
-    const handleDevToolsClosed = () => {
-        // No need for cleanup since we redirect immediately
-        devtoolsOpen = false;
-    };
+//     const handleDevToolsClosed = () => {
+//         // No need for cleanup since we redirect immediately
+//         devtoolsOpen = false;
+//     };
 
-    const check = () => {
-        try {
-            if (detectDevTools()) {
-                handleDevToolsDetected();
-            } else {
-                handleDevToolsClosed();
-            }
-        } catch (error) {
-            // Silent fail
-        }
-    };
+//     const check = () => {
+//         try {
+//             if (detectDevTools()) {
+//                 handleDevToolsDetected();
+//             } else {
+//                 handleDevToolsClosed();
+//             }
+//         } catch (error) {
+//             // Silent fail
+//         }
+//     };
 
-    // Check every second
-    setInterval(check, 1000);
+//     // Check every second
+//     setInterval(check, 1000);
     
-    // Check on resize
-    window.addEventListener('resize', check);
+//     // Check on resize
+//     window.addEventListener('resize', check);
 
-    // Initial check
-    check();
+//     // Initial check
+//     check();
 
-})();
+// })();
 
 // ============================================
 // MOBILE MENU FUNCTIONALITY

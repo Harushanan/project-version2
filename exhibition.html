@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Virtual Exhibition | The TIC Archives</title>
+    <meta name="description" content="Virtual Exhibition on Ilankai Tamil history, heritage, political resistance and culture">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Noto+Sans+Tamil:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Exhibition CSS -->
+    <link rel="stylesheet" href="./exhibition.css">
+    
+</head>
+<body>
+
+<!-- Header -->
+<header role="banner">
+        <div class="header-container">
+            <div class="header-main">
+                <!-- Logo -->
+                <a href="{{ route('client.home') }}" class="logo" aria-label="Tamil Bookshop Archives Home">
+                    <img src="logo.png" alt="Tamil Bookshop Archives Logo" width="60" height="60">
+                    <div class="logo-text">
+                        <span class="ta">The TIC Archives</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="main-nav" role="navigation" aria-label="Main navigation">
+                    <ul>
+                        <li>
+                            <a href="./index.html" 
+                               class="{{ Route::is('client.home') ? 'active' : '' }}"
+>
+                                Home
+                            </a>
+                        </li>
+
+                      
+
+                        <li class="dropdown-parent">
+                            <a href="./coming-soon.html" 
+                               class="{{ Route::is('client.about') || Route::is('client.news') ? 'active' : '' }}"
+                               aria-haspopup="true">
+                                About
+                            </a>
+                            <div class="dropdown" role="menu">
+                                <a href="./coming-soon.html" role="menuitem">About Us</a>
+                                <a href="./coming-soon.html" role="menuitem">News</a>
+                                <a href="./coming-soon.html" role="menuitem">Support Us</a>
+                            </div>
+                        </li>
+
+                        <li class="dropdown-parent">
+                            <a href="./coming-soon.html" class="{{ Route::is('client.archivecentrecollection') ? 'active' : '' }}"
+                               aria-haspopup="true">
+                                Archive Centre
+                            </a>
+                            <div class="dropdown" role="menu">
+                                <a href="./coming-soon.html" role="menuitem">Collection</a>
+                                <a href="./coming-soon.html" role="menuitem">Online Catalogue</a>
+                                <a href="./coming-soon.html" role="menuitem">Google Arts & Heritage</a>
+                            </div>
+                        </li>
+
+                        <li class="dropdown-parent">
+                            <a href="./coming-soon.html" aria-haspopup="true">Exhibition & Heritage</a>
+                            <div class="dropdown" role="menu">
+                                <a href="./coming-soon.html" role="menuitem">ToL Exhibition</a>
+                                <a href="./coming-soon.html" role="menuitem">Heritage Centre</a>
+                                <a href="./coming-soon.html" role="menuitem">Subject Guides</a>
+                                <a href="./coming-soon.html" role="menuitem">Historical Timeline</a>
+                                <a href="./coming-soon.html" role="menuitem">Learning Workshops</a>
+                            </div>
+                        </li>
+
+                        <li class="dropdown-parent">
+                            <a href="#" aria-haspopup="true">What's On</a>
+                            <div class="dropdown" role="menu">
+                                <a href="./coming-soon.html" role="menuitem">Latest Events</a>
+                                <a href="./coming-soon.html" role="menuitem">Projects & Programs</a>
+                                <a href="./coming-soon.html" role="menuitem">Collaborate</a>
+                            </div>
+                        </li>
+
+                        <li class="dropdown-parent">
+                            <a href="#" aria-haspopup="true">Join</a>
+                            <div class="dropdown" role="menu">
+                                <a href="./coming-soon.html" role="menuitem">Membership</a>
+                                <a href="#donate" role="menuitem">Donate</a>
+                            </div>
+                        </li>
+
+                        <li>
+                            <a href="./coming-soon.html" 
+                               class="{{ Route::is('client.publications') ? 'active' : '' }}">
+                                Shop
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="contact.html" 
+                               class="{{ Route::is('client.contactus') ? 'active' : '' }}">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" 
+                        id="mobileMenuBtn" 
+                        aria-label="Open mobile menu"
+                        aria-expanded="false"
+                        aria-controls="mobileNavOffcanvas">
+                    ☰
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Offcanvas -->
+<!-- Mobile Navigation Offcanvas -->
+<div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+<div class="mobile-nav-offcanvas" id="mobileNavOffcanvas" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+        <div class="mobile-nav-header">
+            <span style="font-weight: 700; color: var(--accent-dark);">Menu</span>
+            <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close mobile menu">✕</button>
+        </div>
+        <nav class="mobile-nav-menu" role="navigation" aria-label="Mobile navigation">
+            <ul>
+                <li><a href="./index.html" class="{{ Route::is('client.home') ? 'active' : '' }}">Home</a></li>
+                
+                <li>
+                    <button class="mobile-dropdown-toggle" data-target="aboutDropdown" aria-expanded="false">
+                        About <span>▾</span>
+                    </button>
+                    <div class="mobile-dropdown-content" id="aboutDropdown">
+                        <a href="./collections.html">About Us</a>
+                        <a href="./collections.html">News</a>
+                        <a href="./collections.html">Support Us</a>
+                    </div>
+                </li>
+
+                <li>
+                    <button class="mobile-dropdown-toggle" data-target="archiveDropdown" aria-expanded="false">
+                        Archive Centre <span>▾</span>
+                    </button>
+                    <div class="mobile-dropdown-content" id="archiveDropdown">
+                        <a href="./collections.html">Collection</a>
+                        <a href="./collections.html">Online Catalogue</a>
+                        <a href="./collections.html">Google Arts & Heritage</a>
+                    </div>
+                </li>
+
+                <li>
+                    <button class="mobile-dropdown-toggle" data-target="exhibitionDropdown" aria-expanded="false">
+                        Exhibition & Heritage <span>▾</span>
+                    </button>
+                    <div class="mobile-dropdown-content" id="exhibitionDropdown">
+                        <a href="./collections.html">ToL Exhibition</a>
+                        <a href="./collections.html">Heritage Centre</a>
+                        <a href="./collections.html">Subject Guides</a>
+                        <a href="./collections.html">Historical Timeline</a>
+                        <a href="./collections.html">Learning Workshops</a>
+                    </div>
+                </li>
+
+                <li>
+                    <button class="mobile-dropdown-toggle" data-target="whatsOnDropdown" aria-expanded="false">
+                        What's On <span>▾</span>
+                    </button>
+                    <div class="mobile-dropdown-content" id="whatsOnDropdown">
+                        <a href="./collections.html">Latest Events</a>
+                        <a href="./collections.html">Projects & Programs</a>
+                        <a href="./collections.html">Collaborate</a>
+                    </div>
+                </li>
+
+                <li>
+                    <button class="mobile-dropdown-toggle" data-target="joinDropdown" aria-expanded="false">
+                        Join <span>▾</span>
+                    </button>
+                    <div class="mobile-dropdown-content" id="joinDropdown">
+                        <a href="./collections.html">Membership</a>
+                        <a href="#donate">Donate</a>
+                    </div>
+                </li>
+
+                <li><a href="./collections.html">Shop</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+<main id="main-content" class="px-4 sm:px-8 lg:px-16">
+    <div class="max-w-6xl mx-auto relative">
+        <div class="hero-container ">
+            <div class="hero-container">
+    <img src="image/A4.jpg" class="collage-img z-10" alt="Road with bike"> 
+    
+    <img src="image/A1.jpg" class="collage-img z-20" alt="Elderly man">
+    
+    <img src="image/A2.jpeg" class="collage-img z-30" alt="Elderly woman">
+    
+    <img src="image/A6.png" class="collage-img z-10" alt="Beach">
+</div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-16 max-w-6xl mx-auto pt-4 md:pt-0">
+            
+            <div class="block md:hidden col-span-1 my-4">
+                <div class="intro-box bg-red-600 text-white font-bold text-sm uppercase p-3 mb-4 text-center rounded">
+                    EXHIBITION SECTIONS
+                </div>
+                <ul class="space-y-3">
+                    <li><a href="#" data-page="history" class="text-black font-semibold uppercase hover:text-red-600 block text-center py-2 border-b js-spa-link">HISTORY & HERITAGE</a></li>
+                    <li><a href="#" data-page="political" class="text-black font-semibold uppercase hover:text-red-600 block text-center py-2 border-b js-spa-link">POLITICAL RESISTANCE</a></li>
+                    <li><a href="#" data-page="consequences" class="text-black font-semibold uppercase hover:text-red-600 block text-center py-2 border-b js-spa-link">CONSEQUENCES OF WAR</a></li>
+                    <li><a href="#" data-page="mullivaikal" class="text-black font-semibold uppercase hover:text-red-600 block text-center py-2 border-b js-spa-link">MULLIVAIKAL</a></li>
+                    <li><a href="#" data-page="art" class="text-black font-semibold uppercase hover:text-red-600 block text-center py-2 js-spa-link">ART & CULTURE</a></li>
+                </ul>
+                <hr class="my-6">
+            </div>
+
+            <aside class="sidebar hidden md:block md:col-span-1  h-full p-4 border-r border-gray-200">
+                <div class="intro-box bg-red-600 text-white font-bold text-sm uppercase p-3 mb-8 text-center rounded">
+                    INTRODUCTION
+                </div>
+
+                <ul class="space-y-6">
+                    <li><a href="#" data-page="history" class="text-black font-semibold uppercase hover:text-red-600 block js-spa-link">HISTORY & HERITAGE</a></li>
+                    <li><a href="#" data-page="political" class="text-black font-semibold uppercase hover:text-red-600 block js-spa-link">POLITICAL RESISTANCE</a></li>
+                    <li><a href="#" data-page="consequences" class="text-black font-semibold uppercase hover:text-red-600 block js-spa-link">CONSEQUENCES OF WAR</a></li>
+                    <li><a href="#" data-page="mullivaikal" class="text-black font-semibold uppercase hover:text-red-600 block js-spa-link">MULLIVAIKAL</a></li>
+                    <li><a href="#" data-page="art" class="text-black font-semibold uppercase hover:text-red-600 block js-spa-link">ART & CULTURE</a></li>
+                </ul>
+            </aside>
+
+            <div class="md:col-span-3 hero-text-content" id="content-area">
+                <h2 class="text-4xl font-bold mb-2 text-black" id="content-heading">வணக்கம்</h2>
+                <h1 class="text-5xl font-extrabold mb-6 tracking-tight text-black" id="content-subheading">WELCOME TO OUR<br> VIRTUAL EXHIBITION</h1>
+                <p class="text-lg leading-relaxed mb-6 text-black max-w-3xl" id="content-paragraph">
+                    <b>It is a collective and community-driven project, organised by volunteers attached to the Tamil Information Centre. This exhibition is a project born from loss; we work in the wake of the loss and suffering of Mullivaikal, determined to remember the suffering of the Tamil people. 
+                    We also mourn the passing of TIC's executive director V.S. Nadarajah. His vision and guidance this work has been a challenge, but we hope that we have been true to his vision, 
+                    and have chosen to mark 18 May known as Tamil Genocide Day amongst many Tamil's by hosting this exhibition that demonstrates the resilience and creativity of the community despite the violence inflicted upon them.</b>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <section class="let-us-begin text-center my-20">
+        <p class="tamil-text mb-2">ஆரம்பித்துவிடுவோம்…</p>
+        <p class="english-text tracking-[0.4em] uppercase">LET US BEGIN…</p>
+    </section>
+
+    <div class="max-w-6xl mx-auto my-16">
+        <div class="sections-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 mb-6">
+            
+            <a href="./coming-soon.html">
+              <div class="relative overflow-hidden cursor-pointer hover:shadow-xl transition-shadow">
+                 <img src="image/e1.jpg" class="w-full h-80 object-cover" alt="Ancient History">
+              </div>
+            </a>
+
+            <a href="./coming-soon.html">
+            <div class="relative overflow-hidden cursor-pointer hover:shadow-xl transition-shadow">
+                <img src="image/e3.jpg" class="w-full h-80 object-cover" alt="Political Resistance">
+            </div>
+            </a>
+
+             <a href="./coming-soon.html">
+            <div class="relative overflow-hidden cursor-pointer hover:shadow-xl transition-shadow">
+                <img src="image/e2.jpg" class="w-full h-80 object-cover" alt="Consequences of Conflict">
+            </div>
+            </a>
+        </div>
+
+        <div class="bottom-sections grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-4xl mx-auto">
+            <a href="./coming-soon.html">
+            <div class="relative overflow-hidden cursor-pointer hover:shadow-xl transition-shadow">
+                <img src="image/e2.jpg" class="w-full h-80 object-cover" alt="Mullivaikal">
+            </div>
+            </a>
+
+            <a href="./coming-soon.html">
+            <div class="relative overflow-hidden cursor-pointer hover:shadow-xl transition-shadow">
+                <img src="image/e5.jpg" class="w-full h-80 object-cover" alt="Tamil Art & Culture">
+            </div>
+            </a>
+        </div>
+    </div>
+</main>
+<!-- Footer (unchanged) -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Tamil News</h3>
+                <p style="color: #ccc; font-size: 0.9rem;">
+                    Your trusted source for Tamil community news, culture, and heritage updates from Sri Lanka and around the world.
+                </p>
+                <p style="color: #999; font-size: 0.85rem; margin-top: 1rem;">
+                    © Tamil Information Centre • Est. 1983
+                </p>
+                <div style="margin-bottom: 1.2rem;">
+                    <form action="https://www.paypal.com/donate" method="post" target="_blank">
+                        <input type="hidden" name="hosted_button_id" value="">
+                        <button type="submit" style="background-color:#0070ba;color:white;padding:10px 18px;border:none;border-radius:6px;cursor:pointer;font-size:0.95rem;font-weight:600;display:inline-flex;align-items:center;gap:8px;">
+                            <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="PayPal" style="height:18px;">Donate with PayPal
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a href="exhibition.html">Heritage</a></li>
+                    <li><a href="#">Culture</a></li>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>©Tamil Information Centre TIC Archives || 2025 All rights reserved</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Mobile sidebar toggle
+    const btn = document.getElementById('mobileMenuBtn');
+    const offcanvas = document.getElementById('mobileNavOffcanvas');
+    const overlay = document.getElementById('mobileNavOverlay');
+    const closeBtn = document.getElementById('mobileNavClose');
+
+    btn.addEventListener('click', () => {
+        offcanvas.classList.add('active');
+        overlay.classList.add('active');
+    });
+    closeBtn.addEventListener('click', () => {
+        offcanvas.classList.remove('active');
+        overlay.classList.remove('active');
+    });
+    overlay.addEventListener('click', () => {
+        offcanvas.classList.remove('active');
+        overlay.classList.remove('active');
+    });
+  (function() {
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileNavOffcanvas = document.getElementById('mobileNavOffcanvas');
+    const mobileNavOverlay = document.getElementById('mobileNavOverlay');
+    const mobileNavClose = document.getElementById('mobileNavClose');
+    
+    if (!mobileMenuBtn || !mobileNavOffcanvas) return;
+    
+    function openMobileMenu() {
+        mobileNavOffcanvas.classList.add('active');
+        mobileNavOverlay?.classList.add('active');
+        mobileMenuBtn.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+        
+        // Focus trap
+        const focusableElements = mobileNavOffcanvas.querySelectorAll('a, button');
+        if (focusableElements.length) {
+            focusableElements[0].focus();
+        }
+    }
+    
+    function closeMobileMenu() {
+        mobileNavOffcanvas.classList.remove('active');
+        mobileNavOverlay?.classList.remove('active');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+        mobileMenuBtn.focus();
+    }
+    
+    mobileMenuBtn.addEventListener('click', openMobileMenu);
+    mobileNavClose?.addEventListener('click', closeMobileMenu);
+    mobileNavOverlay?.addEventListener('click', closeMobileMenu);
+    
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && mobileNavOffcanvas.classList.contains('active')) {
+            closeMobileMenu();
+        }
+    });
+    
+    // Mobile dropdown toggles
+    const dropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
+    dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', function() {
+            const targetId = this.getAttribute('data-target');
+            const targetContent = document.getElementById(targetId);
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            
+            // Close all other dropdowns
+            dropdownToggles.forEach(t => {
+                if (t !== this) {
+                    t.setAttribute('aria-expanded', 'false');
+                    const tId = t.getAttribute('data-target');
+                    document.getElementById(tId)?.classList.remove('active');
+                }
+            });
+            
+            // Toggle current dropdown
+            targetContent?.classList.toggle('active');
+            this.setAttribute('aria-expanded', !isExpanded);
+        });
+    });
+})();
+
+// ============================================
+// BACK TO TOP BUTTON
+// ============================================
+(function() {
+    const backToTop = document.getElementById('backToTop');
+    if (!backToTop) return;
+    
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTop.classList.add('visible');
+        } else {
+            backToTop.classList.remove('visible');
+        }
+    });
+    
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+})();
+
+    // SPA content switching
+    const links = document.querySelectorAll('aside a, #mobileNavOffcanvas a');
+    const heading = document.getElementById('content-heading');
+    const subheading = document.getElementById('content-subheading');
+    const paragraph = document.getElementById('content-paragraph');
+
+    const pageContent = {
+        history: { heading: "வணக்கம்", subheading: "HISTORY & HERITAGE", paragraph: "<b>This section contains the history and heritage of the Tamil community...</b>" },
+        political: { heading: "வணக்கம்", subheading: "POLITICAL RESISTANCE", paragraph: "<b>This section covers political resistance and struggles...</b>" },
+        consequences: { heading: "வணக்கம்", subheading: "CONSEQUENCES OF WAR", paragraph: "<b>Here we document the consequences of war on the Tamil people...</b>" },
+        mullivaikal: { heading: "வணக்கம்", subheading: "MULLIVAIKAL", paragraph: "<b>This section highlights the Mullivaikal tragedy...</b>" },
+        art: { heading: "வணக்கம்", subheading: "ART & CULTURE", paragraph: "<b>Explore Tamil art and culture in this section...</b>" }
+    };
+
+    links.forEach(link => {
+        link.addEventListener('click', e => {
+            e.preventDefault();
+            const page = link.dataset.page;
+            const content = pageContent[page];
+            heading.innerHTML = content.heading;
+            subheading.innerHTML = content.subheading;
+            paragraph.innerHTML = content.paragraph;
+
+            // Close mobile menu on click
+            offcanvas.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+    });
+    // ... existing scripts ...
+
+// ============================================
+// SPA content switching (UPDATED)
+// ============================================
+(function() {
+    // Select all exhibition links (desktop sidebar, mobile block, and mobile offcanvas menu)
+    const exhibitionLinks = document.querySelectorAll('.js-spa-link, .mobile-nav-menu a[data-page]');
+    
+    const heading = document.getElementById('content-heading');
+    const subheading = document.getElementById('content-subheading');
+    const paragraph = document.getElementById('content-paragraph');
+    const offcanvas = document.getElementById('mobileNavOffcanvas');
+    const overlay = document.getElementById('mobileNavOverlay');
+
+    const pageContent = {
+        history: { heading: "வணக்கம்", subheading: "HISTORY & HERITAGE", paragraph: "<b>This section contains the history and heritage of the Tamil community...</b>" },
+        political: { heading: "வணக்கம்", subheading: "POLITICAL RESISTANCE", paragraph: "<b>This section covers political resistance and struggles...</b>" },
+        consequences: { heading: "வணக்கம்", subheading: "CONSEQUENCES OF WAR", paragraph: "<b>Here we document the consequences of war on the Tamil people...</b>" },
+        mullivaikal: { heading: "வணக்கம்", subheading: "MULLIVAIKAL", paragraph: "<b>This section highlights the Mullivaikal tragedy...</b>" },
+        art: { heading: "வணக்கம்", subheading: "ART & CULTURE", paragraph: "<b>Explore Tamil art and culture in this section...</b>" }
+    };
+
+    exhibitionLinks.forEach(link => {
+        link.addEventListener('click', e => {
+            e.preventDefault(); // <-- THIS IS THE FIX: It stops the browser from scrolling to the top.
+            
+            const page = link.dataset.page;
+            // Ensure only exhibition pages are processed
+            if (page && pageContent[page]) {
+                const content = pageContent[page];
+                heading.innerHTML = content.heading;
+                subheading.innerHTML = content.subheading;
+                paragraph.innerHTML = content.paragraph;
+            }
+
+            // Close mobile menu if the link was clicked inside the offcanvas
+            if (offcanvas?.classList.contains('active')) {
+                offcanvas.classList.remove('active');
+                overlay.classList.remove('active');
+            }
+        });
+    });
+})();
+</script>
+</script>
+</body>
+</html>
