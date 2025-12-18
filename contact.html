@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="./contact.css"> </head>
 <body>
     
+    <!-- Header -->
     <header role="banner">
         <div class="header-container">
             <div class="header-main">
@@ -89,13 +90,13 @@
                         <li class="dropdown-parent">
                             <a href="#" aria-haspopup="true">Join</a>
                             <div class="dropdown" role="menu">
-                                <a href="./coming-soon.html" role="menuitem">Membership</a>
+                                <a href="./member.html" role="menuitem">Membership</a>
                                 <a href="#donate" role="menuitem">Donate</a>
                             </div>
                         </li>
 
                         <li>
-                            <a href="./coming-soon.html" 
+                            <a href="./publication.html" 
                                class="{{ Route::is('client.publications') ? 'active' : '' }}">
                                 Shop
                             </a>
@@ -183,12 +184,12 @@
                         Join <span>▾</span>
                     </button>
                     <div class="mobile-dropdown-content" id="joinDropdown">
-                        <a href="./collections.html">Membership</a>
+                        <a href="./member.html">Membership</a>
                         <a href="#donate">Donate</a>
                     </div>
                 </li>
 
-                <li><a href="./collections.html">Shop</a></li>
+                <li><a href="./publication.html">Shop</a></li>
                 <li><a href="./contact.html">Contact</a></li>
             </ul>
         </nav>
