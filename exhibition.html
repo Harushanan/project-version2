@@ -18,6 +18,65 @@
 
     <!-- Exhibition CSS -->
     <link rel="stylesheet" href="./exhibition.css">
+
+    <style>
+        .heritage-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.heritage-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+
+  width: 100%;
+  max-width: 1400px;   /* ⬅ INCREASE WIDTH */
+  padding: 20px 40px;
+
+  font-family: "Georgia", "Times New Roman", serif;
+}
+
+.brand-logo {
+  width: 110px;
+  height: 55px;
+  background-color: #0f172a;
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 600;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 2px;
+}
+
+.brand-text {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #111;
+}
+
+.brand-title {
+  font-size: 22px;
+  letter-spacing: 3px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.brand-tagline {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.divider {
+  font-size: 30px;
+}
+
+    </style>
     
 </head>
 <body>
@@ -128,6 +187,18 @@
             </div>
         </div>
     </header>
+
+    <section class="heritage-brand">
+  <div class="brand-logo">TL</div>
+
+  <div class="brand-text">
+    <span class="brand-title">TAMILS OF LANKA</span>
+    <span class="divider">|</span>
+    <span class="brand-tagline">A Timeless Heritage</span>
+    <span class="divider">|</span>
+  </div>
+</section>
+
 
     <!-- Mobile Navigation Offcanvas -->
 <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>

@@ -18,15 +18,155 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./style.css">
-    
+    <style>
+        /* ===============================
+   ROOT VARIABLES
+================================ */
+:root {
+    --primary-bg:#f6e3c5;;
+    --primary-gold: #c5a059;
+    --accent-dark: #0f2540;
+    --accent-muted: #bfa98b;
+    --accent-red: #8e1b1b;
+    --card-bg: #f6ece0;
+    --border-radius: 12px;
+}
+
+/* ===============================
+   BASE
+================================ */
+body {
+    background-color:#f6e3c5;;
+    font-family: 'Inter', sans-serif;
+    color: var(--accent-dark);
+    overflow-x: hidden;
+}
+
+/* ===============================
+   HERO SECTION
+================================ */
+.archive-hero {
+    background-color: #e2caa8;
+    padding: 50px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--accent-muted);
+    margin-bottom: 0.5rem;
+}
+
+.archive-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.archive-tagline {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0.85;
+    border-top: 1px solid var(--accent-muted);
+    padding-top: 1.5rem;
+}
+
+/* ===============================
+   ESTABLISHED TEXT
+================================ */
+.established-text {
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin: 20px 0 40px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+/* ===============================
+   ARCHIVE CONTENT
+================================ */
+.archive-history {
+    max-width: 900px;
+    margin: auto;
+    padding: 0 2rem 5rem;
+}
+
+.history-article {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.lead-text {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    font-weight: 600;
+    margin-bottom: 30px;
+    border-left: 5px solid var(--accent-red);
+    padding-left: 20px;
+}
+
+.content-main p {
+    font-size: 1.3rem;
+    line-height: 1.9;
+    margin-bottom: 25px;
+    color: #333;
+    text-align: justify;
+}
+
+/* ===============================
+   HIGHLIGHT / LEGACY
+================================ */
+.highlight-box {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    margin: 40px 0;
+    border: 1px solid var(--accent-muted);
+}
+
+.highlight-box p {
+    font-style: italic;
+    margin-bottom: 0;
+}
+
+.legacy-section {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 2px solid var(--primary-bg);
+}
+
+.legacy-section p {
+    font-weight: 600;
+    color: var(--accent-red);
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+    .archive-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .archive-hero {
+        padding: 50px 15px;
+    }
+
+    .lead-text {
+        font-size: 1.15rem;
+    }
+
+    .content-main p {
+        font-size: 1rem;
+    }
+}
+
+    </style>
+
 
 
 </head>
 <body>
-    <!-- Skip to content link for accessibility
-    <a href="#main-content" class="skip-link">Skip to main content</a> -->
 
-    <!-- Header -->
+      <!-- Header -->
     <header role="banner">
         <div class="header-container">
             <div class="header-main">
@@ -207,151 +347,59 @@
     </div>
 
     <!-- Main Content -->
-    <main id="main-content" role="main">
-        <div class="container">
-            <section class="hero-section">
-    <div class="hero-content">
-        <h1>Preserving Ilankai Tamil history, heritage & human rights</h1>
-        <p>A digital archive of documents, photographs, and recordings.</p>
+    <main>
+        <section class="archive-hero">
+            <div class="container">
+                <h1>History of Archive</h1>
+                <p class="archive-tagline">
+                    Preserving memory, history, and human rights for future generations
+                </p>
+            </div>
+        </section>
 
-        <br>
-        
-        <!-- Search Box -->
-        <form class="search-box" action="" method="GET" role="search">
-            <input 
-                type="search" 
-                name="q" 
-                placeholder="Search ..." 
-                aria-label="Search archive collection"
-                required
-            >
-            <button type="submit" aria-label="Search">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
-                    <path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="2" fill="none"/>
-                </svg>
-            </button>
-        </form>
-    </div>
+        <div class="established-text">
+            --- Established in 1979 ---
+        </div>
 
-    <div class="hero-image">
-        <img class="hero-image-content" 
-             src="https://assets.roar.media/assets/96JuXtPJnBASnRAT_Olai-Chuvadi.jpg"
-             alt="Tamil books and cultural artifacts"
-             loading="eager" />
-    </div>
-</section>
+        <section class="archive-history">
+            <article class="history-article">
+                
+                <p class="lead-text">
+                    The Tamil Information Centre (TIC) Digital Archive is an independent and authoritative repository dedicated to the collection, preservation, and dissemination of historical, cultural, and human rights documentation relating to Tamil-speaking people in Sri Lanka.
+                </p>
 
-<!-- Featured Collections Section -->
-<h2 class="section-title">Featured Collections</h2>
-<section class="featured-grid">
-    <article class="featured-card" tabindex="0">
-        <div class="card-thumb">
-            <img src="https://qph.cf2.quoracdn.net/main-qimg-747279d2d78783f27df8e9a8b25a2494-lq"
-                 alt="Archive Centre collection"
-                  draggable="false" ondragstart="return false;" 
-                 loading="lazy" />
-        </div>
-        <div class="featured-card-content">
-            <h3>Discover the Collections</h3>
-            <a href="./collections.html" class="explore-btn">Explore</a>
-        </div>
-    </article>
+                <div class="content-main">
+                    <p>
+                        Established in 1979 by Tamil activists based in the United Kingdom, the Tamil Information Centre has, for over four decades, played a pioneering role in the systematic documentation of first-hand, authentic, and verifiable information. From its early operations in London and Tamil Nadu, TIC emerged as one of the earliest and most professionally committed research and documentation organisations focused on the lived realities, historical experiences, and human rights conditions of Tamil-speaking communities.
+                    </p>
 
-    <article class="featured-card" tabindex="0">
-        <div class="card-thumb">
-            <img src="./image/exbihtion.jpeg"
-                 alt="ToL Exhibition"
-                  draggable="false" ondragstart="return false;" 
-                 loading="lazy" />
-        </div>
-        <div class="featured-card-content">
-            <h3>Explore the exhibition</h3>
-            <a href="./exhibition.html" class="explore-btn">Explore</a>
-        </div>
-    </article>
+                    <p>
+                        The archive reflects TIC’s principled commitment to human rights grounded in justice, equality, and respect for fundamental freedoms. TIC does not promote any particular political solution for Sri Lanka; rather, it maintains a neutral and rights-based approach, guided by the Universal Declaration of Human Rights (UDHR) and other internationally recognised human rights instruments.
+                    </p>
 
-    <article class="featured-card" tabindex="0">
-        <div class="card-thumb">
-            <img src="./image/museum.jpeg"
-                 alt="Heritage Hub"
-                  draggable="false" ondragstart="return false;" 
-                 loading="lazy" />
-        </div>
-        <div class="featured-card-content">
-            <h3>Explore the Heritage Museum</h3>
-            <a href="./Heritage Hub.html" class="explore-btn">Explore</a>
-        </div>
-    </article>
-</section>
+                    <div class="highlight-box">
+                        <p>
+                            Over the years, TIC researchers and contributors undertook their work under extremely challenging and often dangerous conditions, facing threats from military forces and armed groups in Sri Lanka and India. Despite these risks, they demonstrated exceptional dedication in collecting, safeguarding, and preserving critical records.
+                        </p>
+                    </div>
 
-<!-- New in Archive Section -->
-<h2 class="section-title">New in the Archive</h2>
-<section class="new-items-grid">
-    <article class="new-item-card">
-        <div class="new-item-image">
-            <img src="https://media.licdn.com/dms/image/v2/D5612AQEXEJvOB2ERCA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1689750105634?e=2147483647&v=beta&t=kdNoGPVR45GGD5MGsrDCu4PZAHBwD0uWLUYeCLSgAC8"
-                 alt="Traditional Tamil food"
-                  draggable="false" ondragstart="return false;" 
-                 loading="lazy" />
-        </div>
-        <div class="new-item-meta">
-            <strong>Traditional Food</strong>
-            <a href="./coming-soon.html" class="explore-btn">View Item</a>
-        </div>
-    </article>
+                    <p>
+                        The TIC Digital Archive contains a wide range of primary source materials, including affidavits, habeas corpus applications, official and unofficial documents, correspondence from detainees and political prisoners, eye-witness testimonies, reports from conflict zones, photographs, and audio-visual recordings of interviews and speeches. 
+                    </p>
 
-    <article class="new-item-card">
-        <div class="new-item-image">
-            <img src="https://i.guim.co.uk/img/static/sys-images/Admin/BkFill/Default_image_group/2011/12/14/1323896292041/Internally-displaced-Sri--005.jpg?width=465&dpr=1&s=none&crop=none"
-                 alt="Heritage sites in Sri Lanka"
-                  draggable="false" ondragstart="return false;" 
-                 loading="lazy" />
-        </div>
-        <div class="new-item-meta">
-            <strong>Heritage Sites</strong>
-            <a href="./coming-soon.html" class="explore-btn">View Item</a>
-        </div>
-    </article>
+                    <p>
+                        Through its extensive global network, TIC has collaborated with governmental and non-governmental organisations, legal professionals, and human rights defenders. Accuracy, integrity, and accountability form the foundation of the archive.
+                    </p>
 
-    <article class="new-item-card">
-        <div class="new-item-image">
-            <img src="https://powerkidtamil.com/wp-content/uploads/2022/08/powerkid-tamil-2-28-scaled.jpg"
-                 alt="Tamil culture and traditions"
-                  draggable="false" ondragstart="return false;" 
-                 loading="lazy" />
-        </div>
-        <div class="new-item-meta">
-            <strong>Tamil Culture</strong>
-            <a href="./coming-soon.html" class="explore-btn">View Item</a>
-        </div>
-    </article>
-
-    <article class="new-item-card">
-        <div class="new-item-image">
-            <img src="https://img.freepik.com/premium-photo/pongal-festival-harvest-with-earthen-pots-rice-crops_1003686-53900.jpg"
-                 alt="Pongal festival celebration"
-                  draggable="false" ondragstart="return false;" 
-                 loading="lazy" />
-        </div>
-        <div class="new-item-meta">
-            <strong>Celebrate</strong>
-            <a href="./coming-soon.html" class="explore-btn">View Item</a>
-        </div>
-    </article>
-</section>
-
-<!-- Call to Action Section -->
-<section class="cta-section">
-    <div class="cta-content">
-        <h2>History of TIC Archives</h2>
-        <p>70 Years of Ilankai Tamils activism and documentation</p>
-    </div>
-    <a href="./history.html" class="cta-btn">Read More</a>
-</section>
-        </div>
+                    <div class="legacy-section">
+                        <p>
+                            The TIC Digital Archive is an extension of this legacy and a commitment to its continuation. It stands as both a historical record and a living resource for research, education, public engagement, and intergenerational memory.
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </section>
     </main>
-
 <!-- footer  -->
    <footer>
     <div class="container">
@@ -431,13 +479,14 @@
     </div>
   </footer>
 <!-- footer  -->
+
               
                     <!-- <div style="margin-top: 1.2rem;">
                         <form action="https://www.paypal.com/donate" method="post" target="_blank">
                             <input type="hidden" name="hosted_button_id" value="YOUR_BUTTON_ID">
                             <button type="submit" class="donate-btn" aria-label="Donate via PayPal">
                                 <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" 
-                                     alt="PayPal" 
+                                     alt="PayP al" 
                                      style="height:18px;">
                                 Donate with PayPal
                             </button>
@@ -496,84 +545,84 @@
         // ============================================
 // PROTECTION MEASURES (Consolidated)
 // ============================================
-// (function() {
-//     'use strict';
+(function() {
+    'use strict';
 
-//     // ------------------------------------
-//     // 1. BASIC COPY/SELECTION PROTECTION
-//     // ------------------------------------
-//     document.addEventListener('copy', e => e.preventDefault());
-//     document.addEventListener('cut', e => e.preventDefault());
-//     document.addEventListener('selectstart', e => e.preventDefault());
-//     document.addEventListener('contextmenu', e => e.preventDefault());
+    // ------------------------------------
+    // 1. BASIC COPY/SELECTION PROTECTION
+    // ------------------------------------
+    document.addEventListener('copy', e => e.preventDefault());
+    document.addEventListener('cut', e => e.preventDefault());
+    document.addEventListener('selectstart', e => e.preventDefault());
+    document.addEventListener('contextmenu', e => e.preventDefault());
 
-//     // ------------------------------------
-//     // 2. KEYBOARD SHORTCUTS BLOCKING
-//     // ------------------------------------
-//     document.addEventListener('keydown', function(e) {
-//         // Block: F12, Ctrl+Shift+I/J/C, Ctrl+U, Ctrl+S
-//         if (
-//             e.key === 'F12' ||
-//             (e.ctrlKey && e.shiftKey && ['I', 'J', 'C'].includes(e.key.toUpperCase())) ||
-//             (e.ctrlKey && e.key.toLowerCase() === 'u') ||
-//             (e.ctrlKey && e.key.toLowerCase() === 's')
-//         ) {
-//             e.preventDefault();
-//             e.stopPropagation();
-//             return false;
-//         }
-//     }, true); // Use capture phase
+    // ------------------------------------
+    // 2. KEYBOARD SHORTCUTS BLOCKING
+    // ------------------------------------
+    document.addEventListener('keydown', function(e) {
+        // Block: F12, Ctrl+Shift+I/J/C, Ctrl+U, Ctrl+S
+        if (
+            e.key === 'F12' ||
+            (e.ctrlKey && e.shiftKey && ['I', 'J', 'C'].includes(e.key.toUpperCase())) ||
+            (e.ctrlKey && e.key.toLowerCase() === 'u') ||
+            (e.ctrlKey && e.key.toLowerCase() === 's')
+        ) {
+            e.preventDefault();
+            e.stopPropagation();
+            return false;
+        }
+    }, true); // Use capture phase
 
-//     // ------------------------------------
-//     // 3. DEVTOOLS DETECTION
-//     // ------------------------------------
-//     let devtoolsOpen = false;
-//     const threshold = 160;
+    // ------------------------------------
+    // 3. DEVTOOLS DETECTION
+    // ------------------------------------
+    let devtoolsOpen = false;
+    const threshold = 160;
 
-//     const detectDevTools = () => {
-//         // Check window size difference
-//         const widthDiff = window.outerWidth - window.innerWidth;
-//         const heightDiff = window.outerHeight - window.innerHeight;
-//         return widthDiff > threshold || heightDiff > threshold;
-//     };
+    const detectDevTools = () => {
+        // Check window size difference
+        const widthDiff = window.outerWidth - window.innerWidth;
+        const heightDiff = window.outerHeight - window.innerHeight;
+        return widthDiff > threshold || heightDiff > threshold;
+    };
 
-//     const handleDevToolsDetected = () => {
-//         if (!devtoolsOpen) {
-//             devtoolsOpen = true;
-//             console.warn('⚠️ Developer tools detected - Redirecting...');
+    const handleDevToolsDetected = () => {
+        if (!devtoolsOpen) {
+            devtoolsOpen = true;
+            console.warn('⚠️ Developer tools detected - Redirecting...');
             
-//             // Immediate redirect to Google
-//             window.location.href = 'https://www.google.com';
-//         }
-//     };
+            // Immediate redirect to Google
+            window.location.href = 'https://www.google.com';
+        }
+    };
 
-//     const handleDevToolsClosed = () => {
-//         // No need for cleanup since we redirect immediately
-//         devtoolsOpen = false;
-//     };
+    const handleDevToolsClosed = () => {
+        // No need for cleanup since we redirect immediately
+        devtoolsOpen = false;
+    };
 
-//     const check = () => {
-//         try {
-//             if (detectDevTools()) {
-//                 handleDevToolsDetected();
-//             } else {
-//                 handleDevToolsClosed();
-//             }
-//         } catch (error) {
-//             // Silent fail
-//         }
-//     };
+    const check = () => {
+        try {
+            if (detectDevTools()) {
+                handleDevToolsDetected();
+            } else {
+                handleDevToolsClosed();
+            }
+        } catch (error) {
+            // Silent fail
+        }
+    };
 
-//     // Check every second
-//     setInterval(check, 1000);
+    // Check every second
+    setInterval(check, 1000);
     
-//     // Check on resize
-//     window.addEventListener('resize', check);
+    // Check on resize
+    window.addEventListener('resize', check);
 
-//     // Initial check
-//     check();
+    // Initial check
+    check();
 
-// })();
+})();
 
 // ============================================
 // MOBILE MENU FUNCTIONALITY
