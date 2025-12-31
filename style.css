@@ -72,12 +72,15 @@
             color: var(--accent-dark);
         }
 
-        .logo img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
+       .logo img {
+    width: 100px;
+    height: 100px;
+  
+    object-fit: cover;
+    border: 2px solid #ddd;
+    background-color: #fff;
+}
+
 
         .logo-text {
             display: flex;

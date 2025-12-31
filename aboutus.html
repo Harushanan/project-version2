@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>TIC Archives</title>
-    <meta name="description" content="@yield('meta_description', 'Tamil Bookshop Archives - Preserving Tamil heritage, culture, and literature since 1983')">
+    <title>About - TIC Archives</title>
+    <meta name="description" content="Tamil Information Centre - Committed to Human Rights and Community Development since 1983">
     
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,20 +13,16 @@
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="./style.css">
-        <link rel="stylesheet" href="./form.css">
-
+     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./aboutus.css">
 </head>
 <body>
-    <!-- Skip to content link for accessibility
-    <a href="#main-content" class="skip-link">Skip to main content</a> -->
 
-    <!-- Header -->
-     <!-- Header -->
+      <!-- Header -->
     <header role="banner">
         <div class="header-container">
             <div class="header-main">
@@ -206,181 +202,208 @@
         </nav>
     </div>
 
-<main id="main-content">
-    <!-- Hero -->
-<section class="hero-card text-center">
-    <h1>Join Tamil Information Centre</h1>
-    <p>
-        Become a member and support our commitment to human rights, peace,
-        and community development for Tamil-speaking people.
-    </p>
+ 
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <section class="about-header">
+            <h1>About Tamil Information Centre</h1>
+            <p>Committed to Human Rights and Community Development since 1983</p>
+        </section>
+
+        <section class="about-section about-tic">
+            <h2>About TIC</h2>
+            <p>The Tamil Information Centre (TIC) is committed to human rights and community development. Over the years, the TIC has become a prominent resource centre for the promotion of human rights, and acts as a focal point for information on aspects of life relating to the Tamil-speaking people of Sri Lanka.</p>
+            <p>The TIC is an organisation for people with interest in human rights, humanitarian assistance and political, social and cultural development of the Tamil-speaking people of Sri Lanka.</p>
+            <p>The TIC does not implement relief or development projects, but provides services and support to organisations and groups involved in relief, rehabilitation and development.</p>
+        </section>
+
+
+<section class="vision-mission">
+    <div class="vision-mission-box vision">
+       
+            <i class="fa-solid fa-eye fa-3x"></i>
+       
+        <h3>Vision</h3>
+        <p>The people live with dignity free from persecution and their civil, political, economic and cultural rights as enshrined in the Universal Declaration of Human Rights (UDHR) and other international instruments of the United Nations are recognised.</p>
+    </div>
+    <div class="vision-mission-box mission">
+       
+            <i class="fa-solid fa-bullseye fa-3x"></i>
+      
+        <h3>Mission</h3>
+        <p>The Tamil Information Centre's mission is to empower people, particularly those suffering persecution and subjected to human rights abuses, valuing the distinct identities and differences among them and to improve the quality of life through access to knowledge. To fulfil its mission the TIC strives to:</p>
+    </div>
 </section>
-    <!-- Benefits Card (centered) -->
-    <section class="benefits-card">
-        <h2>Membership Benefits</h2>
-        <div class="benefits-wrapper">
-            <ul class="benefits-list">
-                <li>Access to exclusive updates and newsletters</li>
-                <li>Invitation to TIC events, workshops, and seminars</li>
-                <li>Support our documentation and research efforts</li>
-                <li>Contribute to advocacy for human rights and peace</li>
-                <li>Network with like-minded individuals and organisations</li>
-            </ul>
-            <p class="note">Note: Membership is free. Voluntary contribution welcomed (£20 suggested annual donation).</p>
-        </div>
-    </section>
 
-    <!-- Form Wrapper (narrower width) -->
-    <div class="form-wrapper">
-        <section id="formContainer" class="form-card">
-            <h2>Membership Application Form</h2>
-            <p>Thank you for your interest in becoming a member of the Tamil Information Centre (TIC).</p>
+        <section class="about-section guiding-principle">
+            <h2>The Guiding Principle</h2>
+            <p>A primary function of the TIC is to provide a forum for the exchange of views and information. The TIC fosters cooperation between governmental, non-governmental and intergovernmental agencies, and supports activities that promote human rights, peace and community development.</p>
+        </section>
 
-            <form id="membershipForm" action="https://formspree.io/f/xblrdlwk" method="POST">
-                <div class="row g-4">
-                    <div class="col-lg-3">
-                        <label for="title">Title</label>
-                        <select class="form-select" id="title" name="title">
-                            <option>Select</option>
-                            <option>Mr</option>
-                            <option>Mrs</option>
-                            <option>Ms</option>
-                            <option>Dr</option>
-                            <option>Other</option>
-                        </select>
-                    </div>
-                    <div class="col-lg-9">
-                        <label for="name">Full Name <span class="req">*</span></label>
-                        <input type="text" class="form-control" id="name" name="name" required>
-                    </div>
+        <section class="about-section peace-building">
+            <h2>Peace Building</h2>
+            <p>The TIC continues to prioritise peace building as an important area of work, realising emphasis on solidarity with human rights and justice groups throughout the world. The knowledge and experience of the TIC in this field have now been transformed into common guidelines for the promotion of peace and advocacy work and placed at the disposal of organisations involved in peace work, aimed at strengthening cooperative partnership.</p>
+        </section>
 
-                    <div class="col-lg-6">
-                        <label for="gender">Gender</label>
-                        <select class="form-select" id="gender" name="gender">
-                            <option>Prefer not to say</option>
-                            <option>Male</option>
-                            <option>Female</option>
-                            <option>Other</option>
-                        </select>
-                    </div>
-                    <div class="col-lg-6">
-                        <label for="dob">Date of Birth</label>
-                        <input type="date" class="form-control" id="dob" name="dob">
-                    </div>
-
-                    <div class="col-12">
-                        <label for="email">Email Address <span class="req">*</span></label>
-                        <input type="email" class="form-control" id="email" name="email" required>
-                    </div>
-
-                    <div class="col-12">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" class="form-control" id="phone" name="phone">
-                    </div>
-
-                    <div class="col-lg-6">
-                        <label for="country">Country <span class="req">*</span></label>
-                        <input type="text" class="form-control" id="country" name="country" placeholder="e.g. United Kingdom" required>
-                    </div>
-                    <div class="col-lg-6">
-                        <label for="city">City / Postcode</label>
-                        <input type="text" class="form-control" id="city" name="city">
-                    </div>
-
-                    <div class="col-12">
-                        <label for="address">Full Address</label>
-                        <textarea class="form-control" id="address" name="address" rows="3"></textarea>
-                    </div>
-
-                    <div class="col-12">
-                        <label for="occupation">Occupation / Profession</label>
-                        <input type="text" class="form-control" id="occupation" name="occupation">
-                    </div>
-
-                    <div class="col-12">
-                        <label for="membership-type">Membership Type</label>
-                        <select class="form-select" id="membership-type" name="membership-type">
-                            <option>Individual</option>
-                            <option>Family</option>
-                            <option>Student</option>
-                            <option>Organisation/Group</option>
-                            <option>Volunteer Only</option>
-                        </select>
-                    </div>
-
-                    <div class="col-12">
-                        <label>Areas of Interest <em>(select all that apply)</em></label>
-                        <div class="checkbox-grid">
-                            <div class="form-check"><input class="form-check-input" type="checkbox" name="interests" value="human-rights" id="int1"><label for="int1">Human Rights</label></div>
-                            <div class="form-check"><input class="form-check-input" type="checkbox" name="interests" value="peace-building" id="int2"><label for="int2">Peace Building</label></div>
-                            <div class="form-check"><input class="form-check-input" type="checkbox" name="interests" value="community-dev" id="int3"><label for="int3">Community Development</label></div>
-                            <div class="form-check"><input class="form-check-input" type="checkbox" name="interests" value="research" id="int4"><label for="int4">Research & Documentation</label></div>
-                            <div class="form-check"><input class="form-check-input" type="checkbox" name="interests" value="events" id="int5"><label for="int5">Events & Workshops</label></div>
-                        </div>
-                    </div>
-
-                    <div class="col-12">
-                        <label for="how-heard">How did you hear about TIC?</label>
-                        <select class="form-select" id="how-heard" name="how-heard">
-                            <option>Select</option>
-                            <option>TIC Website</option>
-                            <option>Social Media</option>
-                            <option>Friend/Family</option>
-                            <option>TIC Event</option>
-                            <option>News/Media</option>
-                            <option>Other</option>
-                        </select>
-                    </div>
-
-                    <div class="col-12">
-                        <label for="message">Why do you want to join TIC? / Additional Comments</label>
-                        <textarea class="form-control" id="message" name="message" rows="5"></textarea>
-                    </div>
-
-                    <div class="col-12">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="agree" required>
-                            <label class="form-check-label" for="agree">I agree to the terms and conditions and privacy policy <span class="req">*</span></label>
-                        </div>
-                    </div>
-
-                   <button type="submit" class="submit-btn" id="submitBtn">
-    <span class="btn-text">Submit Application</span>
-    <span class="btn-spinner"></span>
-</button>
-
-                </div>
- </form>
-        <!-- Success Message (overlay box over form) -->
-        <div id="successOverlay" class="success-overlay">
-            <div class="success-box">
-                <div class="tick">✓</div>
-                <h2>Thank You!</h2>
-                <p>Your membership application has been successfully submitted.</p>
-                <p>After submission, we will contact you via email.<br>
-                For questions, email: <strong>info.tic@sangu.org</strong> or call: <strong>020 8546 1560</strong></p>
-                <p>We look forward to welcoming you to the TIC family!</p>
+        <!--tic-glance-->
+<section class="tic-glance">
+    <h2>TIC at a Glance</h2>
+    <div class="glance-grid">
+        <!-- First Row: 4 Cards -->
+        <div class="glance-card">
+            <div class="icon-wrapper">
+                <i class="fa-solid fa-building-columns fa-4x"></i>
+            </div>
+            <div class="glance-content">
+                <h3>Structure</h3>
+                <p class="details">The TIC is based in London and operates under the direction of a volunteer Board, a minimum staff and volunteers. TIC draws on a pool of skilled volunteers, programme partners and associates and consultants to apply a wide range of expertise in addressing human rights, community development and peace issues.</p>
             </div>
         </div>
-        
-<p id="formStatus" style="color: #d63031; text-align: center; margin-top: 1.5rem; font-weight: 600; display: none;"></p>
-    </div>
 
-       
-    </section>
-
-
-        <!-- Donate Section -->
-        <div class="card text-center">
-            <h2>Support Us with a Donation</h2>
-            <p>Your generous contribution helps us continue our work.</p>
-            <form action="https://www.paypal.com/donate" method="post" target="_blank">
-                <input type="hidden" name="hosted_button_id" value="">
-                <button type="submit" class="submit-btn">Donate with PayPal</button>
-            </form>
+        <div class="glance-card">
+            <div class="icon-wrapper">
+                <i class="fa-solid fa-network-wired fa-4x"></i>
+            </div>
+            <div class="glance-content">
+                <h3>Communication, Cooperation and Network</h3>
+                <p class="details">A primary function of the TIC is to provide a forum for the exchange of views and information. The TIC has fostered links with governmental, non-governmental organisations and intergovernmental agencies and individuals world-wide. These links form the TIC's information infrastructure and facilitate information exchange...</p>
+            </div>
         </div>
-</main>
- <!-- footer  -->
+
+        <div class="glance-card">
+            <div class="icon-wrapper">
+                <i class="fa-solid fa-book-open fa-4x"></i>
+            </div>
+            <div class="glance-content">
+                <h3>Resource Centre</h3>
+                <p class="details">The TIC maintains a documentation unit which aims to provide a comprehensive information resource devoted entirely to issues relating to the Tamil-speaking people of Sri Lanka. The unique collection of nearly 25,000 items provides the support for research and has become a major resource...</p>
+            </div>
+        </div>
+
+        <div class="glance-card">
+            <div class="icon-wrapper">
+                <i class="fa-solid fa-magnifying-glass-chart fa-4x"></i>
+            </div>
+            <div class="glance-content">
+                <h3>Information, Research and Advocacy</h3>
+                <p class="details">A broad range of information, both specialist and general is provided by the TIC. The TIC believes that both research and political action are necessary to effect changes...</p>
+            </div>
+        </div>
+
+        <!-- Second Row: 3 Cards -->
+        <div class="second-row-wrapper">
+            <div class="glance-card">
+                <div class="icon-wrapper">
+                    <i class="fa-solid fa-bell fa-4x"></i>
+                </div>
+                <div class="glance-content">
+                    <h3>Current Awareness Service</h3>
+                    <p class="details">The TIC receives queries from NGOs, journalists... TIC's current awareness service has often proved cost effective to the users...</p>
+                </div>
+            </div>
+
+            <div class="glance-card">
+                <div class="icon-wrapper">
+                    <i class="fa-solid fa-handshake fa-4x"></i>
+                </div>
+                <div class="glance-content">
+                    <h3>Liaison with Organisations</h3>
+                    <p class="details">The TIC liaises with a wide variety of organisations to raise consciousness, promote dialogue...</p>
+                </div>
+            </div>
+
+            <div class="glance-card">
+                <div class="icon-wrapper">
+                    <i class="fa-solid fa-users-line fa-4x"></i>
+                </div>
+                <div class="glance-content">
+                    <h3>Community Development and Training</h3>
+                    <p class="details">The community development programme of the TIC involves women, elders... promotes social networking for writers and identifies markets.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+        <section class="work-partners">
+            <h2>Work with partners</h2>
+            <p>We work with partners in two capacities, either on a joint project to conduct an event or program to reduce costs, or as part of our advocacy program where we bring together different actors with expertise and a variety of complementary skills to achieve our objectives.</p>
+            <p>In other words TIC partnership is about providing the spaces where creative thoughts and ideas can emerge, gain support and build momentum in order to bring about positive transformation. Partnership working can also help to avoid unnecessary duplication of effort.</p>
+<a href="./collaborate.html" class="join-today">
+    Join Today
+</a>
+
+        </section>
+<!-- FAQ Section -->
+<section class="faq">
+    <h2>Frequently Asked Questions</h2>
+    
+    <div class="faq-accordion">
+        <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+                What is the main purpose of TIC? 
+                <span class="icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>The primary purpose of the Tamil Information Centre (TIC) is to collect, preserve, and provide access to information, documentation, and research materials concerning Tamil-speaking communities and related issues in Sri Lanka. It serves as a vital resource hub for understanding the historical, social, political, and cultural contexts affecting these communities.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+                Does TIC run relief or development projects? 
+                <span class="icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>No, TIC does not directly implement relief or development projects on the ground. Instead, it focuses on supporting organisations, researchers, and community groups engaged in such work by providing reliable information, documentation, research assistance, and advocacy support.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+                Where is TIC based? 
+                <span class="icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>The Tamil Information Centre is based in London, United Kingdom. It operates under the guidance of a volunteer Board of Trustees, with a dedicated team of staff and volunteers who manage its collections, services, and outreach activities.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+                Who can use TIC's resources? 
+                <span class="icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>TIC's resources are open to everyone with a genuine interest in Tamil-speaking communities and Sri Lankan issues. This includes researchers, academics, journalists, NGOs, human rights organisations, students, diaspora community members, policymakers, and the general public seeking credible information.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+                How extensive is the TIC collection? 
+                <span class="icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>TIC maintains an extensive archive of nearly 25,000 items, including books, reports, newspapers, periodicals, photographs, audio-visual materials, and digital resources. The collection covers a wide range of topics such as conflict, displacement, human rights, peace-building, resettlement, culture, and post-war developments.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+                How can organisations collaborate with TIC? 
+                <span class="icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>TIC actively collaborates with local and international organisations through joint seminars, workshops, research initiatives, information-sharing, and capacity-building programs. Interested organisations can get in touch via the contact form on this website, email, or by visiting the centre to explore partnership opportunities.</p>
+            </div>
+        </div>
+    </div>
+</section>
+    </main>
+
+
+    <!-- footer  -->
    <footer>
     <div class="container">
       <div class="footer-content">
@@ -459,12 +482,14 @@
     </div>
   </footer>
 <!-- footer  -->
+    <!-- Full Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-<script>
-       
-
+    <script>
+        // ============================================
+        // PROTECTION MEASURES (Consolidated)
+        // ============================================
+    
         // ============================================
         // MOBILE MENU FUNCTIONALITY
         // ============================================
@@ -481,12 +506,6 @@
                 mobileNavOverlay?.classList.add('active');
                 mobileMenuBtn.setAttribute('aria-expanded', 'true');
                 document.body.style.overflow = 'hidden';
-                
-                // Focus trap
-                const focusableElements = mobileNavOffcanvas.querySelectorAll('a, button');
-                if (focusableElements.length) {
-                    focusableElements[0].focus();
-                }
             }
             
             function closeMobileMenu() {
@@ -501,7 +520,6 @@
             mobileNavClose?.addEventListener('click', closeMobileMenu);
             mobileNavOverlay?.addEventListener('click', closeMobileMenu);
             
-            // Close on Escape key
             document.addEventListener('keydown', (e) => {
                 if (e.key === 'Escape' && mobileNavOffcanvas.classList.contains('active')) {
                     closeMobileMenu();
@@ -511,7 +529,8 @@
             // Mobile dropdown toggles
             const dropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
             dropdownToggles.forEach(toggle => {
-                toggle.addEventListener('click', function() {
+                toggle.addEventListener('click', function(e) {
+                    e.preventDefault();
                     const targetId = this.getAttribute('data-target');
                     const targetContent = document.getElementById(targetId);
                     const isExpanded = this.getAttribute('aria-expanded') === 'true';
@@ -525,66 +544,42 @@
                         }
                     });
                     
-                    // Toggle current dropdown
+                    // Toggle current
                     targetContent?.classList.toggle('active');
                     this.setAttribute('aria-expanded', !isExpanded);
                 });
             });
         })();
+       
+document.addEventListener('DOMContentLoaded', function () {
+    const questions = document.querySelectorAll('.faq-question');
 
-        // ============================================
-        // BACK TO TOP BUTTON
-        // ============================================
-        (function() {
-            const backToTop = document.getElementById('backToTop');
-            if (!backToTop) return;
+    questions.forEach(question => {
+        question.addEventListener('click', function () {
+            const currentlyOpen = document.querySelector('.faq-question[aria-expanded="true"]');
+            const thisAnswer = this.nextElementSibling;
+            const thisIcon = this.querySelector('.icon');
+
+            // Close any open answer first
+            if (currentlyOpen && currentlyOpen !== this) {
+                currentlyOpen.setAttribute('aria-expanded', 'false');
+                currentlyOpen.nextElementSibling.classList.remove('open');
+            }
+
+            // Toggle current one
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
             
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 300) {
-                    backToTop.classList.add('visible');
-                } else {
-                    backToTop.classList.remove('visible');
-                }
-            });
-            
-            backToTop.addEventListener('click', () => {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            });
-        })();
-
-        // Add keyboard accessibility for card clicks
-        document.querySelectorAll('.featured-card, .new-item-card').forEach(card => {
-            card.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    const link = this.querySelector('a');
-                    if (link) {
-                        link.click();
-                    }
-                }
-            });
+            if (isExpanded) {
+                this.setAttribute('aria-expanded', 'false');
+                thisAnswer.classList.remove('open');
+            } else {
+                this.setAttribute('aria-expanded', 'true');
+                thisAnswer.classList.add('open');
+            }
         });
+    });
+});
 
-        // Smooth scroll for internal links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                const href = this.getAttribute('href');
-                if (href !== '#') {
-                    e.preventDefault();
-                    const target = document.querySelector(href);
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                }
-            });
-        });
- 
-</script>
+    </script>
 </body>
 </html>

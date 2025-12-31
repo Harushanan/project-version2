@@ -1,66 +1,4 @@
-:root {
-    --primary-bg: #f6e3c5;
-    --accent-dark: #0f2540;
-    --accent-muted: #bfa98b;
-    --card-bg: #f6ece0;
-    --hover-bg: #e6d3bd;
-}
 
-* {
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Inter', 'Noto Sans Tamil', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background-color: var(--primary-bg);
-    color: var(--accent-dark);
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-    user-select: none;
-}
-
-/* Header & Mobile Menu Styles (same as index) */
-header {
-    background: #f6e3c5;
-    border-bottom: 1px solid rgba(15, 37, 64, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-}
-
-.header-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 1rem 1.5rem;
-}
-
-.header-main {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    text-decoration: none;
-    color: var(--accent-dark);
-}
-
-.logo img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.logo-text .ta {
-    font-size: 2rem;
-    font-weight: 800;
-}
 
 /* Navigation (desktop & mobile same as index) */
 .main-nav { display: none; }
@@ -119,50 +57,12 @@ header {
 .mobile-nav-overlay.active { display: block; }
 
 /* Footer (same dark style) */
-footer {
-    background: #0f0f0f;
-    color: white;
-    padding: 3rem 0 1rem;
-    margin-top: 4rem;
-}
-
-.footer-content {
-    display: grid;
-    gap: 2rem;
-    margin-bottom: 2rem;
-}
-
-.footer-section h3 {
-    margin-bottom: 1rem;
-    font-weight: 700;
-}
-
-.footer-section a {
-    color: #ccc;
-    text-decoration: none;
-}
-.footer-section a:hover {
-    color: white;
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 2rem;
-    border-top: 1px solid #333;
-    color: #999;
-}
 
 /* Responsive for header & footer */
 @media (min-width: 768px) {
     .main-nav { display: block; }
     .mobile-menu-btn { display: none; }
-    .footer-content { grid-template-columns: repeat(2, 1fr); }
-}
-@media (min-width: 992px) {
-    .footer-content { grid-template-columns: repeat(4, 1fr); }
-}
-@media (max-width: 767px) {
-    .footer-content { display: none; } /* optional - mobile-இல் hide செய்ய */
+    
 }
 
 /* ==================== EXHIBITION SPECIFIC STYLES ==================== */
@@ -304,32 +204,10 @@ footer {
     .bottom-sections {
         grid-template-columns: 1fr !important;
     }
-    
-    /* Footer mobile-la full content show */
-    .footer-content {
-        display: grid !important;
-        grid-template-columns: 1fr;
-        padding: 0 1rem;
-    }
-    
-    .footer-section {
-        margin-bottom: 2rem;
-        text-align: center;
-    }
-    
-    .footer-section .donate-btn {
-        width: 100% !important;
-        max-width: 300px;
-        margin: 0 auto;
-    }
+
 }
 
-/* Tablet fix */
-@media (min-width: 768px) and (max-width: 991px) {
-    .footer-content {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
+
 /* Mobile Navigation Offcanvas - Improved Design */
 .mobile-nav-offcanvas {
     position: fixed;
@@ -753,86 +631,10 @@ footer {
     background-color: var(--hover-bg) !important;
     color: var(--accent-dark) !important;
 }
-/* Footer Center Alignment Fix */
-footer .container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-}
 
-.footer-content {
-    display: grid;
-    grid-template-columns: 1fr; /* Mobile-la single column */
-    gap: 2.5rem;
-    text-align: center; /* Center all text */
-    margin-bottom: 2rem;
-}
 
-.footer-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center content inside each section */
-}
 
-.footer-section h3 {
-    margin-bottom: 1rem;
-    font-weight: 700;
-}
 
-.footer-section ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.footer-section ul li {
-    margin-bottom: 0;
-}
-
-.footer-section a {
-    color: #ccc;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.footer-section a:hover {
-    color: white;
-}
-
-/* Donate button center */
-.footer-section .donate-btn,
-.footer-section form button {
-    width: auto !important;
-    max-width: 250px;
-    margin: 1rem auto 0;
-}
-
-/* Desktop-la 4 columns, but still centered content */
-@media (min-width: 992px) {
-    .footer-content {
-        grid-template-columns: repeat(4, 1fr);
-        text-align: left; /* Desktop-la left align */
-    }
-    
-    .footer-section {
-        align-items: flex-start; /* Desktop-la left */
-    }
-    
-    .footer-section ul {
-        align-items: flex-start;
-    }
-}
-
-/* Tablet-la 2 columns */
-@media (min-width: 768px) and (max-width: 991px) {
-    .footer-content {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
 .let-us-begin {
     font-family: 'Inter', 'Noto Sans Tamil', sans-serif;
 }
@@ -918,6 +720,18 @@ footer .container {
         right: 80px; /* Adjusted right-20 (Tailwind) to 80px */
         left: auto; /* Ensure 'left' is unset */
     }
+
+    /* New Image - Desktop */
+@media (min-width: 768px) {
+    .collage-img:nth-child(5) {
+        width: 300px;       /* Adjust size */
+        height: 300px;
+        top: 20px;          /* Top distance from container */
+        right: 50px;        /* Right distance from container */
+        left: auto;         /* Ensure left is unset */
+    }
+}
+
 }
 
 /* ---------------------------------------------------------------------- */
@@ -954,4 +768,15 @@ footer .container {
         right: 10vw; 
         left: auto; /* Ensure 'left' is unset */
     }
+    /* New Image - Mobile */
+@media (max-width: 767px) {
+    .collage-img:nth-child(5) {
+        width: 35vw;        /* 35% of viewport width */
+        height: 35vw;       /* Keep it square */
+        top: 5vw;           /* Distance from top */
+        right: 5vw;         /* Distance from right */
+        left: auto;
+    }
+}
+
 }

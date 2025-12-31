@@ -1,0 +1,179 @@
+/* ===================================================
+   GLOBAL VARIABLES
+=================================================== */
+:root {
+    --primary-bg: #f6e3c5;
+    --accent-dark: #0f2540;
+    --accent-muted: #bfa98b;
+    --card-bg: #ffffff;
+    --card-shadow: rgba(0, 0, 0, 0.1);
+    --card-hover-shadow: rgba(0, 0, 0, 0.2);
+    --text-color: #000000;
+}
+
+/* ===================================================
+   MAIN CONTAINER
+=================================================== */
+.explore-heritage {
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.explore-heritage .page-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.explore-heritage .page-intro {
+    font-size: 1.1rem;
+    color: var(--accent-dark);
+}
+
+/* ===================================================
+   GRID AND CARDS
+=================================================== */
+.explore-heritage .row {
+    margin-top: 2rem;
+}
+
+.heritage-card {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px var(--card-shadow);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.heritage-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px var(--card-hover-shadow);
+}
+
+.heritage-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    color: #000000;
+}
+
+.heritage-desc {
+    font-size: 0.95rem;
+    color: #000000;
+    line-height: 1.5;
+}
+
+/* ===================================================
+   RESPONSIVE GRID
+=================================================== */
+@media (max-width: 992px) {
+    .heritage-card {
+        padding: 1.2rem;
+    }
+
+    .heritage-title {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .heritage-card {
+        padding: 1rem;
+    }
+
+    .heritage-title {
+        font-size: 1.1rem;
+    }
+
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .page-intro {
+        font-size: 1rem;
+    }
+}
+.heritage-spa-content {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Sidebar */
+.heritage-sidebar {
+  width: 280px;
+  max-height: 80vh;
+  overflow-y: auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.heritage-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.heritage-sidebar li {
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.heritage-sidebar li:hover,
+.heritage-sidebar li.active {
+  background: var(--accent-dark);
+  color: white;
+}
+
+/* Detail area */
+.heritage-detail {
+  flex: 1;
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.heritage-detail .hero-image {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+}
+
+.heritage-detail .hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heritage-detail h2 {
+  font-size: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.heritage-detail p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Scrollbar Styling */
+.heritage-sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+.heritage-sidebar::-webkit-scrollbar-thumb {
+  background: var(--accent-muted);
+  border-radius: 4px;
+}
+.heritage-sidebar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}

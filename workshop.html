@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>TIC Archives Members </title>
-    <meta name="description" content="@yield('meta_description', 'Tamil Bookshop Archives - Preserving Tamil heritage, culture, and literature since 1983')">
+    <title>Workshop - TIC Archives</title>
+    <meta name="description" content="Tamil Information Centre - Committed to Human Rights and Community Development since 1983">
     
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,17 +16,289 @@
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="./member.css">
      <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./about.css">
+    <style>
+
+        /* ===================================================
+   GLOBAL VARIABLES AND BASE STYLES
+   =================================================== */
+/* Skip to content link for accessibility */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--accent-dark);
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    z-index: 9999;
+    border-radius: 0 0 4px 0;
+}
+
+.skip-link:focus {
+    top: 0;
+    outline: 3px solid #ffd700;
+}
 
 
+
+
+/* Mobile Navigation Offcanvas */
+.mobile-nav-offcanvas {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 85%;
+    max-width: 400px;
+    height: 100vh;
+    background: white;
+    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease;
+    z-index: 2000;
+    overflow-y: auto;
+}
+
+.mobile-nav-offcanvas.active {
+    right: 0;
+}
+
+.mobile-nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.mobile-nav-close {
+    background: var(--accent-dark);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.mobile-nav-menu {
+    padding: 1rem;
+}
+
+.mobile-nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-nav-menu li {
+    margin-bottom: 0.5rem;
+}
+
+.mobile-nav-menu a {
+    color: var(--accent-dark);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 1rem;
+    display: block;
+    border-radius: 8px;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+}
+
+.mobile-nav-menu a:hover,
+.mobile-nav-menu a.active {
+    background-color: var(--accent-dark);
+    color: white;
+}
+
+.mobile-dropdown-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: var(--accent-dark);
+    font-weight: 600;
+    padding: 1rem;
+    border-radius: 8px;
+    min-height: 48px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.mobile-dropdown-content {
+    display: none;
+    padding-left: 1rem;
+}
+
+.mobile-dropdown-content.active {
+    display: block;
+}
+
+/* Overlay for mobile menu */
+.mobile-nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 1999;
+}
+
+.mobile-nav-overlay.active {
+    display: block;
+}
+
+
+.section h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    width: 320px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: left;
+}
+
+.card-img {
+    background-color: #ddd;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-style: italic;
+    font-size: 14px;
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card h3 {
+    margin: 0 0 15px;
+    font-size: 20px;
+}
+
+.card p {
+    font-size: 15px;
+    margin: 0 0 25px;
+    line-height: 1.5;
+    color: #555;
+}
+
+.learn-more {
+    display: inline-block;
+    background-color: #cc0000;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.learn-more:hover {
+    background-color: #a00000;
+}
+
+
+
+.main-content {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+
+
+.section {
+    margin-bottom: 80px;
+}
+
+.section h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    width: 320px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: left;
+}
+
+.card img {
+    width: 100%;
+    height: 220px;  
+    object-fit: cover;  
+    display: block;
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card h3 {
+    margin: 0 0 15px;
+    font-size: 20px;
+}
+
+.card p {
+    font-size: 15px;
+    margin: 0 0 25px;
+    line-height: 1.5;
+    color: #555;
+}
+
+.learn-more {
+    display: inline-block;
+    background-color: #cc0000;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.learn-more:hover {
+    background-color: #a00000;
+}
+    </style>
 </head>
 <body>
-    <!-- Skip to content link for accessibility
-    <a href="#main-content" class="skip-link">Skip to main content</a> -->
 
-      <!-- Header -->
+  <!-- Header -->
     <header role="banner">
         <div class="header-container">
             <div class="header-main">
@@ -206,110 +478,89 @@
         </nav>
     </div>
 
-    <!-- Main Content -->
-<section class="header">
-        <h1><b>Join Us</b></h1>
-        <p><b>Explore our collection of Tamil heritage books and research materials</b></bExplore></p>
-    </section>
 
-    <div class="container">
-        <div class="card">
-            <h2>Volunteers</h2>
-            <p>Join our dedicated team and contribute your skills to preserve Tamil heritage</p>
-        </div>
-        <div class="card">
-            <h2>Working with Partners</h2>
-            <p>Collaborate with us on meaningful projects and advocacy programs</p>
-        </div>
-    </div>
-<div class="container">
-    <div class="volunteer-box">
-        <h1 class="title">Become a Volunteer</h1>
+<!--main-->
+<div class="main-content">
+        <h1>Our Projects & Programs</h1>
+        <p>We are committed to creating meaningful impact through our various projects and programs. Your support helps us expand these initiatives, empower the community, and achieve our mission more effectively.</p>
 
-        <div class="main-content">
-            <div class="left-section">
-                <h2 class="section-title">Join Our Volunteer Community</h2>
-                <p class="community-text">
-                    TIC depends on volunteers for many key activities that drive our mission forward and preserve Tamil heritage for future generations.
-                </p>
-
-                <h3 class="section-title">Key Volunteer Activities:</h3>
-                <div class="activities-grid">
-                    <div class="activity-item">Documentation & Research</div>
-                    <div class="activity-item">Publications</div>
-                    <div class="activity-item">Organizing Events</div>
-                    <div class="activity-item">Fundraising</div>
-                    <div class="activity-item">Representation</div>
-                    <div class="activity-item">Administrative Support</div>
+        <div class="section">
+            <h2>Workshops</h2>
+            <div class="cards">
+                <div class="card">
+                  <img src="https://media.gettyimages.com/id/97459869/photo/paul-laurence-dunbar-vocational-school.jpg?s=612x612&w=gi&k=20&c=TV_ABWVtY50b7dO-dxyRFmP-vxnHv5akYYm4pCas1Bc=" alt="Vintage school swimming pool">
+                    <div class="card-content">
+                        <h3>Schools</h3>
+                        <p>Workshops for EYFS to Key Stage 5 giving pupils unique access to the collections.</p>
+                        <a href="#" class="learn-more">Learn more</a>
+                    </div>
                 </div>
-
-<div class="apply-box">
-    <p>How to Apply</p>
-    <p>Anyone interested in volunteering can apply by completing the provided volunteer application form.</p>
-    
-    <!-- Apply Now Button -->
-    <a href="form.html" class="apply-btn">Apply Now</a>
-</div>            </div>
-
-            <div class="right-section">
-                <div class="sidebar-box">
-                    <div class="sidebar-title">Time Commitment</div>
-                    <p>Flexible hours based on your availability and project needs</p>
+                <div class="card">
+                    <img src="https://media.istockphoto.com/id/1473700939/photo/side-view-of-thoughtful-young-woman-looking-away.jpg?s=612x612&w=0&k=20&c=FUQzKyzLd5S6C17DNA77q0oNqpw6OiKgC3RHuwoUN8c=" alt="Thoughtful young woman with long hair (vintage style)">
+                    <div class="card-content">
+                        <h3>Higher Education</h3>
+                        <p>Seminars and workshops for undergraduate and graduate groups with access to archival collections.</p>
+                        <a href="#" class="learn-more">Learn more</a>
+                    </div>
                 </div>
-
-                <div class="sidebar-box">
-                    <div class="sidebar-title">Location</div>
-                    <p>Remote and in-person opportunities available</p>
-                </div>
-
-                <div class="sidebar-box">
-                    <div class="sidebar-title">Benefits</div>
-                    <ul class="list">
-                        <li>• Skill development</li>
-                        <li>• Community networking</li>
-                        <li>• Cultural preservation</li>
-                        <li>• Professional references</li>
-                    </ul>
+                <div class="card">
+                   <img src="https://images.unsplash.com/photo-1742497358669-97130aa3b3a1?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3" alt="Wall with framed pictures exhibition">
+                    <div class="card-content">
+                        <h3>Adult Learning</h3>
+                        <p>Talks and tours for staff groups, including handling archival items.</p>
+                        <a href="#" class="learn-more">Learn more</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-<div class="document-section">
-        <div class="section-header">
-            <h2>Supporting Documents</h2>
-            <p>Relevant supporting documents are provided for further reference and detailed information about our programs and partnerships.</p>
-        </div>
 
-        <div class="document-cards-container">
-            <div class="document-card">
-                <h3>Volunteer Handbook</h3>
-                <p>Complete guide for IIC volunteers</p>
-                <a href="#" class="download-link">Download PDF</a>
-            </div>
-
-            <div class="document-card">
-                <h3>Partnership Guidelines</h3>
-                <p>Framework for organizational collaboration</p>
-                <a href="#" class="download-link">Download PDF</a>
-            </div>
-
-            <div class="document-card">
-                <h3>Annual Report</h3>
-                <p>IIC's latest activities and achievements</p>
-                <a href="#" class="download-link">Download PDF</a>
-            </div>
-
-            <div class="document-card">
-                <h3>Project Proposals</h3>
-                <p>Template for partnership proposals</p>
-                <a href="#" class="download-link">Download DOC</a>
+        <div class="section">
+            <h2>Resources</h2>
+            <div class="cards">
+                <div class="card">
+                   <img src="https://m.media-amazon.com/images/I/91169UU2xiL._AC_UF894,1000_QL80_.jpg" alt="Framed historical photographs">
+                    <div class="card-content">
+                        <h3>Windrush Journeys</h3>
+                        <p>Key Stage 3 free Windrush history resource.</p>
+                        <a href="#" class="learn-more">Learn more</a>
+                    </div>
+                </div>
+                <div class="card">
+                  <img src="https://static01.nyt.com/images/2016/09/11/books/review/11Stein-sub/11Stein-sub-articleLarge-v3.jpg?quality=75&auto=webp&disable=upscale" alt="Vintage historical food plate">
+                    <div class="card-content">
+                        <h3>The Brixton Uprisings</h3>
+                        <p>Lesson plans and interviews on the Brixton Uprisings of 1981 and 1985.</p>
+                        <a href="#" class="learn-more">Learn more</a>
+                    </div>
+                </div>
+                <div class="card">
+                   <img src="https://www.publicdomainpictures.net/pictures/170000/nahled/judge-gavel-1461291328XaU.jpg" alt="Judge gavel on legal books">
+                    <div class="card-content">
+                        <h3>Black Futures: The Legal Perspective</h3>
+                        <p>Video podcast curated by 5 St. Andrews Hill.</p>
+                        <a href="#" class="learn-more">Learn more</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://res.cloudinary.com/aenetworks/image/upload/c_fill,w_1200,h_630,g_auto/dpr_auto/f_auto/q_auto:eco/v1/abolitionist-movement-gettyimages-3112123" alt="Historical abolition movement">
+                    <div class="card-content">
+                        <h3>Freedom Project</h3>
+                        <p>Key Stage 3 resource about enslavement and abolition.</p>
+                        <a href="#" class="learn-more">Learn more</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://english-heritage.shorthandstories.com/the-story-of-windrush/assets/9xY5uZVJJs/empire-windrush-packed-with-west-indian-immigrants-on-arrival-at-the-port-of-tilbury-on-the-river-thames-on-22-june-1948-copyright-contraband-collection-alamy-images-766x510.jpeg" alt="Windrush ship arrival">
+                    <div class="card-content">
+                        <h3>Windrush Foundation</h3>
+                        <p>Free resources for Key Stages 1-3 supporting Windrush history education.</p>
+                        <a href="#" class="learn-more">Learn more</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    </main>
-
-    <!-- footer  -->
+<!-- footer  -->
    <footer>
     <div class="container">
       <div class="footer-content">
@@ -388,141 +639,6 @@
     </div>
   </footer>
 <!-- footer  -->
-
-
-              
-                
-
-    <!-- Back to Top Button -->
-    <!-- <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button> -->
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Mobile Menu Script -->
-    <script>
-
-// ============================================
-// MOBILE MENU FUNCTIONALITY
-// ============================================
-(function() {
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const mobileNavOffcanvas = document.getElementById('mobileNavOffcanvas');
-    const mobileNavOverlay = document.getElementById('mobileNavOverlay');
-    const mobileNavClose = document.getElementById('mobileNavClose');
-    
-    if (!mobileMenuBtn || !mobileNavOffcanvas) return;
-    
-    function openMobileMenu() {
-        mobileNavOffcanvas.classList.add('active');
-        mobileNavOverlay?.classList.add('active');
-        mobileMenuBtn.setAttribute('aria-expanded', 'true');
-        document.body.style.overflow = 'hidden';
-        
-        // Focus trap
-        const focusableElements = mobileNavOffcanvas.querySelectorAll('a, button');
-        if (focusableElements.length) {
-            focusableElements[0].focus();
-        }
-    }
-    
-    function closeMobileMenu() {
-        mobileNavOffcanvas.classList.remove('active');
-        mobileNavOverlay?.classList.remove('active');
-        mobileMenuBtn.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-        mobileMenuBtn.focus();
-    }
-    
-    mobileMenuBtn.addEventListener('click', openMobileMenu);
-    mobileNavClose?.addEventListener('click', closeMobileMenu);
-    mobileNavOverlay?.addEventListener('click', closeMobileMenu);
-    
-    // Close on Escape key
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && mobileNavOffcanvas.classList.contains('active')) {
-            closeMobileMenu();
-        }
-    });
-    
-    // Mobile dropdown toggles
-    const dropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
-    dropdownToggles.forEach(toggle => {
-        toggle.addEventListener('click', function() {
-            const targetId = this.getAttribute('data-target');
-            const targetContent = document.getElementById(targetId);
-            const isExpanded = this.getAttribute('aria-expanded') === 'true';
-            
-            // Close all other dropdowns
-            dropdownToggles.forEach(t => {
-                if (t !== this) {
-                    t.setAttribute('aria-expanded', 'false');
-                    const tId = t.getAttribute('data-target');
-                    document.getElementById(tId)?.classList.remove('active');
-                }
-            });
-            
-            // Toggle current dropdown
-            targetContent?.classList.toggle('active');
-            this.setAttribute('aria-expanded', !isExpanded);
-        });
-    });
-})();
-
-// ============================================
-// BACK TO TOP BUTTON
-// ============================================
-(function() {
-    const backToTop = document.getElementById('backToTop');
-    if (!backToTop) return;
-    
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
-            backToTop.classList.add('visible');
-        } else {
-            backToTop.classList.remove('visible');
-        }
-    });
-    
-    backToTop.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-})();
-
-    // Add keyboard accessibility for card clicks
-    document.querySelectorAll('.featured-card, .new-item-card').forEach(card => {
-        card.addEventListener('keypress', function(e) {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                const link = this.querySelector('a');
-                if (link) {
-                    link.click();
-                }
-            }
-        });
-    });
-
-    // Smooth scroll for internal links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
-            if (href !== '#') {
-                e.preventDefault();
-                const target = document.querySelector(href);
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            }
-        });
-    });
-
-
-</script>
+</div>
 </body>
 </html>

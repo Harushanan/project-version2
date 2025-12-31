@@ -4,170 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>TIC Archives</title>
-    <meta name="description" content="@yield('meta_description', 'Tamil Bookshop Archives - Preserving Tamil heritage, culture, and literature since 1983')">
-    
-    <!-- Preconnect for performance -->
+    <title>Collaborate - TIC Archives</title>
+    <meta name="description" content="Partner with us on research, events, and cultural initiatives at TIC Archives">
+
+    <!-- Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Main Styles -->
     <link rel="stylesheet" href="./style.css">
-    <style>
-        /* ===============================
-   ROOT VARIABLES
-================================ */
-:root {
-    --primary-bg:#f6e3c5;;
-    --primary-gold: #c5a059;
-    --accent-dark: #0f2540;
-    --accent-muted: #bfa98b;
-    --accent-red: #8e1b1b;
-    --card-bg: #f6ece0;
-    --border-radius: 12px;
-}
-
-/* ===============================
-   BASE
-================================ */
-body {
-    background-color:#f6e3c5;;
-    font-family: 'Inter', sans-serif;
-    color: var(--accent-dark);
-    overflow-x: hidden;
-}
-
-/* ===============================
-   HERO SECTION
-================================ */
-.archive-hero {
-    background-color: #e2caa8;
-    padding: 50px 20px;
-    text-align: center;
-    border-bottom: 1px solid var(--accent-muted);
-    margin-bottom: 0.5rem;
-}
-
-.archive-hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-}
-
-.archive-tagline {
-    font-size: 1.2rem;
-    max-width: 800px;
-    margin: 0 auto;
-    opacity: 0.85;
-    border-top: 1px solid var(--accent-muted);
-    padding-top: 1.5rem;
-}
-
-/* ===============================
-   ESTABLISHED TEXT
-================================ */
-.established-text {
-    text-align: center;
-    font-weight: 700;
-    letter-spacing: 3px;
-    margin: 20px 0 40px;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-}
-
-/* ===============================
-   ARCHIVE CONTENT
-================================ */
-.archive-history {
-    max-width: 900px;
-    margin: auto;
-    padding: 0 2rem 5rem;
-}
-
-.history-article {
-    max-width: 850px;
-    margin: 0 auto;
-}
-
-.lead-text {
-    font-size: 1.3rem;
-    line-height: 1.8;
-    font-weight: 600;
-    margin-bottom: 30px;
-    border-left: 5px solid var(--accent-red);
-    padding-left: 20px;
-}
-
-.content-main p {
-    font-size: 1.3rem;
-    line-height: 1.9;
-    margin-bottom: 25px;
-    color: #333;
-    text-align: justify;
-}
-
-/* ===============================
-   HIGHLIGHT / LEGACY
-================================ */
-.highlight-box {
-    background-color: var(--card-bg);
-    padding: 30px;
-    border-radius: var(--border-radius);
-    margin: 40px 0;
-    border: 1px solid var(--accent-muted);
-}
-
-.highlight-box p {
-    font-style: italic;
-    margin-bottom: 0;
-}
-
-.legacy-section {
-    margin-top: 50px;
-    padding-top: 30px;
-    border-top: 2px solid var(--primary-bg);
-}
-
-.legacy-section p {
-    font-weight: 600;
-    color: var(--accent-red);
-}
-
-/* ===============================
-   RESPONSIVE
-================================ */
-@media (max-width: 768px) {
-    .archive-hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .archive-hero {
-        padding: 50px 15px;
-    }
-
-    .lead-text {
-        font-size: 1.15rem;
-    }
-
-    .content-main p {
-        font-size: 1rem;
-    }
-}
-
-    </style>
-
-
+  
+    <link rel="stylesheet" href="./collaborate.css">
 
 </head>
 <body>
-
-      <!-- Header -->
-     <!-- Header -->
+   <!-- Header -->
     <header role="banner">
         <div class="header-container">
             <div class="header-main">
@@ -347,60 +204,245 @@ body {
         </nav>
     </div>
 
-    <!-- Main Content -->
-    <main>
-        <section class="archive-hero">
-            <div class="container">
-                <h1>History of Archive</h1>
-                <p class="archive-tagline">
-                    Preserving memory, history, and human rights for future generations
-                </p>
-            </div>
-        </section>
 
-        <div class="established-text">
-            --- Established in 1979 ---
-        </div>
+<!-- Main Content - Collaborate Page -->
+    <main id="main-content" role="main">
+                        <div class="container">
+                            <section class="collaborate-hero">
+                                <h1>Collaborate</h1>
+                                <p>Partner with us on research, events, and cultural initiatives</p>
+                            </section>
 
-        <section class="archive-history">
-            <article class="history-article">
-                
-                <p class="lead-text">
-                    The Tamil Information Centre (TIC) Digital Archive is an independent and authoritative repository dedicated to the collection, preservation, and dissemination of historical, cultural, and human rights documentation relating to Tamil-speaking people in Sri Lanka.
-                </p>
+                            <!-- Building Partnerships Section -->
+                            <section class="partnerships-section">
+                                <div class="partnerships-card">
+                                    <h2>Building Partnerships for Heritage Preservation</h2>
+                                    <p>We believe in the power of collaboration to advance Tamil heritage preservation, research, and community engagement. Whether you're a researcher, cultural organization, academic institution, or community group, we welcome partnerships that align with our mission. Together, we can create meaningful impact and ensure Tamil heritage thrives for generations to come.</p>
+                                </div>
+                            </section>
+                <!-- Collaboration Opportunities -->
+                <section class="opportunities-section">
+                    <h2 class="section-title">Collaboration Opportunities</h2>
+                    <p class="section-subtitle">Explore different ways to partner with the Tamil Information Centre</p>
+                    <div class="opportunities-grid">
+                        <!-- Row 1 -->
+                        <article class="opportunity-card">
+                            <div class="icon-wrapper">
+                                <img src="image/i13.jpg" alt="Research Icon">
+                            </div>
+                            <h3>Research Partnerships</h3>
+                            <p>Partner with us on academic research projects utilizing our extensive collections and expertise in Tamil heritage studies.</p>
+                            <ul>
+                                <li>Access to archival collections</li>
+                                <li>Collaborative research projects</li>
+                                <li>Co-authoring publications</li>
+                            </ul>
+                            <button class="cta-btn">Propose Research Project</button>
+                        </article>
 
-                <div class="content-main">
-                    <p>
-                        Established in 1979 by Tamil activists based in the United Kingdom, the Tamil Information Centre has, for over four decades, played a pioneering role in the systematic documentation of first-hand, authentic, and verifiable information. From its early operations in London and Tamil Nadu, TIC emerged as one of the earliest and most professionally committed research and documentation organisations focused on the lived realities, historical experiences, and human rights conditions of Tamil-speaking communities.
-                    </p>
+                        <article class="opportunity-card">
+                            <div class="icon-wrapper">
+                                <img src="image/i8.jpg" alt="Events Icon">
+                            </div>
+                            <h3>Events & Programs</h3>
+                            <p>Co-organize exhibitions, cultural festivals, workshops, and community events that celebrate and educate about Tamil heritage.</p>
+                            <ul>
+                                <li>Joint exhibitions</li>
+                                <li>Cultural festivals</li>
+                                <li>Educational workshops</li>
+                                <li>Film screenings & lectures</li>
+                            </ul>
+                            <button class="cta-btn">Propose Event Partnership</button>
+                        </article>
 
-                    <p>
-                        The archive reflects TIC’s principled commitment to human rights grounded in justice, equality, and respect for fundamental freedoms. TIC does not promote any particular political solution for Sri Lanka; rather, it maintains a neutral and rights-based approach, guided by the Universal Declaration of Human Rights (UDHR) and other internationally recognised human rights instruments.
-                    </p>
+                        <article class="opportunity-card">
+                            <div class="icon-wrapper">
+                                <img src="image/i9.jpg" alt="Digitization Icon">
+                            </div>
+                            <h3>Digitization Initiatives</h3>
+                            <p>Collaborate on digital preservation projects to make Tamil heritage materials accessible online and preserve them for the future.</p>
+                            <ul>
+                                <li>Collection digitization</li>
+                                <li>Metadata creation</li>
+                                <li>Platform development</li>
+                                <li>Technical sharing</li>
+                            </ul>
+                            <button class="cta-btn">Discuss Digital Project</button>
+                        </article>
 
-                    <div class="highlight-box">
-                        <p>
-                            Over the years, TIC researchers and contributors undertook their work under extremely challenging and often dangerous conditions, facing threats from military forces and armed groups in Sri Lanka and India. Despite these risks, they demonstrated exceptional dedication in collecting, safeguarding, and preserving critical records.
-                        </p>
+                        <!-- Row 2 -->
+                        <article class="opportunity-card">
+                            <div class="icon-wrapper">
+                                <img src="image/i10.jpg" alt="Funding Icon">
+                            </div>
+                            <h3>Funding & Sponsorship</h3>
+                            <p>Support our work through funding partnerships, project sponsorships, or corporate social responsibility initiatives.</p>
+                            <ul>
+                                <li>Project-specific funding</li>
+                                <li>Institutional sponsorships</li>
+                                <li>Equipment donations</li>
+                                <li>Endowment programs</li>
+                            </ul>
+                            <button class="cta-btn">Explore Funding Options</button>
+                        </article>
+
+                        <article class="opportunity-card">
+                            <div class="icon-wrapper">
+                                <img src="image/i11.jpg" alt="Collection Icon">
+                            </div>
+                            <h3>Collection Development</h3>
+                            <p>Help us grow our collections through donations, loans, or collaborative acquisition projects.</p>
+                            <ul>
+                                <li>Material donations</li>
+                                <li>Temporary exhibition loans</li>
+                                <li>Joint acquisitions</li>
+                                <li>Collection assessments</li>
+                                <li>Provenance research</li>
+                            </ul>
+                            <button class="cta-btn">Discuss Collections</button>
+                        </article>
+
+                        <article class="opportunity-card">
+                            <div class="icon-wrapper">
+                                <img src="image/i12.jpg" alt="Capacity Icon">
+                            </div>
+                            <h3>Capacity Building</h3>
+                            <p>Share expertise through training programs, professional development, and knowledge exchange initiatives.</p>
+                            <ul>
+                                <li>Staff training programs</li>
+                                <li>Professional workshops</li>
+                                <li>Technical consultancy</li>
+                                <li>Best practice sharing</li>
+                                <li>Mentorship programs</li>
+                            </ul>
+                            <button class="cta-btn">Share Your Expertise</button>
+                        </article>
                     </div>
+                </section>
+                <!-- Partnership Benefits -->
+                <section class="benefits-section">
+                    <h2 class="section-title">Partnership Benefits</h2>
+                    <p class="section-subtitle">What you gain by collaborating with us</p>
+                    <div class="benefits-grid">
+                        <!-- Card 1 -->
+                        <div class="benefit-card">
+                            <i class="fas fa-globe benefit-icon"></i>
+                            <div class="benefit-text">
+                                <h3>Global Network</h3>
+                                <p>Access our international network of researchers, institutions, and Tamil diaspora communities.</p>
+                            </div>
+                        </div>
 
-                    <p>
-                        The TIC Digital Archive contains a wide range of primary source materials, including affidavits, habeas corpus applications, official and unofficial documents, correspondence from detainees and political prisoners, eye-witness testimonies, reports from conflict zones, photographs, and audio-visual recordings of interviews and speeches. 
-                    </p>
+                        <!-- Card 2 -->
+                        <div class="benefit-card">
+                            <i class="fas fa-archive benefit-icon"></i>
+                            <div class="benefit-text">
+                                <h3>Unique Collections</h3>
+                                <p>Work with rare materials and primary sources not available elsewhere.</p>
+                            </div>
+                        </div>
 
-                    <p>
-                        Through its extensive global network, TIC has collaborated with governmental and non-governmental organisations, legal professionals, and human rights defenders. Accuracy, integrity, and accountability form the foundation of the archive.
-                    </p>
+                        <!-- Card 3 -->
+                        <div class="benefit-card">
+                            <i class="fas fa-lightbulb benefit-icon"></i>
+                            <div class="benefit-text">
+                                <h3>Expert Guidance</h3>
+                                <p>Benefit from our staff's deep knowledge of Tamil history and culture.</p>
+                            </div>
+                        </div>
 
-                    <div class="legacy-section">
-                        <p>
-                            The TIC Digital Archive is an extension of this legacy and a commitment to its continuation. It stands as both a historical record and a living resource for research, education, public engagement, and intergenerational memory.
-                        </p>
+                        <!-- Card 4 -->
+                        <div class="benefit-card">
+                            <i class="fas fa-bullhorn benefit-icon"></i>
+                            <div class="benefit-text">
+                                <h3>Visibility</h3>
+                                <p>Promote your work through our platforms and community reach.</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 5 -->
+                        <div class="benefit-card">
+                            <i class="fas fa-people-group benefit-icon"></i>
+                            <div class="benefit-text">
+                                <h3>Community Impact</h3>
+                                <p>Make meaningful contributions to heritage preservation and education.</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 6 -->
+                        <div class="benefit-card">
+                            <i class="fas fa-trophy benefit-icon"></i>
+                            <div class="benefit-text">
+                                <h3>Recognition</h3>
+                                <p>Public acknowledgment and credit for collaborative achievements.</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </article>
-        </section>
-    </main>
+                </section>
+                <!-- Proposal Form -->
+                <section class="proposal-form-section">
+                    <h2 class="section-title">Submit Your Proposal</h2>
+                    <p class="section-subtitle">Fill out the form below to start a conversation about potential collaboration</p>
+                    <form class="proposal-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Name *</label>
+                                <input type="text" id="name" placeholder="Your full name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" placeholder="your@email.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="organization">Organization</label>
+                                <input type="text" id="organization" placeholder="Your organization name">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="tel" id="phone" placeholder="+94 XX XXX XXXX">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="collab-type">Collaboration Type *</label>
+                            <select id="collab-type" required>
+                                <option>Select collaboration type</option>
+                                <option>Research Partnerships</option>
+                                <option>Events & Programs</option>
+                                <option>Digitization Initiatives</option>
+                                <option>Funding & Sponsorship</option>
+                                <option>Collection Development</option>
+                                <option>Capacity Building</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="project-title">Project Title *</label>
+                            <input type="text" id="project-title" placeholder="Brief title for your proposed collaboration" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="description">Project Description *</label>
+                            <textarea id="description" rows="6" placeholder="Describe your proposed collaboration, objectives, timeline, and how it aligns with our mission..." required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="timeline">Expected Timeline</label>
+                            <input type="text" id="timeline" placeholder="e.g. 6 months, 1 year, ongoing">
+                        </div>
+
+                        <button type="submit" class="submit-btn">Submit Proposal</button>
+                    </form>
+                </section>
+
+     </main>
+
+
+
+
 <!-- footer  -->
    <footer>
     <div class="container">
@@ -479,66 +521,9 @@ body {
 
     </div>
   </footer>
-<!-- footer  -->
 
-              
-                    <!-- <div style="margin-top: 1.2rem;">
-                        <form action="https://www.paypal.com/donate" method="post" target="_blank">
-                            <input type="hidden" name="hosted_button_id" value="YOUR_BUTTON_ID">
-                            <button type="submit" class="donate-btn" aria-label="Donate via PayPal">
-                                <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" 
-                                     alt="PayP al" 
-                                     style="height:18px;">
-                                Donate with PayPal
-                            </button>
-                        </form>
-                    </div>
-                </div> -->
 
-                <!-- Quick Links -->
-                <!-- <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="{{ route('client.about') }}">About Us</a></li>
-                        <li><a href="{{ route('client.contactus') }}">Contact</a></li>
-                        <li><a href="{{ route('events.index') }}">Events</a></li>
-                        <li><a href="{{ route('client.publications') }}">Publications</a></li>
-                    </ul>
-                </div> -->
-
-                <!-- Categories -->
-                <!-- <div class="footer-section">
-                    <h3>Categories</h3>
-                    <ul>
-                        <li><a href="{{ route('client.exhibitionheritag') }}">Heritage</a></li>
-                        <li><a href="{{ route('client.archivecentrecollection') }}">Culture</a></li>
-                        <li><a href="{{ route('client.news') }}">Community</a></li>
-                        <li><a href="{{ route('client.publications') }}">Shop</a></li>
-                    </ul>
-                </div> -->
-
-                <!-- Legal -->
-                <!-- <div class="footer-section">
-                    <h3>Legal</h3>
-                    <ul>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Cookie Policy</a></li>
-                    </ul>
-                </div> -->
-            <!-- </div> -->
-
-            <!-- <div class="footer-bottom">
-                <p>© Tamil Bookshop Archives {{ date('Y') }} | All rights reserved</p>
-            </div>
-        </div> -->
-    <!-- </footer> -->
-
-    <!-- Back to Top Button -->
-    <!-- <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button> -->
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Mobile Menu Script -->
     <script>
@@ -546,85 +531,6 @@ body {
         // ============================================
 // PROTECTION MEASURES (Consolidated)
 // ============================================
-(function() {
-    'use strict';
-
-    // ------------------------------------
-    // 1. BASIC COPY/SELECTION PROTECTION
-    // ------------------------------------
-    document.addEventListener('copy', e => e.preventDefault());
-    document.addEventListener('cut', e => e.preventDefault());
-    document.addEventListener('selectstart', e => e.preventDefault());
-    document.addEventListener('contextmenu', e => e.preventDefault());
-
-    // ------------------------------------
-    // 2. KEYBOARD SHORTCUTS BLOCKING
-    // ------------------------------------
-    document.addEventListener('keydown', function(e) {
-        // Block: F12, Ctrl+Shift+I/J/C, Ctrl+U, Ctrl+S
-        if (
-            e.key === 'F12' ||
-            (e.ctrlKey && e.shiftKey && ['I', 'J', 'C'].includes(e.key.toUpperCase())) ||
-            (e.ctrlKey && e.key.toLowerCase() === 'u') ||
-            (e.ctrlKey && e.key.toLowerCase() === 's')
-        ) {
-            e.preventDefault();
-            e.stopPropagation();
-            return false;
-        }
-    }, true); // Use capture phase
-
-    // ------------------------------------
-    // 3. DEVTOOLS DETECTION
-    // ------------------------------------
-    let devtoolsOpen = false;
-    const threshold = 160;
-
-    const detectDevTools = () => {
-        // Check window size difference
-        const widthDiff = window.outerWidth - window.innerWidth;
-        const heightDiff = window.outerHeight - window.innerHeight;
-        return widthDiff > threshold || heightDiff > threshold;
-    };
-
-    const handleDevToolsDetected = () => {
-        if (!devtoolsOpen) {
-            devtoolsOpen = true;
-            console.warn('⚠️ Developer tools detected - Redirecting...');
-            
-            // Immediate redirect to Google
-            window.location.href = 'https://www.google.com';
-        }
-    };
-
-    const handleDevToolsClosed = () => {
-        // No need for cleanup since we redirect immediately
-        devtoolsOpen = false;
-    };
-
-    const check = () => {
-        try {
-            if (detectDevTools()) {
-                handleDevToolsDetected();
-            } else {
-                handleDevToolsClosed();
-            }
-        } catch (error) {
-            // Silent fail
-        }
-    };
-
-    // Check every second
-    setInterval(check, 1000);
-    
-    // Check on resize
-    window.addEventListener('resize', check);
-
-    // Initial check
-    check();
-
-})();
-
 // ============================================
 // MOBILE MENU FUNCTIONALITY
 // ============================================
@@ -747,5 +653,65 @@ body {
 
 
 </script>
-</body>
-</html>
+  </body>
+  </html>
+<!-- footer  -->
+
+              
+                    <!-- <div style="margin-top: 1.2rem;">
+                        <form action="https://www.paypal.com/donate" method="post" target="_blank">
+                            <input type="hidden" name="hosted_button_id" value="YOUR_BUTTON_ID">
+                            <button type="submit" class="donate-btn" aria-label="Donate via PayPal">
+                                <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" 
+                                     alt="PayP al" 
+                                     style="height:18px;">
+                                Donate with PayPal
+                            </button>
+                        </form>
+                    </div>
+                </div> -->
+
+                <!-- Quick Links -->
+                <!-- <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="{{ route('client.about') }}">About Us</a></li>
+                        <li><a href="{{ route('client.contactus') }}">Contact</a></li>
+                        <li><a href="{{ route('events.index') }}">Events</a></li>
+                        <li><a href="{{ route('client.publications') }}">Publications</a></li>
+                    </ul>
+                </div> -->
+
+                <!-- Categories -->
+                <!-- <div class="footer-section">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="{{ route('client.exhibitionheritag') }}">Heritage</a></li>
+                        <li><a href="{{ route('client.archivecentrecollection') }}">Culture</a></li>
+                        <li><a href="{{ route('client.news') }}">Community</a></li>
+                        <li><a href="{{ route('client.publications') }}">Shop</a></li>
+                    </ul>
+                </div> -->
+
+                <!-- Legal -->
+                <!-- <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div> -->
+            <!-- </div> -->
+
+            <!-- <div class="footer-bottom">
+                <p>© Tamil Bookshop Archives {{ date('Y') }} | All rights reserved</p>
+            </div>
+        </div> -->
+    <!-- </footer> -->
+
+    <!-- Back to Top Button -->
+    <!-- <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button> -->
+
+    <!-- Bootstrap JS -->
+ 

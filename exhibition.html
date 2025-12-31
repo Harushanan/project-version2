@@ -18,6 +18,7 @@
 
     <!-- Exhibition CSS -->
     <link rel="stylesheet" href="./exhibition.css">
+    <link rel="stylesheet" href="./style.css">
 
     <style>
         .heritage-wrapper {
@@ -40,13 +41,12 @@
 }
 
 .brand-logo {
-  width: 110px;
-  height: 55px;
+  width: 100px;
+  height: 80px;
   background-color: #0f172a;
   color: #ffffff;
   font-size: 28px;
   font-weight: 600;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -61,7 +61,7 @@
 }
 
 .brand-title {
-  font-size: 22px;
+  font-size: 50px;
   letter-spacing: 3px;
   font-weight: 500;
   text-transform: uppercase;
@@ -76,19 +76,50 @@
   font-size: 30px;
 }
 
+@media (max-width: 767px) {
+  .brand-container {
+    flex-direction: column; /* stack logo and text */
+    align-items: center;    /* center all */
+    gap: 12px;
+   
+  }
+
+  .brand-logo {
+    width: 80px;
+    height: 80px;         /* keep square on mobile */
+    font-size: 24px;
+  }
+
+  .brand-title {
+    font-size: 28px;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
+  .brand-tagline {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .divider {
+    font-size: 20px;
+  }
+}
+
+
+
     </style>
     
 </head>
 <body>
 
- <!-- Header -->
-    <!-- Header -->
+     <!-- Header -->
     <header role="banner">
         <div class="header-container">
             <div class="header-main">
                 <!-- Logo -->
                 <a href="{{ route('client.home') }}" class="logo" aria-label="Tamil Bookshop Archives Home">
-                    <img src="logo.png" alt="Tamil Bookshop Archives Logo" width="60" height="60">
+                    <img src="./image/newlogo.jpeg" alt="Tamil Bookshop Archives Logo" width="60" height="60">
                     <div class="logo-text">
                         <span class="ta">The TIC Archives</span>
                     </div>
@@ -108,15 +139,15 @@
                       
 
                         <li class="dropdown-parent">
-                            <a href="./coming-soon.html" 
+                            <a href="./aboutus.html" 
                                class="{{ Route::is('client.about') || Route::is('client.news') ? 'active' : '' }}"
                                aria-haspopup="true">
                                 About
                             </a>
                             <div class="dropdown" role="menu">
-                                <a href="./coming-soon.html" role="menuitem">About Us</a>
-                                <a href="./coming-soon.html" role="menuitem">News</a>
-                                <a href="./coming-soon.html" role="menuitem">Support Us</a>
+                                <a href="./aboutus.html" role="menuitem">About Us</a>
+                                <a href="./news.html" role="menuitem">News</a>
+                                <a href="./supportus.html" role="menuitem">Support Us</a>
                             </div>
                         </li>
 
@@ -135,20 +166,20 @@
                         <li class="dropdown-parent">
                             <a href="./coming-soon.html" aria-haspopup="true">Exhibition & Heritage</a>
                             <div class="dropdown" role="menu">
-                                <a href="./coming-soon.html" role="menuitem">ToL Exhibition</a>
-                                <a href="./coming-soon.html" role="menuitem">Heritage Centre</a>
-                                <a href="./coming-soon.html" role="menuitem">Subject Guides</a>
-                                <a href="./coming-soon.html" role="menuitem">Historical Timeline</a>
-                                <a href="./coming-soon.html" role="menuitem">Learning Workshops</a>
+                                <a href="./ToL.html" role="menuitem">ToL Exhibition</a>
+                                <a href="./HeritageCentre.html" role="menuitem">Heritage Centre</a>
+                                <a href="./subjectguide.html" role="menuitem">Subject Guides</a>
+                                <a href="./historical-timeline.html" role="menuitem">Historical Timeline</a>
+                                <a href="./workshop.html" role="menuitem">Learning Workshops</a>
                             </div>
                         </li>
 
                         <li class="dropdown-parent">
                             <a href="#" aria-haspopup="true">What's On</a>
                             <div class="dropdown" role="menu">
-                                <a href="./coming-soon.html" role="menuitem">Latest Events</a>
-                                <a href="./coming-soon.html" role="menuitem">Projects & Programs</a>
-                                <a href="./coming-soon.html" role="menuitem">Collaborate</a>
+                                <a href="./event.html" role="menuitem">Latest Events</a>
+                                <a href="./project.html" role="menuitem">Projects & Programs</a>
+                                <a href="./collaborate.html" role="menuitem">Collaborate</a>
                             </div>
                         </li>
 
@@ -187,6 +218,80 @@
             </div>
         </div>
     </header>
+
+    <!-- Mobile Navigation Offcanvas -->
+    <!-- Mobile Navigation Offcanvas -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+    <div class="mobile-nav-offcanvas" id="mobileNavOffcanvas" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+        <div class="mobile-nav-header">
+            <span style="font-weight: 700; color: var(--accent-dark);">Menu</span>
+            <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close mobile menu">✕</button>
+        </div>
+        <nav class="mobile-nav-menu" role="navigation" aria-label="Mobile navigation">
+            <ul>
+                <li><a href="./index.html" class="{{ Route::is('client.home') ? 'active' : '' }}">Home</a></li>
+                
+                <li>
+                    <button class="mobile-dropdown-toggle" data-target="aboutDropdown" aria-expanded="false">
+                        About <span>▾</span>
+                    </button>
+                    <div class="mobile-dropdown-content" id="aboutDropdown">
+                        <a href="./aboutus.html">About Us</a>
+                        <a href="./news.html">News</a>
+                        <a href="./supportus.html">Support Us</a>
+                    </div>
+                </li>
+
+                <li>
+                    <button class="mobile-dropdown-toggle" data-target="archiveDropdown" aria-expanded="false">
+                        Archive Centre <span>▾</span>
+                    </button>
+                    <div class="mobile-dropdown-content" id="archiveDropdown">
+                        <a href="./collections.html">Collection</a>
+                        <a href="./collections.html">Online Catalogue</a>
+                        <a href="./collections.html">Google Arts & Heritage</a>
+                    </div>
+                </li>
+
+                <li>
+                    <button class="mobile-dropdown-toggle" data-target="exhibitionDropdown" aria-expanded="false">
+                        Exhibition & Heritage <span>▾</span>
+                    </button>
+                    <div class="mobile-dropdown-content" id="exhibitionDropdown">
+                        <a href="./ToL.html">ToL Exhibition</a>
+                        <a href="./HeritageCentre.html">Heritage Centre</a>
+                        <a href="./subjectguide.html">Subject Guides</a>
+                        <a href="./historical-timeline.html">Historical Timeline</a>
+                        <a href="./workshop.html">Learning Workshops</a>
+                    </div>
+                </li>
+
+                <li>
+                    <button class="mobile-dropdown-toggle" data-target="whatsOnDropdown" aria-expanded="false">
+                        What's On <span>▾</span>
+                    </button>
+                    <div class="mobile-dropdown-content" id="whatsOnDropdown">
+                        <a href="./event.html">Latest Events</a>
+                        <a href="./project.html">Projects & Programs</a>
+                        <a href="./collaborate.html">Collaborate</a>
+                    </div>
+                </li>
+
+                <li>
+                    <button class="mobile-dropdown-toggle" data-target="joinDropdown" aria-expanded="false">
+                        Join <span>▾</span>
+                    </button>
+                    <div class="mobile-dropdown-content" id="joinDropdown">
+                        <a href="./member.html">Membership</a>
+                        <a href="#donate">Donate</a>
+                    </div>
+                </li>
+
+                <li><a href="./publication.html">Shop</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
 
     <section class="heritage-brand">
   <div class="brand-logo">TL</div>
@@ -276,15 +381,17 @@
 <main id="main-content" class="px-4 sm:px-8 lg:px-16">
     <div class="max-w-6xl mx-auto relative">
         <div class="hero-container ">
-            <div class="hero-container">
-    <img src="image/A4.jpg" class="collage-img z-10" alt="Road with bike"> 
-    
-    <img src="image/A1.jpg" class="collage-img z-20" alt="Elderly man">
-    
-    <img src="image/A2.jpeg" class="collage-img z-30" alt="Elderly woman">
-    
-    <img src="image/A6.png" class="collage-img z-10" alt="Beach">
-</div>
+          <div class="hero-container">
+                <img src="image/A4.jpg" class="collage-img z-10" alt="Road with bike"> 
+                <img src="image/A1.jpg" class="collage-img z-20" alt="Elderly man">
+                <img src="image/A2.jpeg" class="collage-img z-30" alt="Elderly woman">
+                <img src="image/A6.png" class="collage-img z-10" alt="Beach">
+
+                <!-- NEW IMAGE -->
+               <img src="image/44.jpg" class="collage-img z-40" alt="New Image">
+
+         </div>
+
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-4 gap-16 max-w-6xl mx-auto pt-4 md:pt-0">
@@ -371,59 +478,86 @@
         </div>
     </div>
 </main>
-<!-- Footer (unchanged) -->
-<footer>
+
+<!-- footer  -->
+   <footer>
     <div class="container">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Tamil News</h3>
-                <p style="color: #ccc; font-size: 0.9rem;">
-                    Your trusted source for Tamil community news, culture, and heritage updates from Sri Lanka and around the world.
-                </p>
-                <p style="color: #999; font-size: 0.85rem; margin-top: 1rem;">
-                    © Tamil Information Centre • Est. 1983
-                </p>
-                <div style="margin-bottom: 1.2rem;">
-                    <form action="https://www.paypal.com/donate" method="post" target="_blank">
-                        <input type="hidden" name="hosted_button_id" value="">
-                        <button type="submit" style="background-color:#0070ba;color:white;padding:10px 18px;border:none;border-radius:6px;cursor:pointer;font-size:0.95rem;font-weight:600;display:inline-flex;align-items:center;gap:8px;">
-                            <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="PayPal" style="height:18px;">Donate with PayPal
-                        </button>
-                    </form>
-                </div>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#events">Events</a></li>
-                    <li><a href="#publications">Publications</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Categories</h3>
-                <ul>
-                    <li><a href="exhibition.html">Heritage</a></li>
-                    <li><a href="#">Culture</a></li>
-                    <li><a href="#">Community</a></li>
-                    <li><a href="#shop">Shop</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Legal</h3>
-                <ul>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                    <li><a href="#">Cookie Policy</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>©Tamil Information Centre TIC Archives || 2025 All rights reserved</p>
-        </div>
+      <div class="footer-content">
+        <div class="footer-section">
+  
+        <!-- PayPal Donate Button -->
+   
+
+    <!-- Existing Footer Content -->
+    <h3>Tamil News</h3>
+    <p style="color: #ccc; font-size: 0.9rem;">
+        Your trusted source for Tamil community news, culture, and heritage updates from Sri Lanka and around the world.
+    </p>
+    <p style="color: #999; font-size: 0.85rem; margin-top: 1rem;">
+        © Tamil Information Centre • Est. 1983
+    </p>
+     <div style="margin-bottom: 1.2rem;">
+        <form action="https://www.paypal.com/donate" method="post" target="_blank">
+            <input type="hidden" name="hosted_button_id" value=""> 
+            <button type="submit" 
+                style="
+                    background-color:#0070ba;
+                    color:white;
+                    padding:10px 18px;
+                    border:none;
+                    border-radius:6px;
+                    cursor:pointer;
+                    font-size:0.95rem;
+                    font-weight:600;
+                    display:inline-flex;
+                    align-items:center;
+                    gap:8px;
+                "
+            >
+                <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" 
+                     alt="PayPal" 
+                     style="height:18px;">
+                Donate with PayPal
+            </button>
+        </form>
     </div>
-</footer>
+</div>
+
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#publications">Publications</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Categories</h3>
+          <ul>
+            <li><a href="#heritage">Heritage</a></li>
+            <li><a href="#">Culture</a></li>
+            <li><a href="#">Community</a></li>
+            <li><a href="#shop">Shop</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Legal</h3>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+     <div class="footer-bottom">
+         <p> ©Tamil Information Centre TIC Archives || 2025 All rights reserved</p>
+        
+</div>
+
+    </div>
+  </footer>
+<!-- footer  -->
 
 <!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

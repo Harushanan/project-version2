@@ -4,12 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>TIC Archives</title>
-    <meta name="description" content="@yield('meta_description', 'Tamil Bookshop Archives - Preserving Tamil heritage, culture, and literature since 1983')">
-    
-    <!-- Preconnect for performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Events - TIC Archives</title>
+    <meta name="description" content="Latest Events at Tamil Information Centre Archives">
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -18,14 +14,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./style.css">
-        <link rel="stylesheet" href="./form.css">
-
+    <link rel="stylesheet" href="./event.css">
 </head>
 <body>
-    <!-- Skip to content link for accessibility
-    <a href="#main-content" class="skip-link">Skip to main content</a> -->
-
-    <!-- Header -->
+     <!-- Header -->
      <!-- Header -->
     <header role="banner">
         <div class="header-container">
@@ -206,181 +198,149 @@
         </nav>
     </div>
 
-<main id="main-content">
-    <!-- Hero -->
-<section class="hero-card text-center">
-    <h1>Join Tamil Information Centre</h1>
-    <p>
-        Become a member and support our commitment to human rights, peace,
-        and community development for Tamil-speaking people.
-    </p>
-</section>
-    <!-- Benefits Card (centered) -->
-    <section class="benefits-card">
-        <h2>Membership Benefits</h2>
-        <div class="benefits-wrapper">
-            <ul class="benefits-list">
-                <li>Access to exclusive updates and newsletters</li>
-                <li>Invitation to TIC events, workshops, and seminars</li>
-                <li>Support our documentation and research efforts</li>
-                <li>Contribute to advocacy for human rights and peace</li>
-                <li>Network with like-minded individuals and organisations</li>
-            </ul>
-            <p class="note">Note: Membership is free. Voluntary contribution welcomed (£20 suggested annual donation).</p>
-        </div>
-    </section>
+    <!-- Main Content -->
 
-    <!-- Form Wrapper (narrower width) -->
-    <div class="form-wrapper">
-        <section id="formContainer" class="form-card">
-            <h2>Membership Application Form</h2>
-            <p>Thank you for your interest in becoming a member of the Tamil Information Centre (TIC).</p>
-
-            <form id="membershipForm" action="https://formspree.io/f/xblrdlwk" method="POST">
-                <div class="row g-4">
-                    <div class="col-lg-3">
-                        <label for="title">Title</label>
-                        <select class="form-select" id="title" name="title">
-                            <option>Select</option>
-                            <option>Mr</option>
-                            <option>Mrs</option>
-                            <option>Ms</option>
-                            <option>Dr</option>
-                            <option>Other</option>
-                        </select>
-                    </div>
-                    <div class="col-lg-9">
-                        <label for="name">Full Name <span class="req">*</span></label>
-                        <input type="text" class="form-control" id="name" name="name" required>
-                    </div>
-
-                    <div class="col-lg-6">
-                        <label for="gender">Gender</label>
-                        <select class="form-select" id="gender" name="gender">
-                            <option>Prefer not to say</option>
-                            <option>Male</option>
-                            <option>Female</option>
-                            <option>Other</option>
-                        </select>
-                    </div>
-                    <div class="col-lg-6">
-                        <label for="dob">Date of Birth</label>
-                        <input type="date" class="form-control" id="dob" name="dob">
-                    </div>
-
-                    <div class="col-12">
-                        <label for="email">Email Address <span class="req">*</span></label>
-                        <input type="email" class="form-control" id="email" name="email" required>
-                    </div>
-
-                    <div class="col-12">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" class="form-control" id="phone" name="phone">
-                    </div>
-
-                    <div class="col-lg-6">
-                        <label for="country">Country <span class="req">*</span></label>
-                        <input type="text" class="form-control" id="country" name="country" placeholder="e.g. United Kingdom" required>
-                    </div>
-                    <div class="col-lg-6">
-                        <label for="city">City / Postcode</label>
-                        <input type="text" class="form-control" id="city" name="city">
-                    </div>
-
-                    <div class="col-12">
-                        <label for="address">Full Address</label>
-                        <textarea class="form-control" id="address" name="address" rows="3"></textarea>
-                    </div>
-
-                    <div class="col-12">
-                        <label for="occupation">Occupation / Profession</label>
-                        <input type="text" class="form-control" id="occupation" name="occupation">
-                    </div>
-
-                    <div class="col-12">
-                        <label for="membership-type">Membership Type</label>
-                        <select class="form-select" id="membership-type" name="membership-type">
-                            <option>Individual</option>
-                            <option>Family</option>
-                            <option>Student</option>
-                            <option>Organisation/Group</option>
-                            <option>Volunteer Only</option>
-                        </select>
-                    </div>
-
-                    <div class="col-12">
-                        <label>Areas of Interest <em>(select all that apply)</em></label>
-                        <div class="checkbox-grid">
-                            <div class="form-check"><input class="form-check-input" type="checkbox" name="interests" value="human-rights" id="int1"><label for="int1">Human Rights</label></div>
-                            <div class="form-check"><input class="form-check-input" type="checkbox" name="interests" value="peace-building" id="int2"><label for="int2">Peace Building</label></div>
-                            <div class="form-check"><input class="form-check-input" type="checkbox" name="interests" value="community-dev" id="int3"><label for="int3">Community Development</label></div>
-                            <div class="form-check"><input class="form-check-input" type="checkbox" name="interests" value="research" id="int4"><label for="int4">Research & Documentation</label></div>
-                            <div class="form-check"><input class="form-check-input" type="checkbox" name="interests" value="events" id="int5"><label for="int5">Events & Workshops</label></div>
-                        </div>
-                    </div>
-
-                    <div class="col-12">
-                        <label for="how-heard">How did you hear about TIC?</label>
-                        <select class="form-select" id="how-heard" name="how-heard">
-                            <option>Select</option>
-                            <option>TIC Website</option>
-                            <option>Social Media</option>
-                            <option>Friend/Family</option>
-                            <option>TIC Event</option>
-                            <option>News/Media</option>
-                            <option>Other</option>
-                        </select>
-                    </div>
-
-                    <div class="col-12">
-                        <label for="message">Why do you want to join TIC? / Additional Comments</label>
-                        <textarea class="form-control" id="message" name="message" rows="5"></textarea>
-                    </div>
-
-                    <div class="col-12">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="agree" required>
-                            <label class="form-check-label" for="agree">I agree to the terms and conditions and privacy policy <span class="req">*</span></label>
-                        </div>
-                    </div>
-
-                   <button type="submit" class="submit-btn" id="submitBtn">
-    <span class="btn-text">Submit Application</span>
-    <span class="btn-spinner"></span>
-</button>
-
+<main id="main-content" role="main">
+    <div class="container">
+        <!-- Events Hero Text Only - Clean, no background card -->
+<div class="events-hero">
+    <h1>Events</h1>
+    <p>Explore our collection of Tamil heritage books and research materials</p>
+</div>
+        <!-- Filters Section -->
+        <section class="events-filters">
+            <div class="filter-row">
+                <div class="filter-group">
+                    <label for="categoryFilter">Category</label>
+                    <select id="categoryFilter">
+                        <option value="all">All Categories</option>
+                    </select>
                 </div>
- </form>
-        <!-- Success Message (overlay box over form) -->
-        <div id="successOverlay" class="success-overlay">
-            <div class="success-box">
-                <div class="tick">✓</div>
-                <h2>Thank You!</h2>
-                <p>Your membership application has been successfully submitted.</p>
-                <p>After submission, we will contact you via email.<br>
-                For questions, email: <strong>info.tic@sangu.org</strong> or call: <strong>020 8546 1560</strong></p>
-                <p>We look forward to welcoming you to the TIC family!</p>
+
+                <div class="filter-group">
+                    <label for="yearFilter">Year</label>
+                    <select id="yearFilter">
+                        <option value="all">All Years</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="statusFilter">Status</label>
+                    <select id="statusFilter">
+                        <option value="all">All Events</option>
+                        <option value="live">Live</option>
+                        <option value="upcoming">Upcoming</option>
+                        <option value="past">Past</option>
+                    </select>
+                </div>
+
+                <button class="clear-filters" id="clearFilters">Clear Filters</button>
             </div>
-        </div>
-        
-<p id="formStatus" style="color: #d63031; text-align: center; margin-top: 1.5rem; font-weight: 600; display: none;"></p>
+
+            <!-- Status Tabs -->
+            <div class="status-tabs">
+                <span class="status-live" id="liveCount">Live: 0</span>
+                <span class="status-upcoming" id="upcomingCount">Upcoming: 0</span>
+                <span class="status-past" id="pastCount">Past: 0</span>
+            </div>
+        </section>
+
+        <!-- Events Grid -->
+        <section class="events-grid" id="eventsGrid">
+            <!-- Live Event -->
+            <article class="event-card" data-category="all" data-year="2025" data-date="2025-12-18">
+                <div class="event-image">
+                    <img src="https://thumbs.dreamstime.com/b/massive-crowd-enjoying-live-concert-sunset-dramatic-stage-lighting-celebrating-world-music-day-massive-crowd-enjoying-live-380990968.jpg" alt="Tamil Cultural Live Concert">
+                </div>
+                <span class="badge live-badge">Live</span>
+                <div class="event-details">
+                    <h3>Tamil Cultural Live Concert</h3>
+                    <p class="date">Dec 18, 2025</p>
+                    <p class="time">07:00 PM - 10:00 PM</p>
+                    <p class="venue">Chennai Music Academy</p>
+                    <a href="view.html?id=tamil-cultural-concert" class="view-details-btn">View Details</a>
+                </div>
+            </article>
+
+            <!-- Upcoming Event -->
+            <article class="event-card" data-category="all" data-year="2026" data-date="2026-01-15">
+                <div class="event-image">
+                    <img src="https://assets.techrepublic.com/uploads/2022/05/top-5-conferences-2022-tom.jpeg" alt="AI Innovation Summit">
+                </div>
+                <span class="badge upcoming-badge">Upcoming</span>
+                <div class="event-details">
+                    <h3>AI Innovation Summit</h3>
+                    <p class="date">Jan 15, 2026</p>
+                    <p class="time">10:00 AM - 06:00 PM</p>
+                    <p class="venue">Bangalore Tech Hub</p>
+                    <a href="view.html?id=ai-innovation-summit" class="view-details-btn">View Details</a>
+                </div>
+            </article>
+
+            <!-- Past Event 1 -->
+            <article class="event-card" data-category="all" data-year="2025" data-date="2025-12-17">
+                <div class="event-image">
+                    <img src="https://source.ichongqing.info/2021/08/IMG_0180.jpg?x-oss-process=image/resize,m_lfit,w_600" alt="Future Tech Expo">
+                </div>
+                <span class="badge past-badge">Past</span>
+                <div class="event-details">
+                    <h3>Future Tech Expo</h3>
+                    <p class="date">Dec 17, 2025</p>
+                    <p class="time">09:00 AM - 05:00 PM</p>
+                    <p class="venue">Tech Convention Center</p>
+                    <a href="view.html?id=future-tech-expo" class="view-details-btn">View Details</a>
+                </div>
+            </article>
+
+            <!-- Past Event 2 -->
+            <article class="event-card" data-category="all" data-year="2025" data-date="2025-12-07">
+                <div class="event-image">
+                    <img src="https://onlineartfestival.com/wp-content/uploads/2023/07/Bald-Eagle-in-Flight-by-Byron-Nelsen-Photography.jpg" alt="Art Exhibition">
+                </div>
+                <span class="badge past-badge">Past</span>
+                <div class="event-details">
+                    <h3>Art Exhibition</h3>
+                    <p class="date">Dec 07, 2025</p>
+                    <p class="time">11:00 AM - 07:00 PM</p>
+                    <p class="venue">Kandy Art Gallery</p>
+                    <a href="view.html?id=art-exhibition" class="view-details-btn">View Details</a>
+                </div>
+            </article>
+
+            <!-- Past Event 3 -->
+            <article class="event-card" data-category="all" data-year="2025" data-date="2025-11-22">
+                <div class="event-image">
+                    <img src="https://cdn.crowdriff.com/default/e758417b-acf8-2e56-ffeb-7cba95b9ff96/1080.jpg" alt="Tamil Heritage Festival">
+                </div>
+                <span class="badge past-badge">Past</span>
+                <div class="event-details">
+                    <h3>Tamil Heritage Festival</h3>
+                    <p class="date">Nov 22, 2025</p>
+                    <p class="time">10:00 AM - 03:00 PM</p>
+                    <p class="venue">Colombo Cultural Hall</p>
+                    <a href="view.html?id=tamil-heritage-festival" class="view-details-btn">View Details</a>
+                </div>
+            </article>
+
+            <!-- Past Event 4 -->
+            <article class="event-card" data-category="all" data-year="2025" data-date="2025-11-12">
+                <div class="event-image">
+                    <img src="https://npr.brightspotcdn.com/dims4/default/52c658c/2147483647/strip/true/crop/4896x3264+0+0/resize/880x587!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fd6%2Ff7%2Fca38d31c43589755ad47af6adab1%2Fistock-1195572637.jpg" alt="Classical Music Night">
+                </div>
+                <span class="badge past-badge">Past</span>
+                <div class="event-details">
+                    <h3>Classical Music Night</h3>
+                    <p class="date">Nov 12, 2025</p>
+                    <p class="time">06:00 PM - 08:00 PM</p>
+                    <p class="venue">Jaffna Arts Theatre</p>
+                    <a href="view.html?id=classical-music-night" class="view-details-btn">View Details</a>
+                </div>
+            </article>
+        </section>
     </div>
-
-       
-    </section>
-
-
-        <!-- Donate Section -->
-        <div class="card text-center">
-            <h2>Support Us with a Donation</h2>
-            <p>Your generous contribution helps us continue our work.</p>
-            <form action="https://www.paypal.com/donate" method="post" target="_blank">
-                <input type="hidden" name="hosted_button_id" value="">
-                <button type="submit" class="submit-btn">Donate with PayPal</button>
-            </form>
-        </div>
 </main>
- <!-- footer  -->
+
+<!-- footer  -->
    <footer>
     <div class="container">
       <div class="footer-content">
@@ -460,10 +420,59 @@
   </footer>
 <!-- footer  -->
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-<script>
-       
+
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- All Scripts – Only One Clean Version -->
+    <script>
+        // ============================================
+        // PROTECTION MEASURES
+        // ============================================
+        (function() {
+            'use strict';
+            document.addEventListener('copy', e => e.preventDefault());
+            document.addEventListener('cut', e => e.preventDefault());
+            document.addEventListener('selectstart', e => e.preventDefault());
+            document.addEventListener('contextmenu', e => e.preventDefault());
+
+            document.addEventListener('keydown', function(e) {
+                if (
+                    e.key === 'F12' ||
+                    (e.ctrlKey && e.shiftKey && ['I', 'J', 'C'].includes(e.key.toUpperCase())) ||
+                    (e.ctrlKey && e.key.toLowerCase() === 'u') ||
+                    (e.ctrlKey && e.key.toLowerCase() === 's')
+                ) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    return false;
+                }
+            }, true);
+
+            let devtoolsOpen = false;
+            const threshold = 160;
+            const detectDevTools = () => {
+                const widthDiff = window.outerWidth - window.innerWidth;
+                const heightDiff = window.outerHeight - window.innerHeight;
+                return widthDiff > threshold || heightDiff > threshold;
+            };
+            const check = () => {
+                if (detectDevTools()) {
+                    if (!devtoolsOpen) {
+                        devtoolsOpen = true;
+                        window.location.href = 'https://www.google.com';
+                    }
+                } else {
+                    devtoolsOpen = false;
+                }
+            };
+            setInterval(check, 1000);
+            window.addEventListener('resize', check);
+            check();
+        })();
 
         // ============================================
         // MOBILE MENU FUNCTIONALITY
@@ -481,12 +490,8 @@
                 mobileNavOverlay?.classList.add('active');
                 mobileMenuBtn.setAttribute('aria-expanded', 'true');
                 document.body.style.overflow = 'hidden';
-                
-                // Focus trap
                 const focusableElements = mobileNavOffcanvas.querySelectorAll('a, button');
-                if (focusableElements.length) {
-                    focusableElements[0].focus();
-                }
+                if (focusableElements.length) focusableElements[0].focus();
             }
             
             function closeMobileMenu() {
@@ -501,14 +506,12 @@
             mobileNavClose?.addEventListener('click', closeMobileMenu);
             mobileNavOverlay?.addEventListener('click', closeMobileMenu);
             
-            // Close on Escape key
             document.addEventListener('keydown', (e) => {
                 if (e.key === 'Escape' && mobileNavOffcanvas.classList.contains('active')) {
                     closeMobileMenu();
                 }
             });
             
-            // Mobile dropdown toggles
             const dropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
             dropdownToggles.forEach(toggle => {
                 toggle.addEventListener('click', function() {
@@ -516,7 +519,6 @@
                     const targetContent = document.getElementById(targetId);
                     const isExpanded = this.getAttribute('aria-expanded') === 'true';
                     
-                    // Close all other dropdowns
                     dropdownToggles.forEach(t => {
                         if (t !== this) {
                             t.setAttribute('aria-expanded', 'false');
@@ -525,7 +527,6 @@
                         }
                     });
                     
-                    // Toggle current dropdown
                     targetContent?.classList.toggle('active');
                     this.setAttribute('aria-expanded', !isExpanded);
                 });
@@ -533,58 +534,97 @@
         })();
 
         // ============================================
-        // BACK TO TOP BUTTON
+        // BACK TO TOP BUTTON (if you have it)
         // ============================================
         (function() {
             const backToTop = document.getElementById('backToTop');
             if (!backToTop) return;
-            
             window.addEventListener('scroll', () => {
-                if (window.scrollY > 300) {
-                    backToTop.classList.add('visible');
-                } else {
-                    backToTop.classList.remove('visible');
-                }
+                if (window.scrollY > 300) backToTop.classList.add('visible');
+                else backToTop.classList.remove('visible');
             });
-            
             backToTop.addEventListener('click', () => {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
+                window.scrollTo({ top: 0, behavior: 'smooth' });
             });
         })();
 
-        // Add keyboard accessibility for card clicks
-        document.querySelectorAll('.featured-card, .new-item-card').forEach(card => {
-            card.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    const link = this.querySelector('a');
-                    if (link) {
-                        link.click();
-                    }
-                }
-            });
-        });
+        // ============================================
+        // EVENTS FILTER SCRIPT – Only One Version
+        // ============================================
+        document.addEventListener('DOMContentLoaded', function () {
+            const eventsGrid = document.getElementById('eventsGrid');
+            const eventCards = eventsGrid.querySelectorAll('.event-card');
+            
+            const categoryFilter = document.getElementById('categoryFilter');
+            const yearFilter = document.getElementById('yearFilter');
+            const statusFilter = document.getElementById('statusFilter');
+            const clearBtn = document.getElementById('clearFilters');
+            
+            const liveCountEl = document.getElementById('liveCount');
+            const upcomingCountEl = document.getElementById('upcomingCount');
+            const pastCountEl = document.getElementById('pastCount');
+            
+            const currentDate = new Date('2025-12-18');
 
-        // Smooth scroll for internal links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                const href = this.getAttribute('href');
-                if (href !== '#') {
-                    e.preventDefault();
-                    const target = document.querySelector(href);
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
+            // Year 2020 to 2025 (latest first)
+            for (let year = 2025; year >= 2020; year--) {
+                const option = document.createElement('option');
+                option.value = year;
+                option.textContent = year;
+                yearFilter.appendChild(option);
+            }
+
+            function filterEvents() {
+                const selectedCategory = categoryFilter.value;
+                const selectedYear = yearFilter.value;
+                const selectedStatus = statusFilter.value;
+
+                let live = 0, upcoming = 0, past = 0;
+
+                eventCards.forEach(card => {
+                    const cardDate = new Date(card.dataset.date);
+                    let cardStatus = 'past';
+                    if (cardDate.toDateString() === currentDate.toDateString()) {
+                        cardStatus = 'live';
+                    } else if (cardDate > currentDate) {
+                        cardStatus = 'upcoming';
                     }
-                }
+
+                    const badge = card.querySelector('.badge');
+                    badge.textContent = cardStatus.charAt(0).toUpperCase() + cardStatus.slice(1);
+                    badge.className = 'badge ' + cardStatus + '-badge';
+
+                    const matchCategory = selectedCategory === 'all' || card.dataset.category === selectedCategory;
+                    const matchYear = selectedYear === 'all' || card.dataset.year === selectedYear;
+                    const matchStatus = selectedStatus === 'all' || cardStatus === selectedStatus;
+
+                    if (matchCategory && matchYear && matchStatus) {
+                        card.style.display = '';
+                        if (cardStatus === 'live') live++;
+                        else if (cardStatus === 'upcoming') upcoming++;
+                        else past++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                liveCountEl.textContent = `Live: ${live}`;
+                upcomingCountEl.textContent = `Upcoming: ${upcoming}`;
+                pastCountEl.textContent = `Past: ${past}`;
+            }
+
+            filterEvents();
+
+            categoryFilter.addEventListener('change', filterEvents);
+            yearFilter.addEventListener('change', filterEvents);
+            statusFilter.addEventListener('change', filterEvents);
+            clearBtn.addEventListener('click', () => {
+                categoryFilter.value = 'all';
+                yearFilter.value = 'all';
+                statusFilter.value = 'all';
+                filterEvents();
             });
         });
- 
-</script>
+    </script>
 </body>
 </html>

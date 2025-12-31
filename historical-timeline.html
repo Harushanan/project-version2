@@ -1,0 +1,1672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>About - TIC Archives</title>
+    <meta name="description" content="Tamil Information Centre - Committed to Human Rights and Community Development since 1983">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+integrity="sha512-DTOQ     O9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./about.css">
+    <style>
+/* ===================================================
+   GLOBAL VARIABLES AND BASE STYLES
+   =================================================== */
+
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f6e3c5; /* Changed to match header background */
+    color: var(--accent-dark);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    padding-top: 0;
+    user-select: none; -webkit-user-select: none; -moz-user-select: none; 
+}
+
+/* Skip to content link for accessibility */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--accent-dark);
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    z-index: 9999;
+    border-radius: 0 0 4px 0;
+}
+
+.skip-link:focus {
+    top: 0;
+    outline: 3px solid #ffd700;
+}
+
+
+
+
+
+/* Navigation Styles (Desktop) */
+.main-nav {
+    display: none;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+    display: block;
+    background: var(--accent-dark);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-btn:hover,
+.mobile-menu-btn:focus {
+    background: #1a3a5f;
+    outline: 2px solid #ffd700;
+    outline-offset: 2px;
+}
+
+/* Mobile Navigation Offcanvas */
+.mobile-nav-offcanvas {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 85%;
+    max-width: 400px;
+    height: 100vh;
+    background: white;
+    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease;
+    z-index: 2000;
+    overflow-y: auto;
+}
+
+.mobile-nav-offcanvas.active {
+    right: 0;
+}
+
+.mobile-nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.mobile-nav-close {
+    background: var(--accent-dark);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.mobile-nav-menu {
+    padding: 1rem;
+}
+
+.mobile-nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-nav-menu li {
+    margin-bottom: 0.5rem;
+}
+
+.mobile-nav-menu a {
+    color: var(--accent-dark);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 1rem;
+    display: block;
+    border-radius: 8px;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+}
+
+.mobile-nav-menu a:hover,
+.mobile-nav-menu a.active {
+    background-color: var(--accent-dark);
+    color: white;
+}
+
+.mobile-dropdown-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: var(--accent-dark);
+    font-weight: 600;
+    padding: 1rem;
+    border-radius: 8px;
+    min-height: 48px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.mobile-dropdown-content {
+    display: none;
+    padding-left: 1rem;
+}
+
+.mobile-dropdown-content.active {
+    display: block;
+}
+
+/* Overlay for mobile menu */
+.mobile-nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 1999;
+}
+
+.mobile-nav-overlay.active {
+    display: block;
+}
+
+/* Main Content */
+main {
+    min-height: calc(100vh - 300px);
+    padding-top: 2rem;
+}
+
+/* Back to top button */
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--accent-dark);
+    color: white;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+}
+
+.back-to-top.visible {
+    display: flex;
+}
+
+.back-to-top:hover,
+.back-to-top:focus {
+    background: #1a3a5f;
+    outline: 2px solid #ffd700;
+}
+
+/* ===================================================
+   HOMEPAGE/GENERAL SECTION STYLES (Provided by user)
+   =================================================== */
+
+/* Hero Section */
+.hero-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 1.5rem 0 2.5rem;
+    align-items: center;
+}
+
+.hero-content h1 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--accent-dark);
+    margin-bottom: 0.875rem;
+}
+
+.hero-content p {
+    font-size: 0.95rem;
+    color: #243447;
+    margin-bottom: 1.25rem;
+    line-height: 1.6;
+}
+
+/* Search Box */
+.search-box {
+    display: flex;
+    align-items: center;
+    background: white;
+    border: 2px solid rgba(15, 37, 64, 0.2);
+    border-radius: 12px;
+    max-width: 100%;
+    margin-top: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.search-box input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 0.95rem;
+    padding: 0.875rem 1rem;
+    background: transparent;
+    min-width: 0;
+}
+
+.search-box button {
+    background: transparent;
+    color: #000;
+    border: none;
+    padding: 0.875rem 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.search-box button:hover,
+.search-box button:focus {
+    background: rgba(15, 37, 64, 0.05);
+    outline: 2px solid var(--accent-dark);
+    outline-offset: -2px;
+}
+
+.search-box svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Hero Image */
+.hero-image {
+    overflow: hidden;
+    display: flex;
+    width: 100%;
+    height: 220px;
+}
+
+.hero-image-content {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 2.5rem 0 1.25rem;
+    color: var(--accent-dark);
+}
+
+/* Featured Collections Grid */
+.featured-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+}
+
+.featured-card {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.4));
+    border: 1px solid rgba(15, 37, 64, 0.08);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.featured-card:hover {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.55));
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.featured-card:focus-within {
+    outline: 3px solid var(--accent-dark);
+    outline-offset: 2px;
+}
+
+.card-thumb {
+    width: 100%;
+    height: 180px;
+    background: var(--card-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.card-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.featured-card-content {
+    padding: 1rem;
+}
+
+.featured-card h3 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: 0.875rem;
+    color: var(--accent-dark);
+}
+
+.explore-btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--accent-dark);
+    background: transparent;
+    color: var(--accent-dark);
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.explore-btn:hover,
+.explore-btn:focus {
+    background: var(--accent-dark);
+    color: white;
+    transform: translateX(4px);
+    outline: 2px solid #ffd700;
+    outline-offset: 2px;
+}
+
+/* New Items Grid */
+.new-items-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+}
+
+.new-item-card {
+    background: rgba(255, 255, 255, 0.4);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.new-item-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.new-item-image {
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #d4c5b5 0%, #bfa98b 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.new-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.new-item-meta {
+    padding: 1rem;
+    text-align: center;
+}
+
+.new-item-meta strong {
+    display: block;
+    font-size: 1rem;
+    color: var(--accent-dark);
+    margin-bottom: 0.75rem;
+}
+
+/* Call to Action */
+.cta-section {
+    background: var(--accent-dark);
+    color: white;
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin: 2.5rem 0;
+}
+
+.cta-content {
+    flex: 1;
+}
+
+.cta-content h2 {
+    font-size: 1.375rem;
+    font-weight: 700;
+    margin-bottom: 0.625rem;
+    line-height: 1.3;
+}
+
+.cta-content p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    opacity: 0.95;
+}
+
+.cta-btn {
+    background: var(--card-bg);
+    color: var(--accent-dark);
+    padding: 0.75rem 1.25rem;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+    text-align: center;
+}
+
+.cta-btn:hover,
+.cta-btn:focus {
+    background: white;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    outline: 2px solid #ffd700;
+    outline-offset: 2px;
+}
+
+/* ===================================================
+   PUBLICATIONS PAGE STYLES
+   (FIXED: Filter box uses var(--card-bg))
+   =================================================== */
+
+.publications-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* --- Publication Filters Section --- */
+.filter-box {
+    /* FIX APPLIED HERE: Sets background-color to var(--card-bg) */
+    background-color:  #f5eee6;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(15, 37, 64, 0.1);
+}
+
+.filter-row {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-width: 180px;
+}
+
+.filter-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--accent-dark);
+    margin-bottom: 0.5rem;
+}
+
+.filter-group select {
+    padding: 0.75rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    appearance: none; /* Remove default arrow */
+    /* Custom SVG for dropdown arrow (using primary theme color) */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%230f2540" d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+}
+
+.reset-btn {
+    background-color: var(--accent-dark);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    flex-shrink: 0;
+}
+
+.reset-btn:hover {
+    background-color: #1a3a5f;
+}
+
+/* --- Main Content Layout (Guide vs Publications) --- */
+.publications-main-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+/* --- Publication Guide Section (Left) --- */
+.publication-guide h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-dark);
+    margin-bottom: 1rem;
+    border-left: 5px solid var(--accent-muted);
+    padding-left: 1rem;
+}
+
+.guide-content {
+    background-color: white; 
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(15, 37, 64, 0.1);
+    max-height: 600px; /* Max height for scrollable area */
+    overflow-y: auto;
+    line-height: 1.5;
+}
+
+.guide-section {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed #e0e0e0;
+}
+
+.guide-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.guide-section h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--accent-dark);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.guide-section p, .contact-info {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.contact-info strong {
+    display: block;
+    margin-top: 0.5rem;
+    font-weight: 600;
+}
+
+.contact-info address {
+    font-style: normal;
+}
+
+.guide-icon {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    fill: var(--accent-dark);
+}
+
+/* --- Publications Listings Section (Right) --- */
+.publications-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.publications-header h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-dark);
+    margin: 0;
+}
+
+.publication-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+/* --- Individual Publication Card --- */
+.pub-card {
+    background-color: var(--card-bg); /* Uses the same yellow color */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.pub-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.pub-status-tag {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    background-color: #d9534f; /* Red/Tomato for PAID */
+    color: white;
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 0 4px 4px 0;
+    text-transform: uppercase;
+}
+
+.pub-status-tag.private {
+    background-color: #337ab7; /* Blue for PRIVATE */
+}
+
+.pub-image {
+    height: 180px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eee;
+}
+
+.pub-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pub-details {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 150px; 
+}
+
+.pub-type {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--accent-muted);
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+}
+
+.pub-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--accent-dark);
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.pub-description {
+    font-size: 0.85rem;
+    color: #555;
+    margin-bottom: 1rem;
+    flex-grow: 1; /* Ensures buttons align at the bottom */
+}
+
+.pub-price {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--accent-dark);
+    margin-bottom: 1rem;
+}
+
+.pub-action-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.view-details-btn {
+    background-color: #d9534f;
+    color: white;
+}
+
+.view-details-btn:hover {
+    background-color: #c9302c;
+    color: white;
+}
+
+.request-access-btn {
+    background-color: var(--accent-dark);
+    color: white;
+}
+
+.request-access-btn:hover {
+    background-color: #1a3a5f;
+    color: white;
+}
+
+
+/* ===================================================
+   RESPONSIVE DESIGN (Media Queries)
+   =================================================== */
+
+/* Tablet/Desktop Navigation - Show at 768px and above */
+@media (min-width: 768px) {
+    .main-nav {
+        display: block;
+    }
+
+    .mobile-menu-btn {
+        display: none;
+    }
+
+    .hero-section {
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
+        margin: 2rem 0 3rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.125rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-image {
+        height: 100%;
+        min-height: 300px;
+    }
+
+    .search-box {
+        max-width: 550px;
+        margin-top: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin: 3rem 0 1.5rem;
+    }
+
+    .featured-grid,
+    .new-items-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.75rem;
+    }
+
+    .card-thumb {
+        height: 220px;
+    }
+
+    .new-item-image {
+        height: 200px;
+    }
+
+    /* Publications Page Desktop Layout */
+    .publications-main-content {
+        grid-template-columns: 300px 1fr; /* Guide fixed width, Publications takes remaining */
+    }
+    .filter-box {
+        padding: 1rem 1.5rem;
+    }
+    .filter-row {
+        flex-wrap: nowrap;
+    }
+    .filter-group {
+        flex-grow: 1;
+    }
+    .guide-content {
+        max-height: 800px; /* Increase height for desktop */
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .hero-section {
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 3rem;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .hero-image {
+        min-height: 350px;
+    }
+
+    .search-box {
+        max-width: 600px;
+    }
+
+    .featured-grid,
+    .new-items-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .card-thumb {
+        height: 200px;
+    }
+
+    .new-item-image {
+        height: 180px;
+    }
+
+    .cta-section {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2.5rem 3rem;
+    }
+
+    .cta-content h2 {
+        font-size: 1.75rem;
+    }
+
+    .cta-btn {
+        align-self: center;
+        padding: 0.875rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .hero-content h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero-image {
+        min-height: 380px;
+    }
+
+    .card-thumb {
+        height: 220px;
+    }
+
+    .new-item-image {
+        height: 200px;
+    }
+}
+
+/* Extra small devices adjustments */
+@media (max-width: 575px) {
+    .filter-row {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .filter-group {
+        min-width: 100%;
+    }
+    .reset-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 375px) {
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-content p {
+        font-size: 0.875rem;
+    }
+
+    .hero-image {
+        height: 200px;
+    }
+
+    .section-title {
+        font-size: 1.375rem;
+    }
+
+    .featured-card h3,
+    .new-item-meta strong {
+        font-size: 1rem;
+    }
+
+    .explore-btn {
+        font-size: 0.85rem;
+        padding: 0.5rem 0.875rem;
+    }
+
+    .cta-content h2 {
+        font-size: 1.25rem;
+    }
+
+    .cta-content p {
+        font-size: 0.875rem;
+    }
+}
+
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    justify-content: center;   /* 👈 main fix */
+    max-width: 1200px;         /* optional – layout neat */
+    margin: 0 auto;            /* center the whole section */
+}
+        /* Styles to match the images */
+        /* REMOVED THE DUPLICATE body STYLE THAT WAS HERE */
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .section-title {
+            color: #c41e3a;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .browse-all {
+            color: #8B0000; /* Dark red color */
+            text-decoration: none;
+            font-weight: normal;
+            font-size: 16px;
+        }
+
+        .browse-all:hover {
+            text-decoration: underline;
+        }
+
+        .document-description p {
+            font-family: 'Noto Sans Tamil', sans-serif;
+            color: #000000;
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .category-list p {
+            font-family: 'Noto Sans Tamil', sans-serif;
+            color: #000000;
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 5px;
+            background-color: #e0f7fa; /* Light cyan background to match image */
+            padding: 5px 10px;
+        }
+
+        .timeline-section {
+            background-color: #f5ead7;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .timeline-container {
+            position: relative;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 8px;
+            top: 20px;
+            bottom: 0;
+            width: 2px;
+            background-color: #c41e3a;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+            padding-left: 40px;
+        }
+
+        .timeline-marker {
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: #c41e3a;
+        }
+
+        .marker-year {
+            font-size: 18px;
+            font-weight: bold;
+            color: #000000;
+            margin-bottom: 5px;
+        }
+
+        .timeline-item h3 {
+            font-size: 16px;
+            font-weight: bold;
+            color: #000000;
+            margin-bottom: 5px;
+        }
+
+        .timeline-item p {
+            font-size: 14px;
+            color: #808080;
+            line-height: 1.5;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .timeline-container {
+                padding-left: 30px;
+            }
+
+            .timeline-marker {
+                left: -20px;
+            }
+
+            .header-row {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .browse-all {
+                margin-top: 10px;
+            }
+
+            .category-list p {
+                padding: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+  <!-- Header -->
+    <header role="banner">
+        <div class="header-container">
+            <div class="header-main">
+                <!-- Logo -->
+                <a href="{{ route('client.home') }}" class="logo" aria-label="Tamil Bookshop Archives Home">
+                    <img src="./image/newlogo.jpeg" alt="Tamil Bookshop Archives Logo" width="60" height="60">
+                    <div class="logo-text">
+                        <span class="ta">The TIC Archives</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="main-nav" role="navigation" aria-label="Main navigation">
+                    <ul>
+                        <li>
+                            <a href="./index.html" 
+                               class="{{ Route::is('client.home') ? 'active' : '' }}"
+>
+                                Home
+                            </a>
+                        </li>
+
+                      
+
+                        <li class="dropdown-parent">
+                            <a href="./aboutus.html" 
+                               class="{{ Route::is('client.about') || Route::is('client.news') ? 'active' : '' }}"
+                               aria-haspopup="true">
+                                About
+                            </a>
+                            <div class="dropdown" role="menu">
+                                <a href="./aboutus.html" role="menuitem">About Us</a>
+                                <a href="./news.html" role="menuitem">News</a>
+                                <a href="./supportus.html" role="menuitem">Support Us</a>
+                            </div>
+                        </li>
+
+                        <li class="dropdown-parent">
+                            <a href="./coming-soon.html" class="{{ Route::is('client.archivecentrecollection') ? 'active' : '' }}"
+                               aria-haspopup="true">
+                                Archive Centre
+                            </a>
+                            <div class="dropdown" role="menu">
+                                <a href="./coming-soon.html" role="menuitem">Collection</a>
+                                <a href="./coming-soon.html" role="menuitem">Online Catalogue</a>
+                                <a href="./coming-soon.html" role="menuitem">Google Arts & Heritage</a>
+                            </div>
+                        </li>
+
+                        <li class="dropdown-parent">
+                            <a href="./coming-soon.html" aria-haspopup="true">Exhibition & Heritage</a>
+                            <div class="dropdown" role="menu">
+                                <a href="./ToL.html" role="menuitem">ToL Exhibition</a>
+                                <a href="./HeritageCentre.html" role="menuitem">Heritage Centre</a>
+                                <a href="./subjectguide.html" role="menuitem">Subject Guides</a>
+                                <a href="./historical-timeline.html" role="menuitem">Historical Timeline</a>
+                                <a href="./workshop.html" role="menuitem">Learning Workshops</a>
+                            </div>
+                        </li>
+
+                        <li class="dropdown-parent">
+                            <a href="#" aria-haspopup="true">What's On</a>
+                            <div class="dropdown" role="menu">
+                                <a href="./event.html" role="menuitem">Latest Events</a>
+                                <a href="./project.html" role="menuitem">Projects & Programs</a>
+                                <a href="./collaborate.html" role="menuitem">Collaborate</a>
+                            </div>
+                        </li>
+
+                        <li class="dropdown-parent">
+                            <a href="#" aria-haspopup="true">Join</a>
+                            <div class="dropdown" role="menu">
+                                <a href="./member.html" role="menuitem">Membership</a>
+                                <a href="#donate" role="menuitem">Donate</a>
+                            </div>
+                        </li>
+
+                        <li>
+                            <a href="./publication.html" 
+                               class="{{ Route::is('client.publications') ? 'active' : '' }}">
+                                Shop
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="contact.html" 
+                               class="{{ Route::is('client.contactus') ? 'active' : '' }}">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" 
+                        id="mobileMenuBtn" 
+                        aria-label="Open mobile menu"
+                        aria-expanded="false"
+                        aria-controls="mobileNavOffcanvas">
+                    ☰
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Offcanvas -->
+    <!-- Mobile Navigation Offcanvas -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+    <div class="mobile-nav-offcanvas" id="mobileNavOffcanvas" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+        <div class="mobile-nav-header">
+            <span style="font-weight: 700; color: var(--accent-dark);">Menu</span>
+            <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close mobile menu">✕</button>
+        </div>
+        <nav class="mobile-nav-menu" role="navigation" aria-label="Mobile navigation">
+            <ul>
+                <li><a href="./index.html" class="{{ Route::is('client.home') ? 'active' : '' }}">Home</a></li>
+                
+                <li>
+                    <button class="mobile-dropdown-toggle" data-target="aboutDropdown" aria-expanded="false">
+                        About <span>▾</span>
+                    </button>
+                    <div class="mobile-dropdown-content" id="aboutDropdown">
+                        <a href="./aboutus.html">About Us</a>
+                        <a href="./news.html">News</a>
+                        <a href="./supportus.html">Support Us</a>
+                    </div>
+                </li>
+
+                <li>
+                    <button class="mobile-dropdown-toggle" data-target="archiveDropdown" aria-expanded="false">
+                        Archive Centre <span>▾</span>
+                    </button>
+                    <div class="mobile-dropdown-content" id="archiveDropdown">
+                        <a href="./collections.html">Collection</a>
+                        <a href="./collections.html">Online Catalogue</a>
+                        <a href="./collections.html">Google Arts & Heritage</a>
+                    </div>
+                </li>
+
+                <li>
+                    <button class="mobile-dropdown-toggle" data-target="exhibitionDropdown" aria-expanded="false">
+                        Exhibition & Heritage <span>▾</span>
+                    </button>
+                    <div class="mobile-dropdown-content" id="exhibitionDropdown">
+                        <a href="./ToL.html">ToL Exhibition</a>
+                        <a href="./HeritageCentre.html">Heritage Centre</a>
+                        <a href="./subjectguide.html">Subject Guides</a>
+                        <a href="./historical-timeline.html">Historical Timeline</a>
+                        <a href="./workshop.html">Learning Workshops</a>
+                    </div>
+                </li>
+
+                <li>
+                    <button class="mobile-dropdown-toggle" data-target="whatsOnDropdown" aria-expanded="false">
+                        What's On <span>▾</span>
+                    </button>
+                    <div class="mobile-dropdown-content" id="whatsOnDropdown">
+                        <a href="./event.html">Latest Events</a>
+                        <a href="./project.html">Projects & Programs</a>
+                        <a href="./collaborate.html">Collaborate</a>
+                    </div>
+                </li>
+
+                <li>
+                    <button class="mobile-dropdown-toggle" data-target="joinDropdown" aria-expanded="false">
+                        Join <span>▾</span>
+                    </button>
+                    <div class="mobile-dropdown-content" id="joinDropdown">
+                        <a href="./member.html">Membership</a>
+                        <a href="#donate">Donate</a>
+                    </div>
+                </li>
+
+                <li><a href="./publication.html">Shop</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+<!--main-->
+    <main>
+        <div class="container">
+            <!-- எமது ஆவணங்கள் Section -->
+            <section class="documents-section">
+                <div class="header-row">
+                    <h2 class="section-title">எமது ஆவணங்கள்</h2>
+                    <a href="#" class="browse-all">Browse All</a>
+                </div>
+                <div class="document-description">
+                    <p>இலங்கைத் தமிழ் பேசும் சமூகங்களின் எழுத்தாவணங்களை எண்ணிமப்படுத்தி ஆவணப்படுத்தும் செயற்பாடுகளை ஊக்குவிப்பதோடு, தகவல் வளங்களையும் அறிவுச்சேகரங்களையும் ஒழுங்குபடுத்தி அனைவருக்கும் கிடைக்கச் செய்துவரும் இலாப நோக்கற்ற தன்னார்வ முயற்சி.</p>
+                </div>
+                <div class="category-list">
+                    <p>ஓவிய ஆவணங்கள்: 180,996 | ஓவிய பக்கங்கள்: 6,391,190</p>
+                    <p>அறிவியல் ஆவணங்கள்: [130] | அறிவியல் பக்கங்கள்: [449]</p>
+                    <p>U.அறிவியல் ஆவணங்கள்: [121] | அறிவியல் பக்கங்கள்: [1,440]</p>
+                    <p>நாட்டிய ஆவணங்கள்: [2205] | நாட்டிய பக்கங்கள்: [2,695]</p>
+                    <p>பொருளியல் ஆவணங்கள்: [899] | பொருளியல் பக்கங்கள்: [714]</p>
+                    <p>சிற்பக் கலை ஆவணங்கள்: [1,558] | சிற்பக் கலை பக்கங்கள்: [507] | சிற்பக் ஆவணங்கள்: [207]</p>
+                    <p>நிகழ்த்து கலை ஆவணங்கள்: [2,237] | நிகழ்த்து கலை பக்கங்கள்: [59] | நிகழ்த்து ஆவணங்கள்: [5,889]</p>
+                    <p>பாரம்பரிய ஆவணங்கள்: [126] | பாரம்பரிய பக்கங்கள்: [3,944] | பாரம்பரிய ஆவணங்கள்: [792]</p>
+                    <p>ஓவிய சுவடிகள் ஆவணங்கள்: [380] | ஓவிய சுவடிகள் பக்கங்கள்: [782]</p>
+                </div>
+            </section>
+
+            <!-- Our Journey Section -->
+            <section class="timeline-section">
+                <h2 class="section-title">Our Journey</h2>
+                <div class="timeline-container">
+                    <div class="timeline-line"></div>
+                    <!-- 1983 -->
+                    <div class="timeline-item category-foundation" data-decade="1980s">
+                        <div class="timeline-marker"></div>
+                        <div class="marker-year">1983</div>
+                        <h3>Foundation Established</h3>
+                        <p>Tamil Information Centre was founded in response to the growing need for accurate information about the Tamil community in Sri Lanka.</p>
+                    </div>
+
+                    <!-- 1985 -->
+                    <div class="timeline-item category-publication" data-decade="1980s">
+                        <div class="timeline-marker"></div>
+                        <div class="marker-year">1985</div>
+                        <h3>First Human Rights Report</h3>
+                        <p>Published our first comprehensive human rights report documenting violations in Sri Lanka.</p>
+                    </div>
+
+                    <!-- 1987 -->
+                    <div class="timeline-item category-recognition" data-decade="1980s">
+                        <div class="timeline-marker"></div>
+                        <div class="marker-year">1987</div>
+                        <h3>UN Recognition</h3>
+                        <p>Gained consultative status with the United Nations Economic and Social Council (ECOSOC).</p>
+                    </div>
+
+                    <!-- 1990 -->
+                    <div class="timeline-item category-expansion" data-decade="1990s">
+                        <div class="timeline-marker"></div>
+                        <div class="marker-year">1990</div>
+                        <h3>Geneva Office Opened</h3>
+                        <p>Established a permanent office in Geneva to enhance international advocacy efforts.</p>
+                    </div>
+
+                    <!-- 1994 -->
+                    <div class="timeline-item category-archive" data-decade="1990s">
+                        <div class="timeline-marker"></div>
+                        <div class="marker-year">1994</div>
+                        <h3>Archival Collection Started</h3>
+                        <p>Began systematic collection and preservation of historical documents and materials.</p>
+                    </div>
+
+                    <!-- 1998 -->
+                    <div class="timeline-item category-technology" data-decade="1990s">
+                        <div class="timeline-marker"></div>
+                        <div class="marker-year">1998</div>
+                        <h3>Digital Documentation Project</h3>
+                        <p>Initiated digitization of historical records for preservation and accessibility.</p>
+                    </div>
+
+                    <!-- 2001 -->
+                    <div class="timeline-item category-research" data-decade="2000s">
+                        <div class="timeline-marker"></div>
+                        <div class="marker-year">2001</div>
+                        <h3>Peace Process Documentation</h3>
+                        <p>Comprehensive documentation of the Sri Lankan peace process and negotiations.</p>
+                    </div>
+
+                    <!-- 2004 -->
+                    <div class="timeline-item category-archive" data-decade="2000s">
+                        <div class="timeline-marker"></div>
+                        <div class="marker-year">2004</div>
+                        <h3>Tsunami Relief Archives</h3>
+                        <p>Documented relief efforts and community responses to the Indian Ocean tsunami.</p>
+                    </div>
+
+                    <!-- 2009 -->
+                    <div class="timeline-item category-research" data-decade="2000s">
+                        <div class="timeline-marker"></div>
+                        <div class="marker-year">2009</div>
+                        <h3>War Documentation Project</h3>
+                        <p>Launched extensive documentation of the final phase of the civil war.</p>
+                    </div>
+
+                    <!-- 2010 -->
+                    <div class="timeline-item category-archive" data-decade="2010s">
+                        <div class="timeline-marker"></div>
+                        <div class="marker-year">2010</div>
+                        <h3>Memory Project Initiated</h3>
+                        <p>Started collecting personal testimonies and oral histories from survivors.</p>
+                    </div>
+
+                    <!-- 2013 -->
+                    <div class="timeline-item category-milestone" data-decade="2010s">
+                        <div class="timeline-marker"></div>
+                        <div class="marker-year">2013</div>
+                        <h3>30th Anniversary</h3>
+                        <p>Celebrated 30 years of service with special exhibitions and publications.</p>
+                    </div>
+
+                    <!-- 2015 -->
+                    <div class="timeline-item category-advocacy" data-decade="2010s">
+                        <div class="timeline-marker"></div>
+                        <div class="marker-year">2015</div>
+                        <h3>UNHRC Advocacy</h3>
+                        <p>Intensive advocacy during the UN Human Rights Council sessions in Geneva.</p>
+                    </div>
+
+                    <!-- 2018 -->
+                    <div class="timeline-item category-technology" data-decade="2010s">
+                        <div class="timeline-marker"></div>
+                        <div class="marker-year">2018</div>
+                        <h3>Digital Archive Launch</h3>
+                        <p>Launched our online digital archive accessible to researchers worldwide.</p>
+                    </div>
+
+                    <!-- 2020 -->
+                    <div class="timeline-item category-research" data-decade="2020s">
+                        <div class="timeline-marker"></div>
+                        <div class="marker-year">2020</div>
+                        <h3>Pandemic Documentation</h3>
+                        <p>Documented the impact of COVID-19 on Tamil communities globally.</p>
+                    </div>
+
+                    <!-- 2021 -->
+                    <div class="timeline-item category-technology" data-decade="2020s">
+                        <div class="timeline-marker"></div>
+                        <div class="marker-year">2021</div>
+                        <h3>Virtual Exhibitions</h3>
+                        <p>Launched virtual exhibitions to reach global audiences during travel restrictions.</p>
+                    </div>
+
+                    <!-- 2023 -->
+                    <div class="timeline-item category-milestone" data-decade="2020s">
+                        <div class="timeline-marker"></div>
+                        <div class="marker-year">2023</div>
+                        <h3>40th Anniversary</h3>
+                        <p>Celebrated 40 years with major publications and international conferences.</p>
+                    </div>
+
+                    <!-- 2025 -->
+                    <div class="timeline-item category-expansion" data-decade="2020s">
+                        <div class="timeline-marker"></div>
+                        <div class="marker-year">2025</div>
+                        <h3>New Headquarters</h3>
+                        <p>Opened new state-of-the-art archival and research facility.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+<!--/main-->
+
+<!-- footer  -->
+   <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+  
+        <!-- PayPal Donate Button -->
+   
+
+    <!-- Existing Footer Content -->
+    <h3>Tamil News</h3>
+    <p style="color: #ccc; font-size: 0.9rem;">
+        Your trusted source for Tamil community news, culture, and heritage updates from Sri Lanka and around the world.
+    </p>
+    <p style="color: #999; font-size: 0.85rem; margin-top: 1rem;">
+        © Tamil Information Centre • Est. 1983
+    </p>
+     <div style="margin-bottom: 1.2rem;">
+        <form action="https://www.paypal.com/donate" method="post" target="_blank">
+            <input type="hidden" name="hosted_button_id" value=""> 
+            <button type="submit" 
+                style="
+                    background-color:#0070ba;
+                    color:white;
+                    padding:10px 18px;
+                    border:none;
+                    border-radius:6px;
+                    cursor:pointer;
+                    font-size:0.95rem;
+                    font-weight:600;
+                    display:inline-flex;
+                    align-items:center;
+                    gap:8px;
+                "
+            >
+                <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" 
+                     alt="PayPal" 
+                     style="height:18px;">
+                Donate with PayPal
+            </button>
+        </form>
+    </div>
+</div>
+
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#publications">Publications</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Categories</h3>
+          <ul>
+            <li><a href="#heritage">Heritage</a></li>
+            <li><a href="#">Culture</a></li>
+            <li><a href="#">Community</a></li>
+            <li><a href="#shop">Shop</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Legal</h3>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+     <div class="footer-bottom">
+         <p> ©Tamil Information Centre TIC Archives || 2025 All rights reserved</p>
+        
+</div>
+
+    </div>
+  </footer>
+<!-- footer  -->
+    <!-- Full Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // ============================================
+        // MOBILE MENU FUNCTIONALITY
+        // ============================================
+        (function() {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileNavOffcanvas = document.getElementById('mobileNavOffcanvas');
+            const mobileNavOverlay = document.getElementById('mobileNavOverlay');
+            const mobileNavClose = document.getElementById('mobileNavClose');
+            
+            if (!mobileMenuBtn || !mobileNavOffcanvas) return;
+            
+            function openMobileMenu() {
+                mobileNavOffcanvas.classList.add('active');
+                mobileNavOverlay?.classList.add('active');
+                mobileMenuBtn.setAttribute('aria-expanded', 'true');
+                document.body.style.overflow = 'hidden';
+            }
+            
+            function closeMobileMenu() {
+                mobileNavOffcanvas.classList.remove('active');
+                mobileNavOverlay?.classList.remove('active');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+                mobileMenuBtn.focus();
+            }
+            
+            mobileMenuBtn.addEventListener('click', openMobileMenu);
+            mobileNavClose?.addEventListener('click', closeMobileMenu);
+            mobileNavOverlay?.addEventListener('click', closeMobileMenu);
+            
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && mobileNavOffcanvas.classList.contains('active')) {
+                    closeMobileMenu();
+                }
+            });
+            
+            // Mobile dropdown toggles
+            const dropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
+            dropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('data-target');
+                    const targetContent = document.getElementById(targetId);
+                    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                    
+                    // Close all other dropdowns
+                    dropdownToggles.forEach(t => {
+                        if (t !== this) {
+                            t.setAttribute('aria-expanded', 'false');
+                            const tId = t.getAttribute('data-target');
+                            document.getElementById(tId)?.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current
+                    targetContent?.classList.toggle('active');
+                    this.setAttribute('aria-expanded', !isExpanded);
+                });
+            });
+        })();
+       
+document.addEventListener('DOMContentLoaded', function () {
+    const questions = document.querySelectorAll('.faq-question');
+
+    questions.forEach(question => {
+        question.addEventListener('click', function () {
+            const currentlyOpen = document.querySelector('.faq-question[aria-expanded="true"]');
+            const thisAnswer = this.nextElementSibling;
+            const thisIcon = this.querySelector('.icon');
+
+            // Close any open answer first
+            if (currentlyOpen && currentlyOpen !== this) {
+                currentlyOpen.setAttribute('aria-expanded', 'false');
+                currentlyOpen.nextElementSibling.classList.remove('open');
+            }
+
+            // Toggle current one
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            
+            if (isExpanded) {
+                this.setAttribute('aria-expanded', 'false');
+                thisAnswer.classList.remove('open');
+            } else {
+                this.setAttribute('aria-expanded', 'true');
+                thisAnswer.classList.add('open');
+            }
+        });
+    });
+});
+
+    </script>
+</body>
+</html>

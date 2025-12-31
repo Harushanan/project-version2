@@ -387,14 +387,14 @@
     <!-- Skip to content link for accessibility
     <a href="#main-content" class="skip-link">Skip to main content</a> -->
 
-    <!-- Header -->
+ <!-- Header -->
      <!-- Header -->
     <header role="banner">
         <div class="header-container">
             <div class="header-main">
                 <!-- Logo -->
                 <a href="{{ route('client.home') }}" class="logo" aria-label="Tamil Bookshop Archives Home">
-                    <img src="logo.png" alt="Tamil Bookshop Archives Logo" width="60" height="60">
+                    <img src="./image/newlogo.jpeg" alt="Tamil Bookshop Archives Logo" width="60" height="60">
                     <div class="logo-text">
                         <span class="ta">The TIC Archives</span>
                     </div>
@@ -414,15 +414,15 @@
                       
 
                         <li class="dropdown-parent">
-                            <a href="./coming-soon.html" 
+                            <a href="./aboutus.html" 
                                class="{{ Route::is('client.about') || Route::is('client.news') ? 'active' : '' }}"
                                aria-haspopup="true">
                                 About
                             </a>
                             <div class="dropdown" role="menu">
-                                <a href="./coming-soon.html" role="menuitem">About Us</a>
-                                <a href="./coming-soon.html" role="menuitem">News</a>
-                                <a href="./coming-soon.html" role="menuitem">Support Us</a>
+                                <a href="./aboutus.html" role="menuitem">About Us</a>
+                                <a href="./news.html" role="menuitem">News</a>
+                                <a href="./supportus.html" role="menuitem">Support Us</a>
                             </div>
                         </li>
 
@@ -441,20 +441,20 @@
                         <li class="dropdown-parent">
                             <a href="./coming-soon.html" aria-haspopup="true">Exhibition & Heritage</a>
                             <div class="dropdown" role="menu">
-                                <a href="./coming-soon.html" role="menuitem">ToL Exhibition</a>
-                                <a href="./coming-soon.html" role="menuitem">Heritage Centre</a>
-                                <a href="./coming-soon.html" role="menuitem">Subject Guides</a>
-                                <a href="./coming-soon.html" role="menuitem">Historical Timeline</a>
-                                <a href="./coming-soon.html" role="menuitem">Learning Workshops</a>
+                                <a href="./ToL.html" role="menuitem">ToL Exhibition</a>
+                                <a href="./HeritageCentre.html" role="menuitem">Heritage Centre</a>
+                                <a href="./subjectguide.html" role="menuitem">Subject Guides</a>
+                                <a href="./historical-timeline.html" role="menuitem">Historical Timeline</a>
+                                <a href="./workshop.html" role="menuitem">Learning Workshops</a>
                             </div>
                         </li>
 
                         <li class="dropdown-parent">
                             <a href="#" aria-haspopup="true">What's On</a>
                             <div class="dropdown" role="menu">
-                                <a href="./coming-soon.html" role="menuitem">Latest Events</a>
-                                <a href="./coming-soon.html" role="menuitem">Projects & Programs</a>
-                                <a href="./coming-soon.html" role="menuitem">Collaborate</a>
+                                <a href="./event.html" role="menuitem">Latest Events</a>
+                                <a href="./project.html" role="menuitem">Projects & Programs</a>
+                                <a href="./collaborate.html" role="menuitem">Collaborate</a>
                             </div>
                         </li>
 
@@ -495,7 +495,8 @@
     </header>
 
     <!-- Mobile Navigation Offcanvas -->
-   <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+    <!-- Mobile Navigation Offcanvas -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
     <div class="mobile-nav-offcanvas" id="mobileNavOffcanvas" role="dialog" aria-modal="true" aria-label="Mobile navigation">
         <div class="mobile-nav-header">
             <span style="font-weight: 700; color: var(--accent-dark);">Menu</span>
@@ -510,9 +511,9 @@
                         About <span>▾</span>
                     </button>
                     <div class="mobile-dropdown-content" id="aboutDropdown">
-                        <a href="./collections.html">About Us</a>
-                        <a href="./collections.html">News</a>
-                        <a href="./collections.html">Support Us</a>
+                        <a href="./aboutus.html">About Us</a>
+                        <a href="./news.html">News</a>
+                        <a href="./supportus.html">Support Us</a>
                     </div>
                 </li>
 
@@ -532,11 +533,11 @@
                         Exhibition & Heritage <span>▾</span>
                     </button>
                     <div class="mobile-dropdown-content" id="exhibitionDropdown">
-                        <a href="./collections.html">ToL Exhibition</a>
-                        <a href="./collections.html">Heritage Centre</a>
-                        <a href="./collections.html">Subject Guides</a>
-                        <a href="./collections.html">Historical Timeline</a>
-                        <a href="./collections.html">Learning Workshops</a>
+                        <a href="./ToL.html">ToL Exhibition</a>
+                        <a href="./HeritageCentre.html">Heritage Centre</a>
+                        <a href="./subjectguide.html">Subject Guides</a>
+                        <a href="./historical-timeline.html">Historical Timeline</a>
+                        <a href="./workshop.html">Learning Workshops</a>
                     </div>
                 </li>
 
@@ -545,9 +546,9 @@
                         What's On <span>▾</span>
                     </button>
                     <div class="mobile-dropdown-content" id="whatsOnDropdown">
-                        <a href="./collections.html">Latest Events</a>
-                        <a href="./collections.html">Projects & Programs</a>
-                        <a href="./collections.html">Collaborate</a>
+                        <a href="./event.html">Latest Events</a>
+                        <a href="./project.html">Projects & Programs</a>
+                        <a href="./collaborate.html">Collaborate</a>
                     </div>
                 </li>
 
