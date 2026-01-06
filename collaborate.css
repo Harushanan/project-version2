@@ -1,37 +1,37 @@
 /* ===================================================
-   COLLABORATE PAGE - EXACT FIRST IMAGE LOOK
+   COLLABORATE PAGE – OPTIMIZED & DEDUPLICATED
    =================================================== */
 
-/* Hero */
+/* ---------------- HERO & INTRO ---------------- */
 .collaborate-hero {
     text-align: center;
-    padding: 1rem 3rem;
+    padding: 3rem 1rem;
     background: var(--primary-bg);
+    margin-bottom: 10px;
 }
 
 .collaborate-hero h1 {
     font-size: 3rem;
     font-weight: 800;
     color: var(--accent-dark);
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.6rem;
 }
 
 .collaborate-hero p {
     font-size: 1.2rem;
-    color: var(--accent-dark);
-    opacity: 0.85;
     max-width: 700px;
     margin: 0 auto;
+    color: var(--accent-dark);
+    opacity: 0.85;
 }
 
-/* Intro Card */
 .partnerships-card {
-    background: white;
+    background: #ffffff;
     border-radius: 24px;
     padding: 2.5rem 3rem;
     box-shadow: 0 15px 40px rgba(15,37,64,0.15);
     max-width: 900px;
-    margin: 0 auto 4rem;
+    margin: 0 auto 2rem;
     text-align: center;
 }
 
@@ -48,821 +48,332 @@
     opacity: 0.85;
 }
 
-/* Section Titles */
-.section-title {
-    font-size: 2.4rem;
+/* ---------------- SECTION HEADINGS ---------------- */
+.section-title, .section-subtitle {
     text-align: center;
-    margin-bottom: 1rem;
-    color: var(--accent-dark);
-    font-weight: 800;
-}
-
-.section-subtitle {
-    text-align: center;
-    margin-bottom: 3rem;
-    color: var(--accent-dark);
-    opacity: 0.8;
-    font-size: 1.1rem;
-}
-
-/* Opportunities Grid */
-.opportunities-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-    margin-bottom: 4rem;
-}
-
-/* Fancy Opportunity Card - Exact First Image Style */
-.opportunity-card {
-    background: white;
-    border-radius: 24px;
-    padding: 2.5rem 2rem;
-    text-align: center;
-    box-shadow: 0 15px 40px rgba(15,37,64,0.12);
-    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-    position: relative;
-    overflow: hidden;
-}
-
-.opportunity-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 6px;
-    background: linear-gradient(90deg, #bfa98b, #0f2540);
-    border-radius: 24px 24px 0 0;
-}
-
-.opportunity-card:hover {
-    transform: translateY(-20px);
-    box-shadow: 0 30px 60px rgba(15,37,64,0.25);
-}
-
-.opportunity-card .icon {
-    width: 90px;
-    height: 90px;
-    margin: 0 auto 1.8rem;
-    border-radius: 50%;
-    padding: 15px;
-    background: linear-gradient(135deg, #f6e3c5, #e6d3bd);
-    box-shadow: 0 8px 20px rgba(15,37,64,0.1);
-    transition: all 0.3s ease;
-}
-
-.opportunity-card:hover .icon {
-    transform: scale(1.2) rotate(8deg);
-    box-shadow: 0 12px 30px rgba(15,37,64,0.2);
-}
-
-.opportunity-card h3 {
-    font-size: 1.7rem;
-    margin-bottom: 1.2rem;
-    color: var(--accent-dark);
-    font-weight: 700;
-}
-
-.opportunity-card p {
-    color: var(--accent-dark);
-    opacity: 0.85;
-    line-height: 1.7;
-    margin-bottom: 1.8rem;
-}
-
-.opportunity-card ul {
-    list-style: none;
-    padding: 0;
-    margin: 1.8rem 0;
-}
-
-.opportunity-card li {
-    padding: 0.6rem 0;
-    color: var(--accent-dark);
-    opacity: 0.8;
-    font-weight: 500;
-    position: relative;
-    padding-left: 1.8rem;
-}
-
-.opportunity-card li::before {
-    content: '✓';
-    color: #c0392b;
-    font-weight: bold;
-    position: absolute;
-    left: 0;
-}
-
-/* Red Buttons - Exact Image Style */
-.cta-btn {
-    background: #c0392b;
-    color: white;
-    border: none;
-    padding: 1rem 2.5rem;
-    border-radius: 50px;
-    font-weight: 700;
-    font-size: 1.05rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 6px 20px rgba(192,57,43,0.3);
-}
-
-.cta-btn:hover {
-    background: #a93226;
-    transform: translateY(-4px);
-    box-shadow: 0 12px 30px rgba(192,57,43,0.4);
-}
-
-/* Benefits Section */
-.benefits-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.benefit-card {
-    background: white;
-    border-radius: 20px;
-    padding: 2rem;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(15,37,64,0.1);
-    transition: all 0.3s ease;
-}
-
-.benefit-card:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 20px 40px rgba(15,37,64,0.18);
-}
-
-.benefit-card .icon {
-    width: 70px;
-    height: 70px;
-    margin-bottom: 1.2rem;
-}
-
-/* Partners & Form - Keep simple */
-.partners-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    justify-content: center;
-    margin: 2rem 0;
-}
-
-.partner-logo {
-    background: white;
-    padding: 1rem 2rem;
-    border-radius: 16px;
-    box-shadow: 0 6px 20px rgba(15,37,64,0.08);
-    font-weight: 600;
-}
-
-/* Responsive */
-@media (min-width: 768px) {
-    .opportunities-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .benefits-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (min-width: 1200px) {
-    .opportunities-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-/* Opportunities Grid - 3 columns desktop, 2 tablet, 1 mobile */
-.opportunities-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-    margin-bottom: 5rem;
-}
-
-/* Opportunity Card - Rectangle + Fancy */
-.opportunity-card {
-    background: white;
-    border-radius: 24px;
-    padding: 3rem 2rem;
-    text-align: center;
-    box-shadow: 0 12px 35px rgba(15,37,64,0.12);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 520px; /* Rectangle feel */
-}
-
-.opportunity-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 8px;
-    background: linear-gradient(90deg, var(--accent-muted), var(--accent-dark));
-    border-radius: 24px 24px 0 0;
-}
-
-.opportunity-card:hover {
-    transform: translateY(-20px);
-    box-shadow: 0 35px 70px rgba(15,37,64,0.22);
-}
-
-/* Icon Wrapper - Big Circle Background */
-.icon-wrapper {
-    width: 120px;
-    height: 120px;
-    margin: 0 auto 2rem;
-    background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
-    border-radius: 50%;
-    padding: 20px;
-    box-shadow: 0 10px 30px rgba(15,37,64,0.15);
-    transition: all 0.3s ease;
-}
-
-.opportunity-card:hover .icon-wrapper {
-    transform: scale(1.15);
-    box-shadow: 0 15px 40px rgba(15,37,64,0.25);
-}
-
-.icon-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.opportunity-card h3 {
-    font-size: 1.8rem;
-    margin: 1rem 0;
-    color: var(--accent-dark);
-    font-weight: 700;
-}
-
-.opportunity-card p {
-    flex-grow: 1;
-    color: var(--accent-dark);
-    opacity: 0.85;
-    line-height: 1.7;
-    margin-bottom: 1.5rem;
-}
-
-.opportunity-card ul {
-    list-style: none;
-    padding: 0;
-    margin: 1.5rem 0;
-    flex-grow: 1;
-}
-
-.opportunity-card li {
-    padding: 0.6rem 0;
-    color: var(--accent-dark);
-    opacity: 0.8;
-    position: relative;
-    padding-left: 1.8rem;
-}
-
-.opportunity-card li::before {
-    content: '✔';
-    color: #c0392b;
-    font-weight: bold;
-    position: absolute;
-    left: 0;
-}
-
-/* Red Button */
-.cta-btn {
-    background: #c0392b;
-    color: white;
-    border: none;
-    padding: 1.1rem 2.8rem;
-    border-radius: 50px;
-    font-weight: 700;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 8px 25px rgba(192,57,43,0.3);
-    align-self: center;
-    margin-top: auto;
-}
-
-.cta-btn:hover {
-    background: #a93226;
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(192,57,43,0.4);
-}
-
-/* Responsive Grid */
-@media (min-width: 768px) {
-    .opportunities-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (min-width: 1024px) {
-    .opportunities-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-.icon-wrapper img, .benefit-card .icon {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* Image distort ஆகாம இருக்கும் */
-    border-radius: 50%; /* Circle shape for opportunities */
-}
-
-.benefit-card .icon {
-    border-radius: 20px; /* Rectangle feel for benefits */
-}
-/* ===================================================
-   PROPOSAL FORM - USING ROOT COLORS ONLY
-   =================================================== */
-
-/* Section */
-.proposal-form-section {
-    background: var(--primary-bg); /* #f6e3c5 - Cream bg */
-    padding: 5rem 1rem;
-    text-align: center;
-}
-
-/* Form Card - Dark Navy from Root */
-.proposal-form {
-    max-width: 900px;
-    margin: 0 auto;
-    background: var(--accent-dark); /* #0f2540 - Dark navy */
-    border-radius: 30px;
-    padding: 4rem 3rem;
-    box-shadow: 0 25px 60px rgba(15,37,64,0.35);
-    color: white;
-}
-
-/* Title & Subtitle */
-.proposal-form h2 {
-    font-size: 2.4rem;
-    font-weight: 800;
-    color: white;
-    margin-bottom: 0.8rem;
-}
-
-.proposal-form .section-subtitle {
-    color: rgba(255,255,255,0.9);
-    font-size: 1.15rem;
-    margin-bottom: 3rem;
-    max-width: 700px;
     margin-left: auto;
     margin-right: auto;
 }
 
-/* Form Rows */
-.form-row {
+.section-title {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: var(--accent-dark);
+    margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2rem;
+    max-width: 800px;
+}
+
+/* ===================================================
+   OPPORTUNITIES - COMPLETE 3x3 GRID & BOLD TEXT
+   =================================================== */
+
+.opportunities-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
+    /* Forces exactly 3 columns */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+}
+
+.opportunity-card {
+    background:  #ebdccb; /* Restores the card background */
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 1px solid #eee;
+    overflow: hidden;
+    text-align: center;
+}
+
+/* Accent bar at the top */
+.opportunity-card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    height: 4px;
+    width: 100%;
+    background: linear-gradient(90deg, #bfa98b, #c0392b);
+    transition: height 0.3s ease;
+}
+
+/* Hover effect for the card */
+.opportunity-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(15, 37, 64, 0.15);
+    border-color: #bfa98b;
+}
+
+/* --- ICON STYLES --- */
+.icon-wrapper {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: #fdfaf5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    transition: all 0.4s ease;
+    border: 1px solid rgba(191, 169, 139, 0.2);
+}
+
+.icon-wrapper i {
+    font-size: 40px; /* Large icons */
+    color: var(--accent-dark);
+}
+
+.opportunity-card:hover .icon-wrapper {
+    background:  #bfa98b;
+    transform: scale(1.1);
+}
+
+.opportunity-card:hover .icon-wrapper i {
+    color: #927f64;
+}
+
+/* --- ENHANCED BOLD TEXT --- */
+.opportunity-card h3 {
+    font-size: 1.4rem;
+    font-weight: 800; /* Extra bold title */
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+}
+
+.opportunity-card p {
+    font-size: 1rem;
+    font-weight: 700; /* Bolded paragraph text */
+    color: #272626;
+    line-height: 1.5;
     margin-bottom: 1.5rem;
 }
 
-/* Form Group */
-.form-group {
+/* --- LIST WITH GREEN TICKS --- */
+.opportunity-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+    text-align: left; /* Aligns list items to the left */
+}
+
+.opportunity-card ul li {
+    font-size: 0.95rem;
+    font-weight: 800; /* Bolded list items */
+    color: #222;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.opportunity-card ul li::before {
+    content: "✔"; /* Tick symbol */
+    color: #835c2f; /* Green color */
+    font-weight: 900;
+    font-size: 1rem;
+}
+
+/* --- CTA BUTTON --- */
+.cta-btn {
+    margin-top: auto;
+    padding: 0.8rem 2rem;
+    background:  #ece1d3;
+    color: #0f0101;
+    border-radius: 50px;
+    border: none;
+    font-weight: 800;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.cta-btn:hover {
+    background: #e6d3bd;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 992px) {
+    .opportunities-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .opportunities-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===================================================
+   BENEFITS
+   =================================================== */
+
+.benefits-section {
+    padding: 3rem 1rem;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.benefit-card {
+    background: #f5f0e8;
+    border-radius: 16px;
+    padding: 1.8rem;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    display: flex;
+    gap: 1.2rem;
+    transition: background 0.35s ease, transform 0.35s ease;
+}
+
+.benefit-card:hover {
+    background: #ffffff;
+    transform: translateY(-8px);
+}
+
+.benefit-icon {
+    font-size: 2.6rem;
+    color: var(--accent-dark);
+}
+
+.benefit-text {
     text-align: left;
 }
 
+.benefit-text h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--accent-dark);
+}
+
+.benefit-text p {
+    font-size: 0.95rem;
+    color: #000;
+    line-height: 1.5;
+}
+
+/* ===================================================
+   PROPOSAL FORM
+   =================================================== */
+
+.proposal-form-section {
+    background: var(--primary-bg); /* */
+    padding: 4rem 1rem; /* */
+}
+
+.proposal-form {
+    max-width: 900px; /* */
+    margin: 0 auto; /* */
+    background: var(--accent-dark); /* */
+    border-radius: 28px; /* */
+    padding: 3.5rem; /* */
+    color: #ffffff; /* */
+    /* Added to help position the button container if needed */
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr; /* */
+    gap: 1.5rem; /* */
+}
+
+.form-group {
+    margin-bottom: 1.5rem; /* */
+}
+
 .form-group label {
-    display: block;
-    font-weight: 600;
-    margin-bottom: 0.8rem;
-    color: white;
-    font-size: 1.1rem;
+    font-weight: 600; /* */
+    margin-bottom: 0.6rem; /* */
+    display: block; /* */
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea {
-    width: 100%;
-    padding: 1.3rem 1.8rem;
-    border: none;
-    border-radius: 16px;
-    background: #2c3e50; /* Slightly lighter dark for inputs */
-    color: white;
-    font-size: 1.05rem;
-    transition: all 0.3s ease;
+    width: 100%; /* */
+    padding: 1.1rem 1.4rem; /* */
+    border-radius: 14px; /* */
+    border: none; /* */
+    background: #2c3e50; /* */
+    color: #ffffff; /* */
 }
 
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    outline: none;
-    background: #34495e;
-    box-shadow: 0 0 0 4px rgba(191,169,139,0.25); /* accent-muted glow */
-}
-
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-    color: rgba(255,255,255,0.5);
-}
-
-/* Select Custom Arrow */
-.form-group select {
-    appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='10' viewBox='0 0 16 10'%3E%3Cpath fill='%23bfa98b' d='M8 10L0 0h16z'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 1.8rem center;
-    background-size: 12px;
-}
-
-/* Textarea */
-.form-group textarea {
-    min-height: 160px;
-    resize: vertical;
-}
-
-/* Submit Button - Deep Red (Image Match) */
+/* Updated Submit Button Style */
 .submit-btn {
-    background: #c0392b;
-    color: white;
-    border: none;
-    padding: 1.5rem 5rem;
+    margin-top: 2.0rem;
+    padding: 1rem 3rem;
     border-radius: 50px;
-    font-weight: 700;
-    font-size: 1.3rem;
+    border: none;
+    /* Move button to the bottom right of the form */
+    align-self: flex-end; 
+    
+    /* Colors */
+    background: #c0392b; 
+    color: #ffffff;
+    
+    /* Font and Layout */
+    font-weight: 800;
+    font-size: 1.1rem;
     cursor: pointer;
-    margin-top: 3rem;
-    transition: all 0.4s ease;
-    box-shadow: 0 10px 30px rgba(192,57,43,0.4);
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.submit-btn:hover {
-    background: #a93226;
-    transform: translateY(-6px);
-    box-shadow: 0 20px 50px rgba(192,57,43,0.5);
-}
-
-/* Responsive */
-@media (min-width: 768px) {
-    .form-row {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-.icon-wrapper {
-    width: 180px;  /* Bigger circle */
-    height: 140px;
-    margin: 0 auto 2.5rem;
-    background: white; /* White circle as in 2nd image */
-    border-radius: 50%;
-    padding: 20px;
-    box-shadow: 0 10px 30px rgba(15,37,64,0.2);
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 12px; /* Space between text and icon */
     transition: all 0.3s ease;
 }
 
-.icon-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; 
-    border-radius: 20%;
+/* Hover effect with requested color */
+.submit-btn:hover {
+    background-color: #e6d3bd;
+    color: #1a1a1a; /* Darker text for better contrast on light hover bg */
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-.opportunity-card:hover .icon-wrapper {
-    transform: scale(1.1);
-    box-shadow: 0 15px 40px rgba(15,37,64,0.3);
-}
-/* Benefits Section - Square Flip Cards */
-.benefits-section {
-    margin: 5rem 0;
-    padding: 0 1rem;
+/* Icon style inside button */
+.submit-btn i {
+    font-size: 1rem;
+    transition: transform 0.3s ease;
 }
 
-.benefits-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2.5rem;
-    padding: 1rem 0;
+.submit-btn:hover i {
+    transform: translateX(5px); /* Icon moves slightly right on hover */
 }
 
-/* Flip Card - Square Shape */
-.flip-card {
-    background-color: transparent;
-    width: 320px;
-    height: 320px; /* Perfect square */
-    margin: 0 auto;
-    perspective: 1000px;
-}
+/* ===================================================
+   RESPONSIVE
+   =================================================== */
 
-.flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    transform-style: preserve-3d;
-    border-radius: 20px;
-    box-shadow: 0 15px 40px rgba(15,37,64,0.18);
-}
-
-.flip-card:hover .flip-card-inner,
-.flip-card:focus-within .flip-card-inner {
-    transform: rotateY(180deg);
-}
-
-/* Front & Back - Square with Rounded Corners */
-.flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 20px; /* Same curve */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2.5rem;
-    overflow: hidden;
-}
-
-.flip-card-front {
-    background: white;
-}
-
-.benefit-icon {
-    width: 130px; /* Image size balanced for square */
-    height: 130px;
-    object-fit: contain;
-    border-radius: 50%;
-    box-shadow: 0 12px 30px rgba(15,37,64,0.25);
-    transition: transform 0.4s ease;
-    margin-bottom: 1.5rem;
-}
-
-.flip-card:hover .benefit-icon {
-    transform: scale(1.15) rotate(5deg);
-}
-
-.flip-card-back {
-    background: linear-gradient(135deg, var(--accent-dark), #1a3556);
-    color: white;
-    transform: rotateY(180deg);
-}
-
-.flip-card-back h3 {
-    font-size: 1.7rem;
-    margin-bottom: 1.2rem;
-    font-weight: 700;
-}
-
-.flip-card-back p {
-    font-size: 1.05rem;
-    line-height: 1.7;
-    opacity: 0.95;
-    padding: 0 1rem;
-}
-
-/* Responsive Square Cards */
-@media (max-width: 480px) {
-    .flip-card {
-        width: 280px;
-        height: 280px;
-    }
-    .benefit-icon {
-        width: 110px;
-        height: 110px;
-    }
-    .flip-card-back h3 {
-        font-size: 1.5rem;
-    }
-}
-
-@media (min-width: 481px) and (max-width: 768px) {
-    .benefits-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .flip-card {
-        width: 300px;
-        height: 300px;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-    .benefits-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (min-width: 1025px) {
-    .benefits-grid {
-        grid-template-columns: repeat(3, 1fr); 
-    }
-}
-
-
-.benefits-section {
-    padding: 4rem 0;
-    text-align: center;
-}
-
-.section-title {
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: var(--accent-dark);
-    margin-bottom: 1rem;
-}
-
-.section-subtitle {
-    font-size: 1.2rem;
-    color: #666;
-    margin-bottom: 3rem;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.benefits-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-}
-
-.benefit-card {
-    background: #f5f0e8;
-    border-radius: 18px;
-    padding: 2rem 1.5rem;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    transition: all 0.4s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    height: 220px; /* Smaller card */
-    justify-content: center;
-    position: relative;
-    cursor: pointer;
-}
-
-.benefit-card:hover {
-    background: white;
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-}
-
-.benefit-icon {
-    font-size: 3.2rem; /* Normal, elegant size */
-    color: var(--accent-dark);
-    margin-bottom: 1.2rem;
-}
-
-.benefit-card h3 {
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: var(--accent-dark);
-    margin: 0 0 0.5rem 0;
-}
-
-.benefit-details {
-    color: #000000; /* Pure black */
-    font-size: 0.95rem;
-    line-height: 1.6;
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: all 0.4s ease;
-    margin-top: 0;
-}
-
-.benefit-card:hover .benefit-details {
-    opacity: 1;
-    max-height: 150px; /* Enough for text */
-    margin-top: 1rem;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-    .benefits-grid {
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    }
-    .benefit-card {
-        height: 200px;
-        padding: 1.8rem 1rem;
-    }
-    .benefit-icon {
-        font-size: 2.8rem;
-    }
-}
-.benefits-section {
-    padding: 4rem 0;
-    text-align: center;
-}
-
-.section-title {
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: var(--accent-dark);
-    margin-bottom: 1rem;
-}
-
-.section-subtitle {
-    font-size: 1.2rem;
-    color: #666;
-    margin-bottom: 3rem;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.benefits-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
-    grid-template-rows: repeat(3, 1fr);    /* 3 rows */
-    gap: 2rem;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
-.benefit-card {
-    background: #f5f0e8;
-    border-radius: 16px; /* Soft rectangle */
-    padding: 1.8rem;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    transition: all 0.4s ease;
-    display: flex;
-    align-items: flex-start;
-    gap: 1.5rem;
-    height: 180px; /* Compact rectangle */
-}
-
-.benefit-card:hover {
-    background: white;
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-}
-
-.benefit-icon {
-    font-size: 2.8rem; /* Clean size */
-    color: var(--accent-dark);
-    flex-shrink: 0;
-    /* Full remove any background/circle */
-    background: none !important;
-    border-radius: 0 !important;
-    padding: 0 !important;
-    width: auto !important;
-    height: auto !important;
-    line-height: 1 !important;
-}
-
-.benefit-text {
-    flex-grow: 1;
-    text-align: left;
-}
-
-.benefit-text h3 {
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: var(--accent-dark);
-    margin: 0 0 0.8rem 0;
-}
-
-.benefit-text p {
-    color: #000000;
-    font-size: 0.95rem;
-    line-height: 1.5;
-    margin: 0;
-}
-
-/* Responsive */
 @media (max-width: 992px) {
     .benefits-grid {
-        grid-template-columns: 1fr; /* Stack on tablet/small desktop */
-        grid-template-rows: auto;
-        gap: 1.8rem;
-    }
-    .benefit-card {
-        height: auto;
-        padding: 1.5rem;
+        grid-template-columns: 1fr; /* */
     }
 }
 
-@media (max-width: 768px) {
-    .benefit-card {
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-        gap: 1rem;
+@media (min-width: 768px) {
+    .form-row {
+        grid-template-columns: 1fr 1fr; /* */
     }
-    .benefit-text {
-        text-align: center;
-    }
-    .benefit-icon {
-        font-size: 2.6rem;
+    
+    /* Keep button centered or full width on very small screens, 
+       but right-aligned on desktop */
+    .submit-btn {
+        width: auto;
     }
 }

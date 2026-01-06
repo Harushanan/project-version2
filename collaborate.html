@@ -21,15 +21,17 @@
     <link rel="stylesheet" href="./style.css">
   
     <link rel="stylesheet" href="./collaborate.css">
+        <link rel="stylesheet" href="./about.css">
 
 </head>
 <body>
-   <!-- Header -->
+    <!-- Header  -->
+    <!-- Header -->
     <header role="banner">
         <div class="header-container">
             <div class="header-main">
                 <!-- Logo -->
-                <a href="{{ route('client.home') }}" class="logo" aria-label="Tamil Bookshop Archives Home">
+                <a href="./index.html" class="logo" aria-label="Tamil Bookshop Archives Home">
                     <img src="./image/newlogo.jpeg" alt="Tamil Bookshop Archives Logo" width="60" height="60">
                     <div class="logo-text">
                         <span class="ta">The TIC Archives</span>
@@ -63,7 +65,7 @@
                         </li>
 
                         <li class="dropdown-parent">
-                            <a href="./coming-soon.html" class="{{ Route::is('client.archivecentrecollection') ? 'active' : '' }}"
+                            <a href="./archivecenter.html" class="{{ Route::is('client.archivecentrecollection') ? 'active' : '' }}"
                                aria-haspopup="true">
                                 Archive Centre
                             </a>
@@ -203,327 +205,363 @@
             </ul>
         </nav>
     </div>
-
-
+    
 <!-- Main Content - Collaborate Page -->
     <main id="main-content" role="main">
-                        <div class="container">
-                            <section class="collaborate-hero">
-                                <h1>Collaborate</h1>
-                                <p>Partner with us on research, events, and cultural initiatives</p>
-                            </section>
+        <div class="container">
+            <section class="collaborate-hero">
+                <h1>Collaborate</h1>
+                <p>Partner with us on research, events, and cultural initiatives</p>
+            </section>
 
-                            <!-- Building Partnerships Section -->
-                            <section class="partnerships-section">
-                                <div class="partnerships-card">
-                                    <h2>Building Partnerships for Heritage Preservation</h2>
-                                    <p>We believe in the power of collaboration to advance Tamil heritage preservation, research, and community engagement. Whether you're a researcher, cultural organization, academic institution, or community group, we welcome partnerships that align with our mission. Together, we can create meaningful impact and ensure Tamil heritage thrives for generations to come.</p>
-                                </div>
-                            </section>
-                <!-- Collaboration Opportunities -->
-                <section class="opportunities-section">
-                    <h2 class="section-title">Collaboration Opportunities</h2>
-                    <p class="section-subtitle">Explore different ways to partner with the Tamil Information Centre</p>
-                    <div class="opportunities-grid">
-                        <!-- Row 1 -->
-                        <article class="opportunity-card">
-                            <div class="icon-wrapper">
-                                <img src="image/i13.jpg" alt="Research Icon">
-                            </div>
-                            <h3>Research Partnerships</h3>
-                            <p>Partner with us on academic research projects utilizing our extensive collections and expertise in Tamil heritage studies.</p>
-                            <ul>
-                                <li>Access to archival collections</li>
-                                <li>Collaborative research projects</li>
-                                <li>Co-authoring publications</li>
-                            </ul>
-                            <button class="cta-btn">Propose Research Project</button>
-                        </article>
+            <!-- Building Partnerships Section -->
+            <section class="partnerships-section">
+                <div class="partnerships-card">
+                    <h2>Building Partnerships for Heritage Preservation</h2>
+                    <p>We believe in the power of collaboration to advance Tamil heritage preservation, research, and community engagement. Whether you're a researcher, cultural organization, academic institution, or community group, we welcome partnerships that align with our mission. Together, we can create meaningful impact and ensure Tamil heritage thrives for generations to come.</p>
+                </div>
+            </section>
+<!-- Collaboration Opportunities -->
+<section class="opportunities-section">
+    <h2 class="section-title">Collaboration Opportunities</h2>
+    <p class="section-subtitle">Explore different ways to partner with the Tamil Information Centre</p>
+    <div class="opportunities-grid">
+        <!-- Row 1 -->
+        <article class="opportunity-card">
+            <div class="icon-wrapper">
+              <i class="fas fa-flask"></i>
+            </div>
+            <h3>Research Partnerships</h3>
+            <p>Partner with us on academic research projects utilizing our extensive collections and expertise in Tamil heritage studies.</p>
+            <ul>
+                <li>Access to archival collections</li>
+                <li>Collaborative research projects</li>
+                <li>Co-authoring publications</li>
+            </ul>
+            <button class="cta-btn">Propose Research Project</button>
+        </article>
 
-                        <article class="opportunity-card">
-                            <div class="icon-wrapper">
-                                <img src="image/i8.jpg" alt="Events Icon">
-                            </div>
-                            <h3>Events & Programs</h3>
-                            <p>Co-organize exhibitions, cultural festivals, workshops, and community events that celebrate and educate about Tamil heritage.</p>
-                            <ul>
-                                <li>Joint exhibitions</li>
-                                <li>Cultural festivals</li>
-                                <li>Educational workshops</li>
-                                <li>Film screenings & lectures</li>
-                            </ul>
-                            <button class="cta-btn">Propose Event Partnership</button>
-                        </article>
+        <article class="opportunity-card">
+            <div class="icon-wrapper">
+   <i class="fas fa-calendar-check"></i>
 
-                        <article class="opportunity-card">
-                            <div class="icon-wrapper">
-                                <img src="image/i9.jpg" alt="Digitization Icon">
-                            </div>
-                            <h3>Digitization Initiatives</h3>
-                            <p>Collaborate on digital preservation projects to make Tamil heritage materials accessible online and preserve them for the future.</p>
-                            <ul>
-                                <li>Collection digitization</li>
-                                <li>Metadata creation</li>
-                                <li>Platform development</li>
-                                <li>Technical sharing</li>
-                            </ul>
-                            <button class="cta-btn">Discuss Digital Project</button>
-                        </article>
+            </div>
+            <h3>Events & Programs</h3>
+            <p>Co-organize exhibitions, cultural festivals, workshops, and community events that celebrate and educate about Tamil heritage.</p>
+            <ul>
+                <li>Joint exhibitions</li>
+                <li>Cultural festivals</li>
+                <li>Educational workshops</li>
+                <li>Film screenings & lectures</li>
+            </ul>
+            <button class="cta-btn">Propose Event Partnership</button>
+        </article>
 
-                        <!-- Row 2 -->
-                        <article class="opportunity-card">
-                            <div class="icon-wrapper">
-                                <img src="image/i10.jpg" alt="Funding Icon">
-                            </div>
-                            <h3>Funding & Sponsorship</h3>
-                            <p>Support our work through funding partnerships, project sponsorships, or corporate social responsibility initiatives.</p>
-                            <ul>
-                                <li>Project-specific funding</li>
-                                <li>Institutional sponsorships</li>
-                                <li>Equipment donations</li>
-                                <li>Endowment programs</li>
-                            </ul>
-                            <button class="cta-btn">Explore Funding Options</button>
-                        </article>
+        <article class="opportunity-card">
+            <div class="icon-wrapper">
+        <i class="fas fa-digital-tachograph"></i>
+            </div>
+            <h3>Digitization Initiatives</h3>
+            <p>Collaborate on digital preservation projects to make Tamil heritage materials accessible online and preserve them for the future.</p>
+            <ul>
+                <li>Collection digitization</li>
+                <li>Metadata creation</li>
+                <li>Platform development</li>
+                <li>Technical sharing</li>
+            </ul>
+            <button class="cta-btn">Discuss Digital Project</button>
+        </article>
 
-                        <article class="opportunity-card">
-                            <div class="icon-wrapper">
-                                <img src="image/i11.jpg" alt="Collection Icon">
-                            </div>
-                            <h3>Collection Development</h3>
-                            <p>Help us grow our collections through donations, loans, or collaborative acquisition projects.</p>
-                            <ul>
-                                <li>Material donations</li>
-                                <li>Temporary exhibition loans</li>
-                                <li>Joint acquisitions</li>
-                                <li>Collection assessments</li>
-                                <li>Provenance research</li>
-                            </ul>
-                            <button class="cta-btn">Discuss Collections</button>
-                        </article>
+        <!-- Row 2 -->
+        <article class="opportunity-card">
+            <div class="icon-wrapper">
+        <i class="fas fa-hand-holding-dollar"></i>
+            </div>
+            <h3>Funding & Sponsorship</h3>
+            <p>Support our work through funding partnerships, project sponsorships, or corporate social responsibility initiatives.</p>
+            <ul>
+                <li>Project-specific funding</li>
+                <li>Institutional sponsorships</li>
+                <li>Equipment donations</li>
+                <li>Endowment programs</li>
+            </ul>
+            <button class="cta-btn">Explore Funding Options</button>
+        </article>
 
-                        <article class="opportunity-card">
-                            <div class="icon-wrapper">
-                                <img src="image/i12.jpg" alt="Capacity Icon">
-                            </div>
-                            <h3>Capacity Building</h3>
-                            <p>Share expertise through training programs, professional development, and knowledge exchange initiatives.</p>
-                            <ul>
-                                <li>Staff training programs</li>
-                                <li>Professional workshops</li>
-                                <li>Technical consultancy</li>
-                                <li>Best practice sharing</li>
-                                <li>Mentorship programs</li>
-                            </ul>
-                            <button class="cta-btn">Share Your Expertise</button>
-                        </article>
-                    </div>
-                </section>
-                <!-- Partnership Benefits -->
-                <section class="benefits-section">
-                    <h2 class="section-title">Partnership Benefits</h2>
-                    <p class="section-subtitle">What you gain by collaborating with us</p>
-                    <div class="benefits-grid">
-                        <!-- Card 1 -->
-                        <div class="benefit-card">
-                            <i class="fas fa-globe benefit-icon"></i>
-                            <div class="benefit-text">
-                                <h3>Global Network</h3>
-                                <p>Access our international network of researchers, institutions, and Tamil diaspora communities.</p>
-                            </div>
-                        </div>
+        <article class="opportunity-card">
+            <div class="icon-wrapper">
+       
+                <i class="fas fa-box-archive"></i>
+            </div>
+            <h3>Collection Development</h3>
+            <p>Help us grow our collections through donations, loans, or collaborative acquisition projects.</p>
+            <ul>
+                <li>Material donations</li>
+                <li>Temporary exhibition loans</li>
+                <li>Joint acquisitions</li>
+                <li>Collection assessments</li>
+                <li>Provenance research</li>
+            </ul>
+            <button class="cta-btn">Discuss Collections</button>
+        </article>
 
-                        <!-- Card 2 -->
-                        <div class="benefit-card">
-                            <i class="fas fa-archive benefit-icon"></i>
-                            <div class="benefit-text">
-                                <h3>Unique Collections</h3>
-                                <p>Work with rare materials and primary sources not available elsewhere.</p>
-                            </div>
-                        </div>
+        <article class="opportunity-card">
+            <div class="icon-wrapper">
+           <i class="fas fa-people-arrows"></i>
+            </div>
+            <h3>Capacity Building</h3>
+            <p>Share expertise through training programs, professional development, and knowledge exchange initiatives.</p>
+            <ul>
+                <li>Staff training programs</li>
+                <li>Professional workshops</li>
+                <li>Technical consultancy</li>
+                <li>Best practice sharing</li>
+                <li>Mentorship programs</li>
+            </ul>
+            <button class="cta-btn">Share Your Expertise</button>
+        </article>
+    </div>
+</section>
+<!-- Partnership Benefits -->
+<section class="benefits-section">
+    <h2 class="section-title">Partnership Benefits</h2>
+    <p class="section-subtitle">What you gain by collaborating with us</p>
+    <div class="benefits-grid">
+        <!-- Card 1 -->
+        <div class="benefit-card">
+            <i class="fas fa-globe benefit-icon"></i>
+            <div class="benefit-text">
+                <h3>Global Network</h3>
+                <p>Access our international network of researchers, institutions, and Tamil diaspora communities.</p>
+            </div>
+        </div>
 
-                        <!-- Card 3 -->
-                        <div class="benefit-card">
-                            <i class="fas fa-lightbulb benefit-icon"></i>
-                            <div class="benefit-text">
-                                <h3>Expert Guidance</h3>
-                                <p>Benefit from our staff's deep knowledge of Tamil history and culture.</p>
-                            </div>
-                        </div>
+        <!-- Card 2 -->
+        <div class="benefit-card">
+            <i class="fas fa-archive benefit-icon"></i>
+            <div class="benefit-text">
+                <h3>Unique Collections</h3>
+                <p>Work with rare materials and primary sources not available elsewhere.</p>
+            </div>
+        </div>
 
-                        <!-- Card 4 -->
-                        <div class="benefit-card">
-                            <i class="fas fa-bullhorn benefit-icon"></i>
-                            <div class="benefit-text">
-                                <h3>Visibility</h3>
-                                <p>Promote your work through our platforms and community reach.</p>
-                            </div>
-                        </div>
+        <!-- Card 3 -->
+        <div class="benefit-card">
+            <i class="fas fa-lightbulb benefit-icon"></i>
+            <div class="benefit-text">
+                <h3>Expert Guidance</h3>
+                <p>Benefit from our staff's deep knowledge of Tamil history and culture.</p>
+            </div>
+        </div>
 
-                        <!-- Card 5 -->
-                        <div class="benefit-card">
-                            <i class="fas fa-people-group benefit-icon"></i>
-                            <div class="benefit-text">
-                                <h3>Community Impact</h3>
-                                <p>Make meaningful contributions to heritage preservation and education.</p>
-                            </div>
-                        </div>
+        <!-- Card 4 -->
+        <div class="benefit-card">
+            <i class="fas fa-bullhorn benefit-icon"></i>
+            <div class="benefit-text">
+                <h3>Visibility</h3>
+                <p>Promote your work through our platforms and community reach.</p>
+            </div>
+        </div>
 
-                        <!-- Card 6 -->
-                        <div class="benefit-card">
-                            <i class="fas fa-trophy benefit-icon"></i>
-                            <div class="benefit-text">
-                                <h3>Recognition</h3>
-                                <p>Public acknowledgment and credit for collaborative achievements.</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- Proposal Form -->
-                <section class="proposal-form-section">
-                    <h2 class="section-title">Submit Your Proposal</h2>
-                    <p class="section-subtitle">Fill out the form below to start a conversation about potential collaboration</p>
-                    <form class="proposal-form">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name">Name *</label>
-                                <input type="text" id="name" placeholder="Your full name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email *</label>
-                                <input type="email" id="email" placeholder="your@email.com" required>
-                            </div>
-                        </div>
+        <!-- Card 5 -->
+        <div class="benefit-card">
+            <i class="fas fa-people-group benefit-icon"></i>
+            <div class="benefit-text">
+                <h3>Community Impact</h3>
+                <p>Make meaningful contributions to heritage preservation and education.</p>
+            </div>
+        </div>
 
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="organization">Organization</label>
-                                <input type="text" id="organization" placeholder="Your organization name">
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Phone</label>
-                                <input type="tel" id="phone" placeholder="+94 XX XXX XXXX">
-                            </div>
-                        </div>
+        <!-- Card 6 -->
+        <div class="benefit-card">
+            <i class="fas fa-trophy benefit-icon"></i>
+            <div class="benefit-text">
+                <h3>Recognition</h3>
+                <p>Public acknowledgment and credit for collaborative achievements.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Proposal Form -->
+<section class="proposal-form-section">
+    <h2 class="section-title">Submit Your Proposal</h2>
+    <p class="section-subtitle">Fill out the form below to start a conversation about potential collaboration</p>
+    <form class="proposal-form">
+        <div class="form-row">
+            <div class="form-group">
+                <label for="name">Name *</label>
+                <input type="text" id="name" placeholder="Your full name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" placeholder="your@email.com" required>
+            </div>
+        </div>
 
-                        <div class="form-group">
-                            <label for="collab-type">Collaboration Type *</label>
-                            <select id="collab-type" required>
-                                <option>Select collaboration type</option>
-                                <option>Research Partnerships</option>
-                                <option>Events & Programs</option>
-                                <option>Digitization Initiatives</option>
-                                <option>Funding & Sponsorship</option>
-                                <option>Collection Development</option>
-                                <option>Capacity Building</option>
-                            </select>
-                        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="organization">Organization</label>
+                <input type="text" id="organization" placeholder="Your organization name">
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" placeholder="+94 XX XXX XXXX">
+            </div>
+        </div>
 
-                        <div class="form-group">
-                            <label for="project-title">Project Title *</label>
-                            <input type="text" id="project-title" placeholder="Brief title for your proposed collaboration" required>
-                        </div>
+        <div class="form-group">
+            <label for="collab-type">Collaboration Type *</label>
+            <select id="collab-type" required>
+                <option>Select collaboration type</option>
+                <option>Research Partnerships</option>
+                <option>Events & Programs</option>
+                <option>Digitization Initiatives</option>
+                <option>Funding & Sponsorship</option>
+                <option>Collection Development</option>
+                <option>Capacity Building</option>
+            </select>
+        </div>
 
-                        <div class="form-group">
-                            <label for="description">Project Description *</label>
-                            <textarea id="description" rows="6" placeholder="Describe your proposed collaboration, objectives, timeline, and how it aligns with our mission..." required></textarea>
-                        </div>
+        <div class="form-group">
+            <label for="project-title">Project Title *</label>
+            <input type="text" id="project-title" placeholder="Brief title for your proposed collaboration" required>
+        </div>
 
-                        <div class="form-group">
-                            <label for="timeline">Expected Timeline</label>
-                            <input type="text" id="timeline" placeholder="e.g. 6 months, 1 year, ongoing">
-                        </div>
+        <div class="form-group">
+            <label for="description">Project Description *</label>
+            <textarea id="description" rows="6" placeholder="Describe your proposed collaboration, objectives, timeline, and how it aligns with our mission..." required></textarea>
+        </div>
 
-                        <button type="submit" class="submit-btn">Submit Proposal</button>
-                    </form>
-                </section>
+        <div class="form-group">
+            <label for="timeline">Expected Timeline</label>
+            <input type="text" id="timeline" placeholder="e.g. 6 months, 1 year, ongoing">
+        </div>
 
-     </main>
-
-
-
-
-<!-- footer  -->
-   <footer>
+        <button type="submit" class="submit-btn">
+    Submit Proposal <i class="fas fa-paper-plane"></i>
+</button>
+    </form>
+</section>
+<!-- Footer -->
+<footer>
     <div class="container">
-      <div class="footer-content">
-        <div class="footer-section">
-  
-        <!-- PayPal Donate Button -->
-   
+        <div class="footer-content">
+            <!-- Tamil News Section -->
+            <div class="footer-section news-section">
+                <h3>Tamil News</h3>
+                <p class="footer-desc">
+                    Your trusted source for Tamil community news, culture, and heritage updates from Sri Lanka and around the world.
+                </p>
+                <p class="footer-copyright-small">
+                    © Tamil Information Centre • Est. 1983
+                </p>
+                <div class="donate-wrapper">
+                    <form action="https://www.paypal.com/donate" method="post" target="_blank">
+                        <input type="hidden" name="hosted_button_id" value="">
+                        <button type="submit" class="donate-btn-footer">
+                            <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="PayPal Logo" class="paypal-logo">
+                            Donate with PayPal
+                        </button>
+                    </form>
+                </div>
+            </div>
 
-    <!-- Existing Footer Content -->
-    <h3>Tamil News</h3>
-    <p style="color: #ccc; font-size: 0.9rem;">
-        Your trusted source for Tamil community news, culture, and heritage updates from Sri Lanka and around the world.
-    </p>
-    <p style="color: #999; font-size: 0.85rem; margin-top: 1rem;">
-        © Tamil Information Centre • Est. 1983
-    </p>
-     <div style="margin-bottom: 1.2rem;">
-        <form action="https://www.paypal.com/donate" method="post" target="_blank">
-            <input type="hidden" name="hosted_button_id" value=""> 
-            <button type="submit" 
-                style="
-                    background-color:#0070ba;
-                    color:white;
-                    padding:10px 18px;
-                    border:none;
-                    border-radius:6px;
-                    cursor:pointer;
-                    font-size:0.95rem;
-                    font-weight:600;
-                    display:inline-flex;
-                    align-items:center;
-                    gap:8px;
-                "
-            >
-                <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" 
-                     alt="PayPal" 
-                     style="height:18px;">
-                Donate with PayPal
-            </button>
-        </form>
+            <!-- Quick Links -->
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="./about.html">About Us</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a href="./event.html">Events</a></li>
+                    <li><a href="./publication.html">Publications</a></li>
+                </ul>
+            </div>
+
+            <!-- Categories -->
+            <div class="footer-section">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a href="#">Heritage</a></li>
+                    <li><a href="#">Culture</a></li>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="#">Shop</a></li>
+                </ul>
+            </div>
+
+            <!-- Legal -->
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© Tamil Information Centre TIC Archives || 2025 All rights reserved</p>
+        </div>
     </div>
-</div>
+</footer>
+              
+                    <!-- <div style="margin-top: 1.2rem;">
+                        <form action="https://www.paypal.com/donate" method="post" target="_blank">
+                            <input type="hidden" name="hosted_button_id" value="YOUR_BUTTON_ID">
+                            <button type="submit" class="donate-btn" aria-label="Donate via PayPal">
+                                <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" 
+                                     alt="PayP al" 
+                                     style="height:18px;">
+                                Donate with PayPal
+                            </button>
+                        </form>
+                    </div>
+                </div> -->
 
-        <div class="footer-section">
-          <h3>Quick Links</h3>
-          <ul>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#events">Events</a></li>
-            <li><a href="#publications">Publications</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h3>Categories</h3>
-          <ul>
-            <li><a href="#heritage">Heritage</a></li>
-            <li><a href="#">Culture</a></li>
-            <li><a href="#">Community</a></li>
-            <li><a href="#shop">Shop</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h3>Legal</h3>
-          <ul>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Cookie Policy</a></li>
-          </ul>
-        </div>
-      </div>
-     <div class="footer-bottom">
-         <p> ©Tamil Information Centre TIC Archives || 2025 All rights reserved</p>
-        
-</div>
+                <!-- Quick Links -->
+                <!-- <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="{{ route('client.about') }}">About Us</a></li>
+                        <li><a href="{{ route('client.contactus') }}">Contact</a></li>
+                        <li><a href="{{ route('events.index') }}">Events</a></li>
+                        <li><a href="{{ route('client.publications') }}">Publications</a></li>
+                    </ul>
+                </div> -->
 
-    </div>
-  </footer>
+                <!-- Categories -->
+                <!-- <div class="footer-section">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="{{ route('client.exhibitionheritag') }}">Heritage</a></li>
+                        <li><a href="{{ route('client.archivecentrecollection') }}">Culture</a></li>
+                        <li><a href="{{ route('client.news') }}">Community</a></li>
+                        <li><a href="{{ route('client.publications') }}">Shop</a></li>
+                    </ul>
+                </div> -->
 
+                <!-- Legal -->
+                <!-- <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div> -->
+            <!-- </div> -->
 
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+            <!-- <div class="footer-bottom">
+                <p>© Tamil Bookshop Archives {{ date('Y') }} | All rights reserved</p>
+            </div>
+        </div> -->
+    <!-- </footer> -->
+
+    <!-- Back to Top Button -->
+    <!-- <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button> -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Mobile Menu Script -->
     <script>
@@ -531,6 +569,85 @@
         // ============================================
 // PROTECTION MEASURES (Consolidated)
 // ============================================
+(function() {
+    'use strict';
+
+    // ------------------------------------
+    // 1. BASIC COPY/SELECTION PROTECTION
+    // ------------------------------------
+    document.addEventListener('copy', e => e.preventDefault());
+    document.addEventListener('cut', e => e.preventDefault());
+    document.addEventListener('selectstart', e => e.preventDefault());
+    document.addEventListener('contextmenu', e => e.preventDefault());
+
+    // ------------------------------------
+    // 2. KEYBOARD SHORTCUTS BLOCKING
+    // ------------------------------------
+    document.addEventListener('keydown', function(e) {
+        // Block: F12, Ctrl+Shift+I/J/C, Ctrl+U, Ctrl+S
+        if (
+            e.key === 'F12' ||
+            (e.ctrlKey && e.shiftKey && ['I', 'J', 'C'].includes(e.key.toUpperCase())) ||
+            (e.ctrlKey && e.key.toLowerCase() === 'u') ||
+            (e.ctrlKey && e.key.toLowerCase() === 's')
+        ) {
+            e.preventDefault();
+            e.stopPropagation();
+            return false;
+        }
+    }, true); // Use capture phase
+
+    // ------------------------------------
+    // 3. DEVTOOLS DETECTION
+    // ------------------------------------
+    let devtoolsOpen = false;
+    const threshold = 160;
+
+    const detectDevTools = () => {
+        // Check window size difference
+        const widthDiff = window.outerWidth - window.innerWidth;
+        const heightDiff = window.outerHeight - window.innerHeight;
+        return widthDiff > threshold || heightDiff > threshold;
+    };
+
+    const handleDevToolsDetected = () => {
+        if (!devtoolsOpen) {
+            devtoolsOpen = true;
+            console.warn('⚠️ Developer tools detected - Redirecting...');
+            
+            // Immediate redirect to Google
+            window.location.href = 'https://www.google.com';
+        }
+    };
+
+    const handleDevToolsClosed = () => {
+        // No need for cleanup since we redirect immediately
+        devtoolsOpen = false;
+    };
+
+    const check = () => {
+        try {
+            if (detectDevTools()) {
+                handleDevToolsDetected();
+            } else {
+                handleDevToolsClosed();
+            }
+        } catch (error) {
+            // Silent fail
+        }
+    };
+
+    // Check every second
+    setInterval(check, 1000);
+    
+    // Check on resize
+    window.addEventListener('resize', check);
+
+    // Initial check
+    check();
+
+})();
+
 // ============================================
 // MOBILE MENU FUNCTIONALITY
 // ============================================
@@ -653,65 +770,5 @@
 
 
 </script>
-  </body>
-  </html>
-<!-- footer  -->
-
-              
-                    <!-- <div style="margin-top: 1.2rem;">
-                        <form action="https://www.paypal.com/donate" method="post" target="_blank">
-                            <input type="hidden" name="hosted_button_id" value="YOUR_BUTTON_ID">
-                            <button type="submit" class="donate-btn" aria-label="Donate via PayPal">
-                                <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" 
-                                     alt="PayP al" 
-                                     style="height:18px;">
-                                Donate with PayPal
-                            </button>
-                        </form>
-                    </div>
-                </div> -->
-
-                <!-- Quick Links -->
-                <!-- <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="{{ route('client.about') }}">About Us</a></li>
-                        <li><a href="{{ route('client.contactus') }}">Contact</a></li>
-                        <li><a href="{{ route('events.index') }}">Events</a></li>
-                        <li><a href="{{ route('client.publications') }}">Publications</a></li>
-                    </ul>
-                </div> -->
-
-                <!-- Categories -->
-                <!-- <div class="footer-section">
-                    <h3>Categories</h3>
-                    <ul>
-                        <li><a href="{{ route('client.exhibitionheritag') }}">Heritage</a></li>
-                        <li><a href="{{ route('client.archivecentrecollection') }}">Culture</a></li>
-                        <li><a href="{{ route('client.news') }}">Community</a></li>
-                        <li><a href="{{ route('client.publications') }}">Shop</a></li>
-                    </ul>
-                </div> -->
-
-                <!-- Legal -->
-                <!-- <div class="footer-section">
-                    <h3>Legal</h3>
-                    <ul>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Cookie Policy</a></li>
-                    </ul>
-                </div> -->
-            <!-- </div> -->
-
-            <!-- <div class="footer-bottom">
-                <p>© Tamil Bookshop Archives {{ date('Y') }} | All rights reserved</p>
-            </div>
-        </div> -->
-    <!-- </footer> -->
-
-    <!-- Back to Top Button -->
-    <!-- <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button> -->
-
-    <!-- Bootstrap JS -->
- 
+</body>
+</html>
