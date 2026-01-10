@@ -40,34 +40,46 @@
             color: var(--accent-dark);
         }
 
-        /* Hero Section */
-        .hero-section {
-            position: relative;
-            height: 22vh;
-            background-color: var(--card-bg);
-            background-size: cover;
-            background-position: center;
-            color: var(--accent-dark);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 2rem;
-        }
+       .hero-section {
+    width: 100%; 
+    
+    margin: 0 auto 1rem auto; 
+    
+    text-align: center;
+    display: flex;
+    padding: 5rem 1rem 0.5rem; /* Consistent height padding */
 
-        .hero-content {
-            z-index: 1;
-            text-align: center;
-            padding: 2rem;
-        }
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-        .hero-content h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
+    background: linear-gradient(to bottom, var(--card-bg) 0%, var(--primary-bg) 100%);
+    border: 1px solid rgba(0, 0, 0, 0.08); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); 
+    border-radius: var(--border-radius); 
+}
 
-        .hero-content p {
-            font-size: 1.25rem;
-        }
+.hero-content {
+    max-width: 850px;
+    width: 100%;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--accent-dark);
+    margin: 0 0 1rem 0;
+    letter-spacing: -1.5px;
+    line-height: 1.2;
+}
+
+.hero-section p {
+    font-size: 1.25rem;
+    color: var(--accent-dark);
+    opacity: 0.8;
+    margin: 0;
+    line-height: 1.6;
+}
 
         /* Timeline Styles */
         .timeline-container {
@@ -362,7 +374,7 @@
 <body>
 
       <!-- Header -->
-    <!-- Header -->
+     <!-- Header -->
     <header role="banner">
         <div class="header-container">
             <div class="header-main">
@@ -406,9 +418,9 @@
                                 Archive Centre
                             </a>
                             <div class="dropdown" role="menu">
-                                <a href="./coming-soon.html" role="menuitem">Collection</a>
-                                <a href="./coming-soon.html" role="menuitem">Online Catalogue</a>
-                                <a href="./coming-soon.html" role="menuitem">Google Arts & Heritage</a>
+                                <a href="./archivecenter.html" role="menuitem">Collection</a>
+                                <a href="./archivecenter.html" role="menuitem">Online Catalogue</a>
+                                <a href="./archivecenter.html" role="menuitem">Google Arts & Heritage</a>
                             </div>
                         </li>
 
@@ -496,9 +508,9 @@
                         Archive Centre <span>▾</span>
                     </button>
                     <div class="mobile-dropdown-content" id="archiveDropdown">
-                        <a href="./collections.html">Collection</a>
-                        <a href="./collections.html">Online Catalogue</a>
-                        <a href="./collections.html">Google Arts & Heritage</a>
+                        <a href="./archivecenter.html">Collection</a>
+                        <a href="./archivecenter.html">Online Catalogue</a>
+                        <a href="./archivecenter.html">Google Arts & Heritage</a>
                     </div>
                 </li>
 
@@ -541,14 +553,15 @@
             </ul>
         </nav>
     </div>
+   
 
     <!-- Hero Section -->
     <section class="hero-section">
-        <div class="hero-content">
-            <h1>Journey Through Time: Tamils of Lanka</h1>
-            <p>Explore the rich history and heritage of Tamil communities in Sri Lanka from ancient times to the present day.</p>
-        </div>
-    </section>
+            <div class="hero-content">
+                <h1>Journey Through Time: Tamils of Lanka</h1>
+                <p>Explore the rich history and heritage of Tamil communities in Sri Lanka from ancient times to the present day.</p>
+            </div>
+</section>
 
     <!-- Main Content -->
     <main class="container my-5">
@@ -762,7 +775,7 @@
    
 
     <!-- Existing Footer Content -->
-    <h3>Tamil News</h3>
+    <h3>TIC Archives</h3>
     <p style="color: #ccc; font-size: 0.9rem;">
         Your trusted source for Tamil community news, culture, and heritage updates from Sri Lanka and around the world.
     </p>

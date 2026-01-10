@@ -19,6 +19,38 @@
             padding: 0;
         } */
 
+        .page-header-section {
+    width: 100%; 
+    margin: 0 auto 0 !important;           /* bottom margin fully removed */
+    padding: 2rem 1rem 0.5rem !important;  /* bottom padding drastically reduced */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, var(--card-bg) 0%, var(--primary-bg) 100%);
+    border: 1px solid rgba(0, 0, 0, 0.08); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); 
+    border-radius: var(--border-radius);
+}
+
+.page-header-section .page-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--accent-dark);
+    margin: 0 0 1rem 0;
+    letter-spacing: -1.5px;
+    line-height: 1.2;
+}
+
+.page-header-section .page-subtitle {
+    font-size: 1.25rem;
+    color: var(--accent-dark);
+    opacity: 0.8;
+    margin: 0;
+    max-width: 800px;
+    line-height: 1.6;
+}
         /* Publications Container */
         .publications-container {
             max-width: 1400px;
@@ -571,9 +603,9 @@
                                 Archive Centre
                             </a>
                             <div class="dropdown" role="menu">
-                                <a href="./coming-soon.html" role="menuitem">Collection</a>
-                                <a href="./coming-soon.html" role="menuitem">Online Catalogue</a>
-                                <a href="./coming-soon.html" role="menuitem">Google Arts & Heritage</a>
+                                <a href="./archivecenter.html" role="menuitem">Collection</a>
+                                <a href="./archivecenter.html" role="menuitem">Online Catalogue</a>
+                                <a href="./archivecenter.html" role="menuitem">Google Arts & Heritage</a>
                             </div>
                         </li>
 
@@ -661,9 +693,9 @@
                         Archive Centre <span>▾</span>
                     </button>
                     <div class="mobile-dropdown-content" id="archiveDropdown">
-                        <a href="./collections.html">Collection</a>
-                        <a href="./collections.html">Online Catalogue</a>
-                        <a href="./collections.html">Google Arts & Heritage</a>
+                        <a href="./archivecenter.html">Collection</a>
+                        <a href="./archivecenter.html">Online Catalogue</a>
+                        <a href="./archivecenter.html">Google Arts & Heritage</a>
                     </div>
                 </li>
 
@@ -711,10 +743,11 @@
     <main class="publications-container">
         <!-- Filter Section -->
 
-               <section class="page-header-section">
-                <h1 class="page-title">Publications</h1>
-                <p class="page-subtitle">Explore our collection of Tamil heritage books and research materials</p>
-            </section>
+        <section class="page-header-section">
+            <h1 class="page-title">Publications</h1>
+            <p class="page-subtitle">Explore our collection of Tamil heritage books and research materials</p>
+        </section>
+
         <section class="filter-box">
             <h3 style="display: flex; align-items: center; gap: 0.5rem; font-size: 1.1rem; font-weight: 700; margin-bottom: 1rem;">
                 Filter Publications
@@ -792,7 +825,7 @@
     </main>
 
 
-    <!-- footer  -->
+<!-- footer  -->
    <footer>
     <div class="container">
       <div class="footer-content">
@@ -802,7 +835,7 @@
    
 
     <!-- Existing Footer Content -->
-    <h3>Tamil News</h3>
+    <h3>TIC Archives</h3>
     <p style="color: #ccc; font-size: 0.9rem;">
         Your trusted source for Tamil community news, culture, and heritage updates from Sri Lanka and around the world.
     </p>

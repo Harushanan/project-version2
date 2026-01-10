@@ -23,12 +23,49 @@
     <link rel="stylesheet" href="./aboutus.css">
     <style>
         .exhibition-header {
-            color:  #0f2540;
-            padding: 2rem;
-            text-align: center;
+    width: 100%; 
+    
+    /* Nav bar gap remove seiya margin-top: 0 
+       Next section-ukku gap thara margin-bottom: 4rem */
+    margin: 0 auto 4rem auto; 
+    
+    text-align: center;
+    display: flex;
+    padding: 5rem 1rem 4rem; /* Consistent height padding */
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    /* Background & Border Style - Consistent with Image 1 */
+    background: linear-gradient(to bottom, var(--card-bg) 0%, var(--primary-bg) 100%);
+    border: 1px solid rgba(0, 0, 0, 0.08); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); 
+    border-radius: var(--border-radius); 
+}
+
+        /* Icon style - LandMark icon center-il azhagaga vara */
+        .exhibition-header i {
+            color: var(--accent-dark);
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
         }
-        .section-subtitle {
-            color: #0f2540;
+
+        .exhibition-header h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--accent-dark);
+            margin: 0 0 1rem 0;
+            letter-spacing: -1.5px;
+            line-height: 1.2;
+        }
+
+        .exhibition-header .section-subtitle {
+            font-size: 1.25rem;
+            color: var(--accent-dark);
+            opacity: 0.8;
+            margin: 0;
+            max-width: 800px;
         }
         .current-exhibitions {
             padding: 1rem;
@@ -307,6 +344,7 @@
      <!-- Header -->
       <!-- Header -->
      <!-- Header -->
+    <!-- Header -->
     <header role="banner">
         <div class="header-container">
             <div class="header-main">
@@ -350,9 +388,9 @@
                                 Archive Centre
                             </a>
                             <div class="dropdown" role="menu">
-                                <a href="./coming-soon.html" role="menuitem">Collection</a>
-                                <a href="./coming-soon.html" role="menuitem">Online Catalogue</a>
-                                <a href="./coming-soon.html" role="menuitem">Google Arts & Heritage</a>
+                                <a href="./archivecenter.html" role="menuitem">Collection</a>
+                                <a href="./archivecenter.html" role="menuitem">Online Catalogue</a>
+                                <a href="./archivecenter.html" role="menuitem">Google Arts & Heritage</a>
                             </div>
                         </li>
 
@@ -440,9 +478,9 @@
                         Archive Centre <span>▾</span>
                     </button>
                     <div class="mobile-dropdown-content" id="archiveDropdown">
-                        <a href="./collections.html">Collection</a>
-                        <a href="./collections.html">Online Catalogue</a>
-                        <a href="./collections.html">Google Arts & Heritage</a>
+                        <a href="./archivecenter.html">Collection</a>
+                        <a href="./archivecenter.html">Online Catalogue</a>
+                        <a href="./archivecenter.html">Google Arts & Heritage</a>
                     </div>
                 </li>
 
@@ -488,8 +526,7 @@
 
     <!-- Main Content -->
     <main>
-        <section class="exhibition-header">
-            <i class="fas fa-landmark" style="font-size: 2rem; margin-bottom: 1rem;"></i>
+       <section class="exhibition-header">
             <h1>Exhibition & Heritage Centre</h1>
             <p class="section-subtitle">Discover our exhibitions and heritage displays</p>
         </section>
@@ -634,7 +671,7 @@
 
     </main>
 
-   <!-- footer  -->
+  <!-- footer  -->
    <footer>
     <div class="container">
       <div class="footer-content">
@@ -644,7 +681,7 @@
    
 
     <!-- Existing Footer Content -->
-    <h3>Tamil News</h3>
+    <h3>TIC Archives</h3>
     <p style="color: #ccc; font-size: 0.9rem;">
         Your trusted source for Tamil community news, culture, and heritage updates from Sri Lanka and around the world.
     </p>

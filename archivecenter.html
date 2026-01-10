@@ -94,9 +94,9 @@
                                 Archive Centre
                             </a>
                             <div class="dropdown" role="menu">
-                                <a href="./coming-soon.html" role="menuitem">Collection</a>
-                                <a href="./coming-soon.html" role="menuitem">Online Catalogue</a>
-                                <a href="./coming-soon.html" role="menuitem">Google Arts & Heritage</a>
+                                <a href="./archivecenter.html" role="menuitem">Collection</a>
+                                <a href="./archivecenter.html" role="menuitem">Online Catalogue</a>
+                                <a href="./archivecenter.html" role="menuitem">Google Arts & Heritage</a>
                             </div>
                         </li>
 
@@ -184,9 +184,9 @@
                         Archive Centre <span>▾</span>
                     </button>
                     <div class="mobile-dropdown-content" id="archiveDropdown">
-                        <a href="./collections.html">Collection</a>
-                        <a href="./collections.html">Online Catalogue</a>
-                        <a href="./collections.html">Google Arts & Heritage</a>
+                        <a href="./archivecenter.html">Collection</a>
+                        <a href="./archivecenter.html">Online Catalogue</a>
+                        <a href="./archivecenter.html">Google Arts & Heritage</a>
                     </div>
                 </li>
 
@@ -232,6 +232,42 @@
 
     <!-- Main Content -->
 <style>
+
+    .archive-hero {
+    width: 100%; 
+    margin: 0 auto 1.5rem auto !important; 
+    
+    text-align: center;
+    display: flex;
+    /* Hero-vin height-ai kuraikka padding adjust seiyappattuள்ளது */
+    padding: 2.5rem 1rem 2rem !important; 
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    /* Background & Border Style - Consistent across site */
+    background: linear-gradient(to bottom, var(--card-bg) 0%, var(--primary-bg) 100%);
+    border: 1px solid rgba(0, 0, 0, 0.08); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); 
+    border-radius: var(--border-radius); 
+}
+
+        .archive-hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--accent-dark);
+            margin: 0 0 0.8rem 0;
+            letter-spacing: -1px;
+        }
+
+        .archive-hero p {
+            font-size: 1.2rem;
+            color: var(--accent-dark);
+            opacity: 0.85;
+            margin: 0;
+            max-width: 700px;
+        }
     .carousel {
         background-color: #f0f0f0; /* Image load aagatha pothu intha color kaattum */
         min-height: 160px;
@@ -277,9 +313,8 @@
 </style>
 
 <main class="container my-5 py-4">
-    <section class="text-center mb-5">
-        <h1 class="display-8 fw-bold" style="color: #0f2540;">Archive Centre Collection</h1>
-        <p class="text-muted small">Explore curated guides on Tamil heritage topics</p>
+     <section class="archive-hero"> <h1>Archive Centre Collection</h1>
+        <p>Explore curated guides on Tamil heritage topics</p>
     </section>
 
     <section class="search-section mb-5">
@@ -543,7 +578,7 @@
    
 
     <!-- Existing Footer Content -->
-    <h3>Tamil News</h3>
+    <h3>TIC Archives</h3>
     <p style="color: #ccc; font-size: 0.9rem;">
         Your trusted source for Tamil community news, culture, and heritage updates from Sri Lanka and around the world.
     </p>

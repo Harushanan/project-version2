@@ -37,6 +37,66 @@ body {
     user-select: none; -webkit-user-select: none; -moz-user-select: none; 
 }
 
+/* Hero Section */
+.timeline-hero {
+    width: 100%; 
+    
+    margin: 0 auto 4rem auto; 
+    
+    text-align: center;
+    display: flex;
+    padding: 5rem 1rem 4rem; /* Consistent height padding */
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    /* Consistent Hero Block Styles */
+    background: linear-gradient(to bottom, var(--card-bg) 0%, var(--primary-bg) 100%);
+    border: 1px solid rgba(0, 0, 0, 0.08); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); 
+    border-radius: var(--border-radius); 
+}
+
+.timeline-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--accent-dark);
+    margin: 0 0 1rem 0;
+    letter-spacing: -1.5px;
+    line-height: 1.2;
+}
+
+.timeline-hero p {
+    font-size: 1.25rem;
+    color: var(--accent-dark);
+    opacity: 0.8;
+    margin: 0;
+    max-width: 800px;
+}
+.hero-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 1.5rem 0 2.5rem;
+    align-items: center;
+}
+
+.hero-content h1 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--accent-dark);
+    margin-bottom: 0.875rem;
+}
+
+.hero-content p {
+    font-size: 0.95rem;
+    color: #243447;
+    margin-bottom: 1.25rem;
+    line-height: 1.6;
+}
+
 /* Skip to content link for accessibility */
 .skip-link {
     position: absolute;
@@ -1143,7 +1203,7 @@ main {
 </head>
 <body>
 
-   <!-- Header -->
+    <!-- Header -->
     <header role="banner">
         <div class="header-container">
             <div class="header-main">
@@ -1187,9 +1247,9 @@ main {
                                 Archive Centre
                             </a>
                             <div class="dropdown" role="menu">
-                                <a href="./coming-soon.html" role="menuitem">Collection</a>
-                                <a href="./coming-soon.html" role="menuitem">Online Catalogue</a>
-                                <a href="./coming-soon.html" role="menuitem">Google Arts & Heritage</a>
+                                <a href="./archivecenter.html" role="menuitem">Collection</a>
+                                <a href="./archivecenter.html" role="menuitem">Online Catalogue</a>
+                                <a href="./archivecenter.html" role="menuitem">Google Arts & Heritage</a>
                             </div>
                         </li>
 
@@ -1277,9 +1337,9 @@ main {
                         Archive Centre <span>▾</span>
                     </button>
                     <div class="mobile-dropdown-content" id="archiveDropdown">
-                        <a href="./collections.html">Collection</a>
-                        <a href="./collections.html">Online Catalogue</a>
-                        <a href="./collections.html">Google Arts & Heritage</a>
+                        <a href="./archivecenter.html">Collection</a>
+                        <a href="./archivecenter.html">Online Catalogue</a>
+                        <a href="./archivecenter.html">Google Arts & Heritage</a>
                     </div>
                 </li>
 
@@ -1326,6 +1386,12 @@ main {
 <!--main-->
     <main>
         <div class="container">
+
+            <section class="timeline-hero">
+            <h1>Historical Timeline</h1>
+            <p>A journey through the significant milestones and heritage of our community</p>
+        </section>
+
             <!-- எமது ஆவணங்கள் Section -->
             <section class="documents-section">
                 <div class="header-row">
@@ -1504,7 +1570,7 @@ main {
    
 
     <!-- Existing Footer Content -->
-    <h3>Tamil News</h3>
+    <h3>TIC Archives</h3>
     <p style="color: #ccc; font-size: 0.9rem;">
         Your trusted source for Tamil community news, culture, and heritage updates from Sri Lanka and around the world.
     </p>
@@ -1573,6 +1639,7 @@ main {
     </div>
   </footer>
 <!-- footer  -->
+ 
     <!-- Full Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 

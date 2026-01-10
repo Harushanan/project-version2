@@ -247,27 +247,44 @@ a:hover {
    5. CONTACT PAGE SPECIFIC STYLES (UPDATED CARDS)
    =================================================== */
 
-/* Page Header */
 .page-header-section {
-    padding: 40px 0;
+    width: 100%; 
+    
+    /* Nav bar gap remove seiya margin-top: 0 
+       Kila vara section-ukku gap thara margin-bottom: 4rem */
+    margin: 0 auto 4rem auto; 
+    
     text-align: center;
-    border-bottom: 2px solid var(--border-color);
-    margin-bottom: 40px;
+    display: flex;
+    padding: 5rem 1rem 4rem; /* Image 1-il ulla height vara standard padding */
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(to bottom, var(--card-bg) 0%, var(--primary-bg) 100%);
+    border: 1px solid rgba(0, 0, 0, 0.08); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); 
+    border-radius: var(--border-radius); 
 }
 
-.page-title {
-    font-size: 2.5rem;
+.page-header-section .page-title {
+    font-size: 3.5rem;
     font-weight: 800;
     color: var(--accent-dark);
+    margin: 0 0 1rem 0;
+    letter-spacing: -1.5px;
+    line-height: 1.2;
 }
 
-.page-subtitle {
-    font-size: 1.1rem;
-    color: #6B7280; 
-    max-width: 800px;
-    margin: 10px auto 0;
+.page-header-section .page-subtitle {
+    font-size: 1.25rem;
+    color: var(--accent-dark);
+    opacity: 0.8;
+    margin: 0;
+    max-width: 850px;
+    line-height: 1.6;
 }
-
 /* 5.1 GRID LAYOUT (The Parent Container) - TWO SEPARATE CARDS */
 .contact-grid-section {
     display: grid;

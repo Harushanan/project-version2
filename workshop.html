@@ -154,12 +154,47 @@
 .mobile-nav-overlay.active {
     display: block;
 }
+div.main-content {
+    width: 100%; 
+    
+    margin: 0 auto 4rem auto; 
+    
+    text-align: center;
+    display: flex;
+    padding: 5rem 1.5rem 1rem; /* Consistent height padding */
 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(to bottom, var(--card-bg) 0%, var(--primary-bg) 100%);
+    border: 1px solid rgba(0, 0, 0, 0.08); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); 
+    border-radius: var(--border-radius); 
+}
+
+div.main-content h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--accent-dark);
+    margin: 0 0 1rem 0;
+    letter-spacing: -1.5px;
+    line-height: 1.2;
+}
+
+div.main-content p {
+    font-size: 1.25rem;
+    color: var(--accent-dark);
+    opacity: 0.8;
+    margin: 0;
+    max-width: 850px;
+    line-height: 1.6;
+}
 
 .section h2 {
     font-size: 32px;
     margin-bottom: 40px;
-    color: #333;
+    color: #0f2540;
 }
 
 .cards {
@@ -207,7 +242,7 @@
 
 .learn-more {
     display: inline-block;
-    background-color: #cc0000;
+    background-color:  #0f2540;
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -217,7 +252,7 @@
 }
 
 .learn-more:hover {
-    background-color: #a00000;
+    background-color: #264975;
 }
 
 
@@ -238,7 +273,8 @@
 .section h2 {
     font-size: 32px;
     margin-bottom: 40px;
-    color: #333;
+    color: #0f2540;
+     text-align: center;
 }
 
 .cards {
@@ -282,7 +318,7 @@
 
 .learn-more {
     display: inline-block;
-    background-color: #cc0000;
+    background-color: #0f2540;
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -292,18 +328,19 @@
 }
 
 .learn-more:hover {
-    background-color: #a00000;
+    background-color: #264975;
+
 }
     </style>
 </head>
 <body>
 
-   <!-- Header -->
+  <!-- Header -->
     <header role="banner">
         <div class="header-container">
             <div class="header-main">
                 <!-- Logo -->
-                <a href="./index.html" class="logo" aria-label="Tamil Bookshop Archives Home">
+                <a href="{{ route('client.home') }}" class="logo" aria-label="Tamil Bookshop Archives Home">
                     <img src="./image/newlogo.jpeg" alt="Tamil Bookshop Archives Logo" width="60" height="60">
                     <div class="logo-text">
                         <span class="ta">The TIC Archives</span>
@@ -337,19 +374,19 @@
                         </li>
 
                         <li class="dropdown-parent">
-                            <a href="./archivecenter.html" class="{{ Route::is('client.archivecentrecollection') ? 'active' : '' }}"
+                            <a href="./archive.html" class="{{ Route::is('client.archivecentrecollection') ? 'active' : '' }}"
                                aria-haspopup="true">
                                 Archive Centre
                             </a>
                             <div class="dropdown" role="menu">
-                                <a href="./coming-soon.html" role="menuitem">Collection</a>
-                                <a href="./coming-soon.html" role="menuitem">Online Catalogue</a>
-                                <a href="./coming-soon.html" role="menuitem">Google Arts & Heritage</a>
+                                <a href="./archive.html" role="menuitem">Collection</a>
+                                <a href="./archive.html" role="menuitem">Online Catalogue</a>
+                                <a href="./archive.html" role="menuitem">Google Arts & Heritage</a>
                             </div>
                         </li>
 
                         <li class="dropdown-parent">
-                            <a href="./coming-soon.html" aria-haspopup="true">Exhibition & Heritage</a>
+                            <a href="./ToL.html" aria-haspopup="true">Exhibition & Heritage</a>
                             <div class="dropdown" role="menu">
                                 <a href="./ToL.html" role="menuitem">ToL Exhibition</a>
                                 <a href="./HeritageCentre.html" role="menuitem">Heritage Centre</a>
@@ -432,9 +469,9 @@
                         Archive Centre <span>▾</span>
                     </button>
                     <div class="mobile-dropdown-content" id="archiveDropdown">
-                        <a href="./collections.html">Collection</a>
-                        <a href="./collections.html">Online Catalogue</a>
-                        <a href="./collections.html">Google Arts & Heritage</a>
+                        <a href="./archive.html">Collection</a>
+                        <a href="./archive.html">Online Catalogue</a>
+                        <a href="./archive.html">Google Arts & Heritage</a>
                     </div>
                 </li>
 
@@ -480,10 +517,15 @@
 
 
 <!--main-->
-<div class="main-content">
-        <h1>Our Projects & Programs</h1>
-        <p>We are committed to creating meaningful impact through our various projects and programs. Your support helps us expand these initiatives, empower the community, and achieve our mission more effectively.</p>
-
+<main id="main-content" role="main">
+    <div class="container">
+        <div class="main-content">
+            <h1>Our Projects & Programs</h1>
+            <p>We are committed to creating meaningful impact through our various projects and programs. Your support helps us expand these initiatives, empower the community, and achieve our mission more effectively.</p>
+        </div>
+        
+        </div>
+</main>
         <div class="section">
             <h2>Workshops</h2>
             <div class="cards">
@@ -560,7 +602,8 @@
             </div>
         </div>
     </div>
-<!-- footer  -->
+
+    <!-- footer  -->
    <footer>
     <div class="container">
       <div class="footer-content">
@@ -570,7 +613,7 @@
    
 
     <!-- Existing Footer Content -->
-    <h3>Tamil News</h3>
+    <h3>TIC Archives</h3>
     <p style="color: #ccc; font-size: 0.9rem;">
         Your trusted source for Tamil community news, culture, and heritage updates from Sri Lanka and around the world.
     </p>

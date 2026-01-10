@@ -217,24 +217,39 @@ main {
 }
 
 .about-header {
-    background-color: var(--accent-dark);
-    color: white;
-    padding: 2rem;
+     width: 100%; 
+    
+    margin: 0 auto 4rem auto; 
+    
     text-align: center;
-    border-radius: var(--border-radius);
+    display: flex;
+    padding: 5rem 1rem 4rem; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(to bottom, var(--card-bg) 0%, var(--primary-bg) 100%);
+    border: 1px solid rgba(0, 0, 0, 0.08); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); 
+    border-radius: var(--border-radius); /* Rounded corners */
 }
 
 .about-header h1 {
-    margin: 0;
-    font-size: 2rem;
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--accent-dark);
+    margin: 0 0 1rem 0;
+    letter-spacing: -1.5px;
+    line-height: 1.2;
 }
 
 .about-header p {
-    margin: 0.5rem 0 0;
-    font-size: 1rem;
-    opacity: 0.9;
+    font-size: 1.25rem;
+    color: var(--accent-dark);
+    opacity: 0.8;
+    margin: 0;
+    max-width: 800px; 
 }
-
 .about-section {
     background-color: var(--card-bg);
     padding: 1.5rem;
@@ -347,6 +362,7 @@ main {
         line-height: 1.7;
         margin: 0;
     }
+    
 .view-more, .join-today {
     border: none;
     padding: 0.75rem 1.5rem;

@@ -23,6 +23,43 @@ integrity="sha512-DTOQ     O9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1
      <link rel="stylesheet" href="./guide.css">
 
      <style>
+
+        section.text-center.mb-5 {
+    width: 100%; 
+    
+    margin: 0 auto 4rem auto !important; 
+    
+    text-align: center;
+    display: flex;
+    padding: 5rem 1rem 4rem; /* Consistent height padding */
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    /* Background & Border Style - Consistent across the site */
+    background: linear-gradient(to bottom, var(--card-bg) 0%, var(--primary-bg) 100%);
+    border: 1px solid rgba(0, 0, 0, 0.08); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); 
+    border-radius: var(--border-radius); 
+}
+
+section.text-center.mb-5 h1 {
+    font-size: 3.5rem !important; /* Bootstrap size-ai override  */
+    font-weight: 800;
+    color: var(--accent-dark) !important;
+    margin: 0 0 1rem 0;
+    letter-spacing: -1.5px;
+    line-height: 1.2;
+}
+
+section.text-center.mb-5 p {
+    font-size: 1.25rem !important;
+    color: var(--accent-dark) !important;
+    opacity: 0.8;
+    margin: 0;
+    max-width: 800px;
+}
         /* Force same image size for all cards */
 .collection-card .card-img-top {
     width: 100%;
@@ -57,7 +94,7 @@ integrity="sha512-DTOQ     O9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1
 <body>
 
      <!-- Header -->
-    <!-- Header -->
+     <!-- Header -->
     <header role="banner">
         <div class="header-container">
             <div class="header-main">
@@ -101,9 +138,9 @@ integrity="sha512-DTOQ     O9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1
                                 Archive Centre
                             </a>
                             <div class="dropdown" role="menu">
-                                <a href="./coming-soon.html" role="menuitem">Collection</a>
-                                <a href="./coming-soon.html" role="menuitem">Online Catalogue</a>
-                                <a href="./coming-soon.html" role="menuitem">Google Arts & Heritage</a>
+                                <a href="./archivecenter.html" role="menuitem">Collection</a>
+                                <a href="./archivecenter.html" role="menuitem">Online Catalogue</a>
+                                <a href="./archivecenter.html" role="menuitem">Google Arts & Heritage</a>
                             </div>
                         </li>
 
@@ -191,9 +228,9 @@ integrity="sha512-DTOQ     O9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1
                         Archive Centre <span>▾</span>
                     </button>
                     <div class="mobile-dropdown-content" id="archiveDropdown">
-                        <a href="./collections.html">Collection</a>
-                        <a href="./collections.html">Online Catalogue</a>
-                        <a href="./collections.html">Google Arts & Heritage</a>
+                        <a href="./archivecenter.html">Collection</a>
+                        <a href="./archivecenter.html">Online Catalogue</a>
+                        <a href="./archivecenter.html">Google Arts & Heritage</a>
                     </div>
                 </li>
 
@@ -236,14 +273,15 @@ integrity="sha512-DTOQ     O9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1
             </ul>
         </nav>
     </div>
+   
 
 
     <!--main-->
     <main class="container my-1 py-1">
     <!-- Page Title -->
     <section class="text-center mb-5">
-        <h1 class="display-5 fw-bold" style="color:  #0f2540;;">Subject Guides</h1>
-        <p class="lead text-muted fs-5">Explore curated guides on Tamil heritage topics</p>
+            <h1 class="display-5 fw-bold">Subject Guides</h1>
+            <p class="lead text-muted fs-5">Explore curated guides on Tamil heritage topics</p>
     </section>
 
     <!-- Search & Filters -->
@@ -576,7 +614,7 @@ integrity="sha512-DTOQ     O9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1
    
 
     <!-- Existing Footer Content -->
-    <h3>Tamil News</h3>
+    <h3>TIC Archives</h3>
     <p style="color: #ccc; font-size: 0.9rem;">
         Your trusted source for Tamil community news, culture, and heritage updates from Sri Lanka and around the world.
     </p>

@@ -4,25 +4,41 @@
 
 /* Hero - Light Cream */
 .support-hero {
+    width: 100%; 
+    
+    margin: 0 auto 4rem auto; 
+    
     text-align: center;
-    padding: 4rem 1rem 3rem;
-    background: var(--primary-bg); /* #f6e3c5 */
-    margin-bottom: 3rem;
+    display: flex;
+    padding: 5rem 1.5rem 4rem; /* Standard height padding */
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    /* Background & Border Style - Consistent across the site */
+    background: linear-gradient(to bottom, var(--card-bg) 0%, var(--primary-bg) 100%);
+    border: 1px solid rgba(0, 0, 0, 0.08); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); 
+    border-radius: var(--border-radius); 
 }
 
 .support-hero h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 800;
     color: var(--accent-dark);
-    margin-bottom: 0.8rem;
+    margin: 0 0 1rem 0;
+    letter-spacing: -1.5px;
+    line-height: 1.2;
 }
 
 .support-hero p {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     color: var(--accent-dark);
-    opacity: 0.85;
+    opacity: 0.8;
+    margin: 0;
     max-width: 800px;
-    margin: 0 auto;
+    line-height: 1.6;
 }
 
 /* Impact Section */
